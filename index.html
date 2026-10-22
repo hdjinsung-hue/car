@@ -298,47 +298,107 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 @media(max-width:760px){.wrap{padding:10px 9px 28px}.hero{padding:25px 20px;border-radius:20px}.hero h1{font-size:26px}.hero p{font-size:13px}.nav{position:relative;top:auto;grid-template-columns:repeat(2,1fr);gap:5px}.nav button{padding:11px 7px!important}.panel{padding:16px}.amount{font-size:34px}.results{grid-template-columns:1fr}#p3 .panel[style*="linear-gradient"]>div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}}
 </style>
 </head><body>
-<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v4 · GitHub/Firebase 연결 준비</div>
+<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v5 · Firebase 실시간 승인 연결</div>
 <style>
 #authGate{position:fixed;inset:0;z-index:200000;background:linear-gradient(135deg,#07182b,#0f3b62 55%,#312e81);display:flex;align-items:center;justify-content:center;padding:18px}.authCard{width:min(500px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 80px #0007}.authBrand{font-size:13px;font-weight:900;color:#1d4ed8}.authCard h2{margin:6px 0 8px;font-size:26px}.authCard p{color:#64748b;font-size:13px;line-height:1.6}.authCard input{margin:6px 0}.authBtn{width:100%;border:0;border-radius:12px;padding:13px;background:#0f4c75;color:#fff;font-weight:900;cursor:pointer;margin-top:8px}.authSub{background:#eef2ff;color:#3730a3}.authMsg{margin-top:12px;font-size:12px;font-weight:800;line-height:1.5}.authTabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.authTabs button{padding:10px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc;font-weight:900;cursor:pointer}.adminPanel{position:fixed;inset:0;z-index:210000;background:#eef3f8;display:none;overflow:auto;padding:20px}.adminBox{max-width:900px;margin:auto;background:#fff;border-radius:20px;padding:22px}.adminRow{display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:8px;align-items:center;padding:12px;border-bottom:1px solid #e5e7eb}.adminRow button{border:0;border-radius:9px;padding:8px 10px;font-weight:900;cursor:pointer}.topAdminBtn{position:fixed;right:14px;bottom:14px;z-index:10000;border:0;border-radius:999px;background:#0f4c75;color:#fff;padding:11px 15px;font-weight:900;box-shadow:0 8px 24px #0003;display:none}@media(max-width:650px){.adminRow{grid-template-columns:1fr}.authCard{padding:21px}}
 </style>
 <div id="authGate"><div class="authCard">
-<div class="authBrand">홍익보험의 정신 · Authorized Access</div><h2 id="authTitle">자손 · 자상 보상분석</h2>
-<p id="authIntro">승인된 사용자만 이용할 수 있습니다. 신규 사용자는 가입 신청 후 관리자의 승인을 받아야 합니다.</p>
-<div id="firstAdminPane" style="display:none"><div style="padding:11px;border-radius:12px;background:#fff7ed;color:#9a3412;font-size:12px;font-weight:800;line-height:1.6;margin:12px 0">이 브라우저의 최초 실행입니다. 관리자 2명을 등록하세요. 두 관리자 모두 가입신청을 확인하고 승인·거절할 수 있습니다.</div><div style="font-weight:900;color:#0f172a;margin:14px 0 6px">관리자 1</div><input id="setupAdmin1Id" value="admin1" placeholder="관리자 1 아이디"><input id="setupAdmin1Phone" inputmode="tel" placeholder="관리자 1 휴대폰번호 (예: 010-1234-5678)"><input id="setupAdmin1Pw" type="password" placeholder="관리자 1 비밀번호 (6자 이상)"><input id="setupAdmin1Pw2" type="password" placeholder="관리자 1 비밀번호 확인"><div style="font-weight:900;color:#0f172a;margin:18px 0 6px">관리자 2</div><input id="setupAdmin2Id" value="admin2" placeholder="관리자 2 아이디"><input id="setupAdmin2Phone" inputmode="tel" placeholder="관리자 2 휴대폰번호 (예: 010-1234-5678)"><input id="setupAdmin2Pw" type="password" placeholder="관리자 2 비밀번호 (6자 이상)"><input id="setupAdmin2Pw2" type="password" placeholder="관리자 2 비밀번호 확인"><button class="authBtn" onclick="setupFirstAdmin()">관리자 2명 등록</button></div>
-<div id="normalAuthPane"><div class="authTabs"><button onclick="authMode('login')">로그인</button><button onclick="authMode('request')">가입 신청</button></div><div id="loginPane"><input id="loginId" placeholder="아이디"><input id="loginPw" type="password" placeholder="비밀번호"><button class="authBtn" onclick="appLogin()">로그인</button></div><div id="requestPane" style="display:none"><input id="reqName" placeholder="성명"><input id="reqContact" placeholder="연락처"><input id="reqOrg" placeholder="소속 / 지점"><input id="reqWishId" placeholder="희망 아이디"><button class="authBtn authSub" onclick="requestApproval()">관리자 승인 요청</button></div></div>
-<div id="authMsg" class="authMsg"></div><p style="margin-top:15px;color:#b91c1c;font-weight:800">※ 현재 v3는 이 기기·브라우저에서 실제 작동하는 로컬 승인형입니다. 여러 기기에서 공통 계정을 사용하려면 Firebase 서버 연결이 필요합니다.</p></div></div>
-<button id="adminFloating" class="topAdminBtn" onclick="openAdmin()">⚙ 관리자</button>
-<div id="adminPanel" class="adminPanel"><div class="adminBox"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><div><b style="font-size:22px">관리자 승인센터</b><div style="font-size:12px;color:#64748b;margin-top:4px">가입 신청 승인 · 계정 발급 · 사용중지</div></div><button onclick="closeAdmin()" style="border:0;border-radius:10px;padding:10px 14px;background:#0f4c75;color:#fff;font-weight:900">닫기</button></div><div id="adminList" style="margin-top:18px"></div><div style="margin-top:20px;padding:14px;background:#f8fafc;border-radius:12px;font-size:12px;color:#64748b;line-height:1.7">승인 시 희망 아이디가 계정 ID가 되며 임시 비밀번호가 자동 생성됩니다. 임시 비밀번호는 승인 직후 화면에 표시되므로 사용자에게 전달하세요.</div></div></div>
-<script>
-const AUTH_KEY='hongik_jason_auth_v3';
-function getAuthDB(){try{return JSON.parse(localStorage.getItem(AUTH_KEY))||{admin:null,requests:[],users:[]}}catch(e){return {admin:null,requests:[],users:[]}}}
-function saveAuthDB(db){localStorage.setItem(AUTH_KEY,JSON.stringify(db))}
-async function hashText(t){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-function initAuth(){const db=getAuthDB();const admins=(db.admins||[]);const legacy=db.admin?[db.admin]:[];const first=(admins.length+legacy.length)===0;document.getElementById('firstAdminPane').style.display=first?'block':'none';document.getElementById('normalAuthPane').style.display=first?'none':'block';document.getElementById('authTitle').textContent=first?'관리자 2명 최초 등록':'자손 · 자상 보상분석'}
-function authMode(m){document.getElementById('loginPane').style.display=m==='login'?'block':'none';document.getElementById('requestPane').style.display=m==='request'?'block':'none';document.getElementById('authMsg').textContent=''}
-async function setupFirstAdmin(){
-  const a1={id:setupAdmin1Id.value.trim(),phone:setupAdmin1Phone.value.trim(),p:setupAdmin1Pw.value,p2:setupAdmin1Pw2.value};
-  const a2={id:setupAdmin2Id.value.trim(),phone:setupAdmin2Phone.value.trim(),p:setupAdmin2Pw.value,p2:setupAdmin2Pw2.value};
-  if(!a1.id||!a2.id||a1.p.length<6||a2.p.length<6){authMsg.textContent='관리자 2명의 아이디와 6자 이상의 비밀번호를 모두 입력해 주세요.';return}
-  if(a1.id===a2.id){authMsg.textContent='관리자 1과 관리자 2의 아이디는 서로 달라야 합니다.';return}
-  if(a1.p!==a1.p2||a2.p!==a2.p2){authMsg.textContent='관리자 비밀번호 확인이 일치하지 않습니다.';return}
-  let db=getAuthDB();
-  if((db.admins&&db.admins.length)||db.admin){authMsg.textContent='이미 관리자 계정이 등록되어 있습니다.';initAuth();return}
-  db.admins=[{id:a1.id,phone:a1.phone,hash:await hashText(a1.p),name:'관리자 1'},{id:a2.id,phone:a2.phone,hash:await hashText(a2.p),name:'관리자 2'}];
-  delete db.admin;
-  saveAuthDB(db);authMsg.textContent='관리자 2명 등록 완료. 두 계정 모두 관리자 승인센터를 이용할 수 있습니다.';initAuth()
+<div class="authBrand">홍익보험의 정신 · Firebase Secure Access</div><h2 id="authTitle">자손 · 자상 보상분석</h2>
+<p id="authIntro">승인된 사용자만 이용할 수 있습니다. 신규 사용자는 가입 신청 후 관리자 승인을 받아야 합니다.</p>
+<div class="authTabs"><button id="tabLogin" type="button">로그인</button><button id="tabRequest" type="button">가입 신청</button></div>
+<div id="loginPane"><input id="loginId" placeholder="아이디"><input id="loginPw" type="password" placeholder="비밀번호"><button class="authBtn" id="loginBtn" type="button">로그인</button><div style="font-size:11px;color:#64748b;margin-top:8px">관리자는 admin1 또는 admin2로 로그인합니다.</div></div>
+<div id="requestPane" style="display:none"><input id="reqName" placeholder="성명"><input id="reqContact" inputmode="tel" placeholder="연락처"><input id="reqOrg" placeholder="소속 / 지점"><input id="reqWishId" placeholder="희망 아이디"><input id="reqPw" type="password" placeholder="비밀번호 (6자 이상)"><input id="reqPw2" type="password" placeholder="비밀번호 확인"><button class="authBtn authSub" id="requestBtn" type="button">가입 신청</button><div style="font-size:11px;color:#64748b;margin-top:8px">신청 즉시 승인대기 상태로 등록되며, 관리자가 승인한 뒤 이용할 수 있습니다.</div></div>
+<div id="authMsg" class="authMsg"></div><p style="margin-top:15px;color:#b91c1c;font-weight:800">※ 가입정보는 Firebase Authentication과 Firestore에서 관리됩니다. 승인 전에는 본 프로그램에 진입할 수 없습니다.</p></div></div>
+<button id="adminFloating" class="topAdminBtn" type="button">⚙ 관리자</button>
+<div id="adminPanel" class="adminPanel"><div class="adminBox"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><div><b style="font-size:22px">관리자 승인센터</b><div style="font-size:12px;color:#64748b;margin-top:4px">가입 신청 승인 · 거절 · 사용중지</div></div><button id="closeAdminBtn" type="button" style="border:0;border-radius:10px;padding:10px 14px;background:#0f4c75;color:#fff;font-weight:900">닫기</button></div><div id="adminList" style="margin-top:18px"></div><div style="margin-top:20px;padding:14px;background:#f8fafc;border-radius:12px;font-size:12px;color:#64748b;line-height:1.7">사용자는 가입 시 직접 비밀번호를 설정합니다. 관리자는 승인상태만 변경하며 비밀번호를 열람할 수 없습니다.</div></div></div>
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
+import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, getDocs, serverTimestamp } from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBIF_IPA0b1RXrDgg2HMQjhr_6hhhJkaWA",
+  authDomain: "dreamcar-3e5a0.firebaseapp.com",
+  projectId: "dreamcar-3e5a0",
+  storageBucket: "dreamcar-3e5a0.firebasestorage.app",
+  messagingSenderId: "251212519873",
+  appId: "1:251212519873:web:11b901688c75e41fbd3740"
+};
+const ADMIN_UIDS = new Set(['N2oXKvwGuTbvXwpem6Oam1iS51J3','xf2l0yG4jJR6M6qqFOf2RgPv0RD2']);
+const ADMIN_EMAILS = {admin1:'admin1@dreamcar.local',admin2:'admin2@dreamcar.local'};
+const app=initializeApp(firebaseConfig), auth=getAuth(app), db=getFirestore(app);
+const $=id=>document.getElementById(id);
+const gate=$('authGate'), msg=$('authMsg'), adminBtn=$('adminFloating'), adminPanel=$('adminPanel');
+
+function authMode(m){$('loginPane').style.display=m==='login'?'block':'none';$('requestPane').style.display=m==='request'?'block':'none';msg.textContent=''}
+$('tabLogin').onclick=()=>authMode('login'); $('tabRequest').onclick=()=>authMode('request');
+$('closeAdminBtn').onclick=()=>adminPanel.style.display='none'; $('adminFloating').onclick=()=>openAdmin();
+function esc(v){return String(v??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}
+function idEmail(id){ if(ADMIN_EMAILS[id]) return ADMIN_EMAILS[id]; const bytes=new TextEncoder().encode(id.trim().toLowerCase()); return 'u.'+[...bytes].map(b=>b.toString(16).padStart(2,'0')).join('')+'@dreamcar.local'; }
+function setMsg(t,ok=false){msg.textContent=t;msg.style.color=ok?'#166534':'#b91c1c'}
+
+$('requestBtn').onclick=async()=>{
+  const name=$('reqName').value.trim(), contact=$('reqContact').value.trim(), org=$('reqOrg').value.trim(), id=$('reqWishId').value.trim(), pw=$('reqPw').value, pw2=$('reqPw2').value;
+  if(!name||!id||!contact){setMsg('성명, 연락처, 희망 아이디를 입력해 주세요.');return}
+  if(pw.length<6){setMsg('비밀번호는 6자 이상으로 설정해 주세요.');return}
+  if(pw!==pw2){setMsg('비밀번호 확인이 일치하지 않습니다.');return}
+  if(['admin1','admin2'].includes(id.toLowerCase())){setMsg('사용할 수 없는 아이디입니다.');return}
+  try{
+    const cred=await createUserWithEmailAndPassword(auth,idEmail(id),pw);
+    await setDoc(doc(db,'users',cred.user.uid),{id,name,contact,org,status:'pending',createdAt:serverTimestamp(),updatedAt:serverTimestamp()});
+    await signOut(auth);
+    setMsg('가입 신청이 완료되었습니다. 관리자 승인 후 로그인할 수 있습니다.',true);
+    ['reqName','reqContact','reqOrg','reqWishId','reqPw','reqPw2'].forEach(x=>$(x).value='');
+  }catch(e){
+    const m=e?.code==='auth/email-already-in-use'?'이미 사용 중이거나 신청된 아이디입니다.':('가입 신청 오류: '+(e?.message||e)); setMsg(m);
+  }
+};
+
+$('loginBtn').onclick=async()=>{
+  const id=$('loginId').value.trim(), pw=$('loginPw').value;
+  if(!id||!pw){setMsg('아이디와 비밀번호를 입력해 주세요.');return}
+  try{
+    const cred=await signInWithEmailAndPassword(auth,idEmail(id),pw);
+    if(ADMIN_UIDS.has(cred.user.uid)){
+      gate.style.display='none'; adminBtn.style.display='block'; await openAdmin(); return;
+    }
+    const snap=await getDoc(doc(db,'users',cred.user.uid));
+    if(!snap.exists()){await signOut(auth);setMsg('사용자 승인정보를 찾을 수 없습니다.');return}
+    const st=snap.data().status;
+    if(st==='approved'){gate.style.display='none';adminBtn.style.display='none';return}
+    await signOut(auth);
+    setMsg(st==='pending'?'현재 관리자 승인 대기 중입니다.':st==='rejected'?'가입 신청이 거절되었습니다. 관리자에게 문의해 주세요.':'현재 사용이 중지된 계정입니다. 관리자에게 문의해 주세요.');
+  }catch(e){setMsg('아이디/비밀번호가 맞지 않거나 로그인할 수 없는 계정입니다.')}
+};
+
+async function openAdmin(){
+  const u=auth.currentUser;
+  if(!u||!ADMIN_UIDS.has(u.uid)){setMsg('관리자 권한이 없습니다.');return}
+  adminPanel.style.display='block'; await renderAdmin();
 }
-async function appLogin(){let id=loginId.value.trim(),p=loginPw.value,db=getAuthDB(),h=await hashText(p);let admins=db.admins||[];if(db.admin)admins=[db.admin,...admins];let a=admins.find(x=>x.id===id&&x.hash===h);if(a){sessionStorage.setItem('hongikRole','admin');sessionStorage.setItem('hongikAdminId',a.id);authGate.style.display='none';adminFloating.style.display='block';openAdmin();return}let u=db.users.find(x=>x.id===id&&x.hash===h);if(u&&u.active!==false){sessionStorage.setItem('hongikRole','user');authGate.style.display='none';return}authMsg.textContent='아이디/비밀번호가 맞지 않거나 아직 승인되지 않은 계정입니다.'}
-function requestApproval(){let n=reqName.value.trim(),c=reqContact.value.trim(),o=reqOrg.value.trim(),id=reqWishId.value.trim();if(!n||!id){authMsg.textContent='성명과 희망 아이디를 입력해 주세요.';return}let db=getAuthDB();if(db.users.some(x=>x.id===id)||db.requests.some(x=>x.id===id)){authMsg.textContent='이미 사용 중이거나 승인 대기 중인 아이디입니다.';return}db.requests.push({key:Date.now(),name:n,contact:c,org:o,id,status:'pending'});saveAuthDB(db);authMsg.textContent='가입 신청이 저장되었습니다. Firebase 연결 후에는 관리자 2명의 휴대폰에 승인대기 알림이 전송되며, 관리자가 프로그램에서 승인/거절합니다.';reqName.value=reqContact.value=reqOrg.value=reqWishId.value=''}
-function openAdmin(){renderAdmin();adminPanel.style.display='block'}function closeAdmin(){adminPanel.style.display='none'}
-function tempPw(){return 'H!'+Math.random().toString(36).slice(2,8).toUpperCase()}
-async function approveReq(key){let db=getAuthDB(),r=db.requests.find(x=>x.key===key);if(!r)return;let pw=tempPw();db.users.push({id:r.id,name:r.name,org:r.org,contact:r.contact,hash:await hashText(pw),active:true});db.requests=db.requests.filter(x=>x.key!==key);saveAuthDB(db);renderAdmin();alert('승인 완료\n아이디: '+r.id+'\n임시 비밀번호: '+pw+'\n\n이 비밀번호를 사용자에게 전달해 주세요.')}
-function rejectReq(key){let db=getAuthDB();db.requests=db.requests.filter(x=>x.key!==key);saveAuthDB(db);renderAdmin()}
-function toggleUser(id){let db=getAuthDB(),u=db.users.find(x=>x.id===id);if(u)u.active=!u.active;saveAuthDB(db);renderAdmin()}
-function renderAdmin(){let db=getAuthDB(),el=document.getElementById('adminList');let h='<h3>승인 대기 '+db.requests.length+'건</h3>';if(!db.requests.length)h+='<div style="padding:14px;background:#f8fafc;border-radius:10px;color:#64748b">현재 승인 대기 신청이 없습니다.</div>';db.requests.forEach(r=>h+=`<div class="adminRow"><b>${esc(r.name)} · ${esc(r.id)}</b><span>${esc(r.org||'-')}</span><span>${esc(r.contact||'-')}</span><span><button style="background:#dcfce7;color:#166534" onclick="approveReq(${r.key})">승인</button> <button style="background:#fee2e2;color:#991b1b" onclick="rejectReq(${r.key})">거절</button></span></div>`);h+='<h3 style="margin-top:24px">사용자 '+db.users.length+'명</h3>';db.users.forEach(u=>h+=`<div class="adminRow"><b>${esc(u.name)} · ${esc(u.id)}</b><span>${esc(u.org||'-')}</span><span>${u.active!==false?'사용중':'중지'}</span><span><button style="background:${u.active!==false?'#fee2e2':'#dcfce7'};color:#334155" onclick="toggleUser('${escAttr(u.id)}')">${u.active!==false?'사용중지':'재활성'}</button></span></div>`);el.innerHTML=h}
-function esc(v){return String(v).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}function escAttr(v){return String(v).replace(/['\\]/g,'')}
-window.addEventListener('DOMContentLoaded',initAuth);
+async function renderAdmin(){
+  const el=$('adminList'); el.innerHTML='<div style="padding:18px;color:#64748b">가입신청을 불러오는 중...</div>';
+  try{
+    const qs=await getDocs(collection(db,'users')); const rows=[]; qs.forEach(d=>rows.push({uid:d.id,...d.data()}));
+    rows.sort((a,b)=>String(a.name||'').localeCompare(String(b.name||''),'ko'));
+    const pending=rows.filter(x=>x.status==='pending'), users=rows.filter(x=>x.status!=='pending');
+    let h=`<h3>승인 대기 ${pending.length}건</h3>`;
+    if(!pending.length)h+='<div style="padding:14px;background:#f8fafc;border-radius:10px;color:#64748b">현재 승인 대기 신청이 없습니다.</div>';
+    pending.forEach(r=>h+=`<div class="adminRow"><b>${esc(r.name)} · ${esc(r.id)}</b><span>${esc(r.org||'-')}</span><span>${esc(r.contact||'-')}</span><span><button style="background:#dcfce7;color:#166534" data-act="approve" data-uid="${r.uid}">승인</button> <button style="background:#fee2e2;color:#991b1b" data-act="reject" data-uid="${r.uid}">거절</button></span></div>`);
+    h+=`<h3 style="margin-top:24px">처리 사용자 ${users.length}명</h3>`;
+    users.forEach(r=>h+=`<div class="adminRow"><b>${esc(r.name)} · ${esc(r.id)}</b><span>${esc(r.org||'-')}</span><span>${r.status==='approved'?'사용중':r.status==='suspended'?'사용중지':'거절'}</span><span>${r.status==='approved'?`<button style="background:#fee2e2;color:#991b1b" data-act="suspend" data-uid="${r.uid}">사용중지</button>`:`<button style="background:#dcfce7;color:#166534" data-act="approve" data-uid="${r.uid}">승인/재활성</button>`}</span></div>`);
+    el.innerHTML=h;
+    el.querySelectorAll('button[data-act]').forEach(b=>b.onclick=async()=>{const act=b.dataset.act, uid=b.dataset.uid; const status=act==='approve'?'approved':act==='reject'?'rejected':'suspended'; await updateDoc(doc(db,'users',uid),{status,updatedAt:serverTimestamp(),processedBy:auth.currentUser.uid}); await renderAdmin();});
+  }catch(e){el.innerHTML='<div style="padding:14px;background:#fee2e2;color:#991b1b;border-radius:10px">관리자 데이터 조회 오류: '+esc(e.message)+'</div>'}
+}
+
+onAuthStateChanged(auth,async u=>{
+  if(!u){gate.style.display='flex';adminBtn.style.display='none';return}
+  if(ADMIN_UIDS.has(u.uid)){gate.style.display='none';adminBtn.style.display='block';return}
+  try{const snap=await getDoc(doc(db,'users',u.uid)); if(snap.exists()&&snap.data().status==='approved'){gate.style.display='none';} else {gate.style.display='flex';}}catch{gate.style.display='flex'}
+});
+
+window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v5 · Firebase 실시간 승인 연결';badge.style.background='#065f46';}});
 </script>
 <div class="wrap">
 <section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의 정신 · 상담/교육용 시뮬레이션</div></section>
@@ -858,55 +918,7 @@ function openEmbeddedPolicy(company){
    return;
  }
  try{
-   win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+company+' 약관 여는 중...</title></head><body style="font-family:sans-serif;padding:24px">약관 PDF를 여는 중입니다...
-<!-- ===== v4 CLOUD CONNECTION LAYER =====
- GitHub Pages는 화면 배포, Firebase는 인증/가입신청/승인/알림 데이터 동기화를 담당합니다.
- 아래 firebaseConfig는 Firebase Console > 프로젝트 설정 > 내 앱 > SDK 설정 및 구성 값으로 교체합니다.
- 실제 FCM 푸시는 HTTPS(GitHub Pages 가능), service worker, VAPID key, Cloud Function(또는 안전한 서버 발송)이 추가로 필요합니다.
--->
-<script type="module" id="hongikFirebaseV4">
-const firebaseConfig = {
-  apiKey: "PASTE_FIREBASE_API_KEY",
-  authDomain: "PASTE_PROJECT.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE_PROJECT.firebasestorage.app",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
-};
-
-const HONGIK_V4 = {
-  mode: firebaseConfig.apiKey.startsWith('PASTE_') ? 'LOCAL_FALLBACK' : 'FIREBASE',
-  adminPhonePurpose: '가입신청 발생 시 관리자 1·2 모두 승인대기 알림 수신',
-  collections: {
-    users: 'users',
-    approvalRequests: 'approvalRequests',
-    admins: 'admins',
-    notificationTokens: 'notificationTokens'
-  }
-};
-window.HONGIK_V4 = HONGIK_V4;
-
-const badge=document.getElementById('cloudReadyBanner');
-if(badge){
-  badge.textContent = HONGIK_V4.mode==='FIREBASE' ? 'v4 · Firebase 연결됨' : 'v4 · Firebase 설정값 입력 대기';
-  badge.style.background = HONGIK_V4.mode==='FIREBASE' ? '#065f46' : '#9a3412';
-}
-
-// Firebase 설정값 입력 전에는 기존 v3 로컬 승인 기능으로 테스트할 수 있습니다.
-// 설정값 입력 후에는 아래 import/초기화 블록을 활성화하여 Authentication + Firestore로 전환합니다.
-/*
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js';
-import { getAuth } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js';
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js';
-import { getMessaging } from 'https://www.gstatic.com/firebasejs/12.4.0/firebase-messaging.js';
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const messaging = getMessaging(app);
-*/
-</script>
-
-</body></html>');
+   win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+company+' 약관 여는 중...</title></head><body style="font-family:sans-serif;padding:24px">약관 PDF를 여는 중입니다...</body></html>');
    win.document.close();
  }catch(e){}
 
