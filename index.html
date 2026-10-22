@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>자동차보험 자손·자상 보상분석 v14 | 홍익보험의 정신</title>
+<title>자동차보험 자손·자상 보상분석 v1.00 | 홍익보험의 정신</title>
 <style>
 :root{--nav:#102a43;--blue:#2563eb;--green:#059669;--purple:#7c3aed;--orange:#f59e0b;--bg:#eef3f8;--card:#fff;--line:#d7e0ea;--ink:#172033;--muted:#667085}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:"Malgun Gothic",Arial,sans-serif;color:var(--ink)}
@@ -328,15 +328,25 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 }
 .hero:after{content:'';position:absolute;right:-90px;top:-120px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(211,170,73,.13) 0%,rgba(211,170,73,0) 68%);pointer-events:none}
 </style>
+
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="64x64" href="./car-icon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./car-icon-180.png">
+<meta name="theme-color" content="#0b3a6e">
+<meta name="application-name" content="자동차보상">
+<meta name="apple-mobile-web-app-title" content="자동차보상">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head><body>
-<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v10 · 기능 안정화</div>
+<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v1.00 · 자동차보상</div>
 <style>
 #authGate{position:fixed;inset:0;z-index:200000;background:linear-gradient(135deg,#07182b,#0f3b62 55%,#312e81);display:flex;align-items:center;justify-content:center;padding:18px}.authCard{width:min(500px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 80px #0007}.authBrand{font-size:13px;font-weight:900;color:#1d4ed8}.authCard h2{margin:6px 0 8px;font-size:26px}.authCard p{color:#64748b;font-size:13px;line-height:1.6}.authCard input{margin:6px 0}.authBtn{width:100%;border:0;border-radius:12px;padding:13px;background:#0f4c75;color:#fff;font-weight:900;cursor:pointer;margin-top:8px}.authSub{background:#eef2ff;color:#3730a3}.authMsg{margin-top:12px;font-size:12px;font-weight:800;line-height:1.5}.authTabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.authTabs button{padding:10px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc;font-weight:900;cursor:pointer}.adminPanel{position:fixed;inset:0;z-index:210000;background:#eef3f8;display:none;overflow:auto;padding:20px}.adminBox{max-width:900px;margin:auto;background:#fff;border-radius:20px;padding:22px}.adminRow{display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:8px;align-items:center;padding:12px;border-bottom:1px solid #e5e7eb}.adminRow button{border:0;border-radius:9px;padding:8px 10px;font-weight:900;cursor:pointer}.topAdminBtn{position:fixed;right:14px;bottom:14px;z-index:10000;border:0;border-radius:999px;background:#0f4c75;color:#fff;padding:11px 15px;font-weight:900;box-shadow:0 8px 24px #0003;display:none}@media(max-width:650px){.adminRow{grid-template-columns:1fr}.authCard{padding:21px}}
 
 .adminStat{background:#f8fafc;border:1px solid #e2e8f0;border-radius:13px;padding:13px;text-align:center}.adminStat b{display:block;font-size:24px;color:#0f4c75}.adminStat span{font-size:11px;color:#64748b;font-weight:800}.adminRow3{grid-template-columns:1.4fr 1fr auto}.adminRowProcessed{grid-template-columns:1.25fr 1fr .8fr auto}@media(max-width:650px){.adminBox>div:first-child{align-items:flex-start!important;flex-direction:column}.adminStat{padding:9px 5px}.adminStat b{font-size:19px}.adminStat span{font-size:9px}.adminRow3,.adminRowProcessed{grid-template-columns:1fr!important}}
 </style>
 <div id="authGate"><div class="authCard">
-<div class="authBrand">홍익보험의 정신 · Firebase Secure Access</div><h2 id="authTitle">자손 · 자상 보상분석</h2>
+<div class="authBrand">홍익보험의 정신 · Firebase Secure Access</div><h2 id="authTitle">자손 · 자상 보상분석 <span style="font-size:13px;color:#64748b;font-weight:800">v1.00</span></h2>
 <p id="authIntro">승인된 사용자만 이용할 수 있습니다. 신규 사용자는 가입 신청 후 관리자 승인을 받아야 합니다.</p>
 <div class="authTabs"><button id="tabLogin" type="button">로그인</button><button id="tabRequest" type="button">가입 신청</button></div>
 <div id="loginPane"><input id="loginId" placeholder="아이디"><input id="loginPw" type="password" placeholder="비밀번호"><button class="authBtn" id="loginBtn" type="button">로그인</button><div style="font-size:11px;color:#64748b;margin-top:8px">관리자는 admin1 또는 admin2로 로그인합니다.</div></div>
@@ -460,10 +470,10 @@ onAuthStateChanged(auth,async u=>{
   try{const snap=await getDoc(doc(db,'users',u.uid)); if(snap.exists()&&snap.data().status==='approved'){gate.style.display='none';} else {gate.style.display='flex';}}catch{gate.style.display='flex'}
 });
 
-window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v10 · 기능 안정화';badge.style.background='#065f46';}});
+window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v1.00 · 자동차보상';badge.style.background='#065f46';}});
 </script>
 <div class="wrap">
-<section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의정신(김성호,정진성) · 상담/교육용 시뮬레이션</div></section>
+<section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS · v1.00</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의정신(김성호,정진성) · 상담/교육용 시뮬레이션</div></section>
 <nav class="nav">
 <button id="n1" class="active" onclick="showPage(1)">기본정보</button>
 <button id="n2" onclick="showPage(2)">부상한도</button>
@@ -1070,7 +1080,14 @@ function openEmbeddedPolicy(company){
    return;
  }
  try{
-   win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+company+' 약관 여는 중...</title></head><body style="font-family:sans-serif;padding:24px">약관 PDF를 여는 중입니다...</body></html>');
+   win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+company+' 약관 여는 중...</title>
+</head><body style="font-family:sans-serif;padding:24px">약관 PDF를 여는 중입니다...
+<script>
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));
+}
+</script>
+</body></html>');
    win.document.close();
  }catch(e){}
 
@@ -1123,7 +1140,7 @@ function closeEmbeddedPolicy(){
 <b>제공해드리는 콘텐츠의 지적재산권은 홍익보험의 정신에 있습니다. 특별한 경우, 예외적 활용도가 있으신 경우 반드시 사전에 협의해 주시기 바랍니다. 그 외 경우로 활용하는 경우, 저작권 이슈가 발생할 수 있음을 양지하시기 바랍니다. 특히 온라인 공간 및 AI 서비스에 저희 자료를 올리시는 것 역시 엄격히 금지되어 있습니다. (사용자에게 전달받은 제3자 공유도 마찬가지입니다.) 모든 자료는 홍익보험의 정신이 자체적으로 제작되어 지식재산으로 보호받고 있습니다.</b>
 </div>
 <div style="text-align:center;margin:8px auto 22px;font-size:13px;font-weight:800;color:#64748b;letter-spacing:.2px;">
-made by 홍익보험의정신(김성호,정진성)
+made by 홍익보험의정신(김성호,정진성) · v1.00
 </div>
 
 <div id="policyModal" class="policyModal" aria-hidden="true">
