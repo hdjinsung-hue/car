@@ -1,6 +1,7 @@
-<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>자동차보험 자손·자상 보상분석 v1.03 | 홍익보험의 정신</title>
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>자동차보험 자손·자상 보상분석 v1.16 | 홍익보험의 정신</title>
 <style>
 :root{--nav:#102a43;--blue:#2563eb;--green:#059669;--purple:#7c3aed;--orange:#f59e0b;--bg:#eef3f8;--card:#fff;--line:#d7e0ea;--ink:#172033;--muted:#667085}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:"Malgun Gothic",Arial,sans-serif;color:var(--ink)}
@@ -53,7 +54,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 .inputLegend{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 13px;padding:11px 13px;border-radius:13px;background:#fff;border:1px solid #d7e0ea;font-size:13px;font-weight:900}
 .legendDot{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:5px;vertical-align:-2px}
 
-/* v1.03 사고유형 선택 */
+/* v1.16 사고유형 선택 */
 .accidentChooser{margin:12px 0 14px;padding:13px;border:1px solid #d9e2ec;border-radius:16px;background:linear-gradient(135deg,#f8fbff,#f4f7fb)}
 .accidentChooserTitle{font-weight:900;color:#102a43;margin-bottom:9px;font-size:15px}
 .accidentToggle{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -65,6 +66,26 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 @media(max-width:640px){.accidentToggle{grid-template-columns:1fr}.accidentBtn{padding:12px 10px}}
 
 .wageAutoRow{display:flex;gap:10px;align-items:center}.wageAutoRow input{flex:1}.wageBadge{display:inline-flex;align-items:center;justify-content:center;min-width:86px;padding:9px 12px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-weight:900;font-size:12px;border:1px solid #bae6fd;white-space:nowrap}.wageBadge.manual{background:#fff7ed;color:#c2410c;border-color:#fed7aa}.wageTableToggle{margin-top:9px;border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:10px;padding:8px 11px;font-weight:800;cursor:pointer}.wageTableToggle:hover{background:#f8fafc}.wageTableWrap{margin-top:10px;overflow:auto;border:1px solid #dbe4ee;border-radius:12px;background:#fff}.wageTable{width:100%;border-collapse:collapse;min-width:720px;font-size:12px}.wageTable th,.wageTable td{padding:9px 10px;border-bottom:1px solid #e5e7eb;text-align:right;white-space:nowrap}.wageTable th:first-child,.wageTable td:first-child{text-align:left}.wageTable thead th{background:#f1f5f9;color:#334155;font-weight:900}.wageTable tbody tr:last-child td{border-bottom:0}.wageFoot{padding:9px 10px;background:#f8fafc;color:#64748b;font-size:11px;line-height:1.55;border-top:1px solid #e5e7eb}@media(max-width:640px){.wageAutoRow{align-items:stretch}.wageBadge{min-width:74px;padding:8px}.wageTableToggle{width:100%}}
+
+.futureRuleBox{margin-top:10px;padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;background:#f8fafc;line-height:1.65;font-size:13px}.futureRuleBox b{color:#0f172a}.futureRuleBox.practice{background:#fff7ed;border-color:#fdba74;color:#9a3412}.futureRuleBox.formal{background:#fef2f2;border-color:#fca5a5;color:#991b1b}.futureRuleBox.legacy{background:#eff6ff;border-color:#93c5fd;color:#1e40af}.futureRuleBox.error{background:#fff1f2;border-color:#fb7185;color:#9f1239}.futureRuleTag{display:inline-block;margin-right:6px;padding:3px 7px;border-radius:999px;background:#102a43;color:#fff;font-size:11px;font-weight:900}.futureRuleSub{margin-top:5px;font-size:12px;color:inherit}.responsibilityHint{margin-top:5px;font-size:11px;color:#64748b;line-height:1.5}
+
+.calcInputHeader{margin-top:14px;padding:14px 16px;border:1px solid #cbd5e1;border-radius:16px;background:linear-gradient(135deg,#f8fbff,#f1f5ff);box-shadow:0 6px 18px #102a4310}.calcInputTitle{font-size:19px;font-weight:900;color:#102a43}.calcInputDesc{margin-top:5px;color:#526277;font-size:13px;line-height:1.55}.calcInputHeader + .inputs{margin-top:10px}
+
+.opponentExplainGrid{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(320px,1fr);gap:16px;align-items:stretch}
+.opponentExplainGrid #opponentBreakdown{display:flex;flex-direction:column;justify-content:flex-start;min-height:100%;padding:20px 22px;border:1px solid #cbd5e1;border-radius:16px;background:#fff;font-size:17px;line-height:1.85;color:#102a43;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.opponentExplainGrid #opponentBreakdown .breakdownTitle{display:block;font-size:22px;font-weight:900;line-height:1.3;color:#102a43;margin-bottom:10px}
+.opponentExplainGrid #opponentBreakdown .breakdownRow{display:block;margin:4px 0}
+.opponentExplainGrid #opponentBreakdown .breakdownRow b{font-weight:900}
+.opponentExplainGrid #opponentBreakdown .breakdownTotal{display:block;margin-top:14px;padding-top:12px;border-top:2px dashed #cbd5e1;font-size:28px;line-height:1.2;font-weight:900;color:#0f172a}
+.opponentExplainGrid #opponentBreakdown .breakdownNote{display:block;margin-top:10px;font-size:15px;line-height:1.6;color:#b45309;font-weight:800}
+.opponentExplainGrid .routeDetail{height:100%;margin:0;padding:18px 20px;font-size:15px;line-height:1.85}
+@media(max-width:1080px){.opponentExplainGrid{grid-template-columns:minmax(0,1.45fr) minmax(280px,1fr)}.opponentExplainGrid #opponentBreakdown{font-size:16px}.opponentExplainGrid #opponentBreakdown .breakdownTitle{font-size:20px}.opponentExplainGrid #opponentBreakdown .breakdownTotal{font-size:24px}}
+@media(max-width:820px){.opponentExplainGrid{grid-template-columns:1fr}.opponentExplainGrid #opponentBreakdown{padding:16px}.opponentExplainGrid #opponentBreakdown .breakdownTitle{font-size:18px}.opponentExplainGrid #opponentBreakdown .breakdownTotal{font-size:22px}.opponentExplainGrid .routeDetail{padding:16px;font-size:14px}}
+
+/* v1.16 안내문 한줄 표시 최적화 */
+.oneLineNotice{white-space:nowrap;overflow:visible;font-size:clamp(9px,.78vw,12px)!important;line-height:1.35!important;letter-spacing:-.02em}
+.oneLineWarning{white-space:nowrap;overflow:visible;font-size:clamp(10px,.86vw,13px)!important;line-height:1.4!important;letter-spacing:-.02em}
+@media (max-width:900px){.oneLineNotice,.oneLineWarning{white-space:normal;font-size:12px!important;line-height:1.55!important}}
 </style><style>
 .conditionLayout{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(420px,1.28fr);gap:26px;align-items:start;margin-top:12px}
 .conditionLeft{display:grid;grid-template-columns:1fr;gap:18px}
@@ -321,14 +342,12 @@ label{font-size:12px;color:#59697c;margin-bottom:7px}select,input{min-height:46p
 table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){background:#f8fafc}
 @media(max-width:760px){.wrap{padding:10px 9px 28px}.hero{padding:25px 20px;border-radius:20px}.hero h1{font-size:26px}.hero p{font-size:13px}.nav{position:relative;top:auto;grid-template-columns:repeat(2,1fr);gap:5px}.nav button{padding:11px 7px!important}.panel{padding:16px}.amount{font-size:34px}.results{grid-template-columns:1fr}#p3 .panel[style*="linear-gradient"]>div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr!important}}
 </style>
-
 <style>
 /* v7 brand signature refinement */
 .conditionLeft .hongikMini,
 .conditionLeft .hongikMini *{color:#fff!important;}
 .conditionLeft .hongikTitle{font-weight:900!important;letter-spacing:-.2px!important;}
 </style>
-
 <style>
 /* v8 visual refinement */
 .heroBadge{
@@ -341,32 +360,71 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 }
 .hero:after{content:'';position:absolute;right:-90px;top:-120px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(211,170,73,.13) 0%,rgba(211,170,73,0) 68%);pointer-events:none}
 </style>
-
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="icon" href="./favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="64x64" href="./car-icon-64.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./car-icon-180.png">
-<meta name="theme-color" content="#0b3a6e">
-<meta name="application-name" content="자동차보상">
-<meta name="apple-mobile-web-app-title" content="자동차보상">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+/* v1.16 쌍방사고 처리경로 분리 */
+.mutualRouteBox{margin-top:12px;padding:14px;border:1px solid #cbd5e1;border-radius:14px;background:#fff}
+.mutualRouteTitle{font-size:14px;font-weight:900;color:#102a43;margin-bottom:9px}
+.mutualRouteToggle{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.routeBtn{border:2px solid #cbd5e1;border-radius:12px;padding:12px 10px;background:#fff;color:#334155;font-weight:900;cursor:pointer;transition:.15s}
+.routeBtn:hover{transform:translateY(-1px)}
+.routeBtn.opponentFirst.active{background:linear-gradient(135deg,#0f766e,#14b8a6);border-color:#0f766e;color:#fff;box-shadow:0 0 0 3px #ccfbf1}
+.routeBtn.jasangFirst.active{background:linear-gradient(135deg,#6d28d9,#a855f7);border-color:#6d28d9;color:#fff;box-shadow:0 0 0 3px #ede9fe}
+.routeDetail{margin-top:10px;padding:12px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;line-height:1.65;font-size:12px;color:#475569}
+.routeInputGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:11px}
+.routeInputGrid label{margin:0;color:#713f12}
+.routeResultPanel{margin-top:12px;border-radius:14px;border:1px solid #d9e2ec;background:linear-gradient(135deg,#f8fbff,#f8fafc);padding:14px}
+.routeResultTitle{font-size:15px;font-weight:900;color:#102a43;margin-bottom:10px}
+.routeMetrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px}
+.routeMetric{padding:11px;border-radius:11px;background:#fff;border:1px solid #e2e8f0;text-align:center}
+.routeMetric span{display:block;font-size:11px;color:#64748b;font-weight:800;margin-bottom:5px}
+.routeMetric b{font-size:17px;color:#0f172a}
+.routeMetric.primary b{color:#2563eb}.routeMetric.auto b{color:#059669}.routeMetric.warn b{color:#b45309}
+.routeResultNote{margin-top:10px;padding:10px 11px;border-radius:10px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;font-size:12px;line-height:1.6;font-weight:700}
+.routeResultNote.ok{background:#ecfdf5;border-color:#a7f3d0;color:#047857}
+@media(max-width:760px){.mutualRouteToggle,.routeInputGrid,.routeMetrics{grid-template-columns:1fr}}
+</style>
+<style>
+/* v1.18 compact one-line guidance */
+.compactOneLine,#memo{font-size:clamp(10px,.82vw,12px)!important;line-height:1.35!important;padding:11px 16px!important;white-space:nowrap!important;word-break:keep-all!important;overflow:hidden!important;text-overflow:clip!important;letter-spacing:-.025em!important}
+#compareBasis b,#memo b{font-weight:900!important}
+@media(max-width:1100px){.compactOneLine,#memo{font-size:9px!important;padding:10px 12px!important}}
+@media(max-width:820px){.compactOneLine,#memo{font-size:12px!important;line-height:1.55!important;white-space:normal!important;overflow:visible!important;padding:12px 14px!important}}
+</style>
+<link href="./manifest.webmanifest" rel="manifest"/>
+<link href="./favicon.ico" rel="icon" sizes="any"/>
+<link href="./car-icon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+<link href="./car-icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="#0b3a6e" name="theme-color"/>
+<meta content="자동차보상" name="application-name"/>
+<meta content="자동차보상" name="apple-mobile-web-app-title"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+<style>
+/* v1.16 사고유형·경상환자 사고일별 로직 */
+.scenarioLogic{margin:12px 0 14px;padding:16px 17px;border-radius:16px;border:1px solid #cdd9e8;background:linear-gradient(135deg,#f8fbff,#eef6ff)}
+.scenarioLogic .logicTitle{font-size:16px;font-weight:900;color:#102a43;margin-bottom:7px}.scenarioLogic .logicBody{font-size:14px;line-height:1.65;color:#334155}.scenarioLogic .logicTag{display:inline-block;padding:5px 9px;border-radius:999px;background:#102a43;color:#fff;font-size:12px;font-weight:900;margin-right:6px}
+#mutualDetailBox{display:none;margin:10px 0 14px;padding:14px;border:1px solid #f1c977;border-radius:14px;background:#fffbeb}.mutualGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mutualGrid label{font-weight:900;color:#713f12}.mutualGrid input,.mutualGrid select{width:100%;margin-top:6px;padding:11px;border:1px solid #d6b665;border-radius:10px;background:#fff;font-weight:800}
+#minorRulePanel{display:none;margin:14px 0;border:2px solid #7c3aed;border-radius:18px;overflow:hidden;background:#fff}.minorRuleHead{padding:14px 16px;background:linear-gradient(135deg,#4c1d95,#7c3aed);color:#fff}.minorRuleHead b{font-size:17px}.minorRuleHead span{display:block;margin-top:5px;font-size:12px;opacity:.9}.minorRuleBody{padding:15px}.minorEra{padding:12px 14px;border-radius:12px;background:#f5f3ff;border:1px solid #ddd6fe;line-height:1.65;margin-bottom:12px}.minorEra strong{color:#5b21b6}.minorCalcGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.minorMetric{padding:11px;border-radius:12px;background:#f8fafc;border:1px solid #dbe4ee;text-align:center}.minorMetric span{display:block;font-size:11px;color:#64748b;margin-bottom:4px}.minorMetric b{font-size:17px;color:#0f172a}.minorWarn{margin-top:10px;padding:11px 13px;border-radius:12px;background:#fff7ed;border:1px solid #fdba74;color:#9a3412;font-size:13px;line-height:1.6}.minorOk{background:#ecfdf5;border-color:#86efac;color:#166534}.minorInfo{background:#eff6ff;border-color:#93c5fd;color:#1e40af}.eraTableWrap{overflow:auto;margin-top:12px}.eraTable{min-width:720px;width:100%;border-collapse:collapse;font-size:12px}.eraTable th,.eraTable td{padding:9px 8px;border:1px solid #dbe4ee;vertical-align:top}.eraTable th{background:#102a43;color:#fff}.eraTable td:first-child{font-weight:900;white-space:nowrap}.treatmentDurationBox{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px}.treatmentDurationBox label{font-size:12px;font-weight:900;color:#475569}.treatmentDurationBox input{width:100%;margin-top:5px;padding:10px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
+.logicSelectors{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 14px;padding:12px;border:1px solid #d7e3f1;border-radius:14px;background:#fff}.logicSelectors label{font-size:12px;font-weight:900;color:#334155}.logicSelectors select,.logicSelectors input{width:100%;margin-top:5px;padding:11px;border:1px solid #bfcee0;border-radius:10px;background:#fff;font-weight:800;color:#0f172a}.logicCoverDisplay{display:flex;align-items:center;justify-content:center;min-height:43px;margin-top:5px;border:1px solid #bfcee0;border-radius:10px;background:#f8fafc;font-weight:900;color:#475569;text-align:center;padding:7px}
+.flowChart{display:flex;align-items:stretch;gap:7px;overflow-x:auto;padding:6px 1px 3px;margin-top:12px}.flowNode{min-width:145px;flex:1;padding:12px 10px;border-radius:13px;border:1px solid #cbd5e1;background:#fff;text-align:center;display:flex;flex-direction:column;justify-content:center;box-shadow:0 4px 12px #0f172a0a}.flowNode .flowStep{font-size:10px;font-weight:900;color:#64748b;margin-bottom:5px}.flowNode b{font-size:13px;line-height:1.45;color:#102a43}.flowNode.primary{background:#eff6ff;border-color:#93c5fd}.flowNode.cover{background:#f5f3ff;border-color:#c4b5fd}.flowNode.warn{background:#fff7ed;border-color:#fdba74}.flowNode.result{background:#ecfdf5;border-color:#86efac}.flowArrow{display:flex;align-items:center;justify-content:center;min-width:22px;color:#64748b;font-size:22px;font-weight:900}.logicSummary{margin-top:10px;padding:10px 12px;border-radius:11px;background:#f8fafc;border:1px solid #e2e8f0;line-height:1.6;font-size:13px;color:#334155}
+@media(max-width:760px){.mutualGrid,.treatmentDurationBox,.logicSelectors{grid-template-columns:1fr}.minorCalcGrid{grid-template-columns:1fr 1fr}.flowChart{display:grid;grid-template-columns:1fr}.flowArrow{transform:rotate(90deg);min-height:18px}.flowNode{min-width:0}}
+</style>
 </head><body>
-<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v1.03 · 자동차보상</div>
+<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v1.16 · 자동차보상</div>
 <style>
 #authGate{position:fixed;inset:0;z-index:200000;background:linear-gradient(135deg,#07182b,#0f3b62 55%,#312e81);display:flex;align-items:center;justify-content:center;padding:18px}.authCard{width:min(500px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 80px #0007}.authBrand{font-size:13px;font-weight:900;color:#1d4ed8}.authCard h2{margin:6px 0 8px;font-size:26px}.authCard p{color:#64748b;font-size:13px;line-height:1.6}.authCard input{margin:6px 0}.authBtn{width:100%;border:0;border-radius:12px;padding:13px;background:#0f4c75;color:#fff;font-weight:900;cursor:pointer;margin-top:8px}.authSub{background:#eef2ff;color:#3730a3}.authMsg{margin-top:12px;font-size:12px;font-weight:800;line-height:1.5}.authTabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.authTabs button{padding:10px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc;font-weight:900;cursor:pointer}.adminPanel{position:fixed;inset:0;z-index:210000;background:#eef3f8;display:none;overflow:auto;padding:20px}.adminBox{max-width:900px;margin:auto;background:#fff;border-radius:20px;padding:22px}.adminRow{display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:8px;align-items:center;padding:12px;border-bottom:1px solid #e5e7eb}.adminRow button{border:0;border-radius:9px;padding:8px 10px;font-weight:900;cursor:pointer}.topAdminBtn{position:fixed;right:14px;bottom:14px;z-index:10000;border:0;border-radius:999px;background:#0f4c75;color:#fff;padding:11px 15px;font-weight:900;box-shadow:0 8px 24px #0003;display:none}@media(max-width:650px){.adminRow{grid-template-columns:1fr}.authCard{padding:21px}}
 
 .adminStat{background:#f8fafc;border:1px solid #e2e8f0;border-radius:13px;padding:13px;text-align:center}.adminStat b{display:block;font-size:24px;color:#0f4c75}.adminStat span{font-size:11px;color:#64748b;font-weight:800}.adminRow3{grid-template-columns:1.4fr 1fr auto}.adminRowProcessed{grid-template-columns:1.25fr 1fr .8fr auto}@media(max-width:650px){.adminBox>div:first-child{align-items:flex-start!important;flex-direction:column}.adminStat{padding:9px 5px}.adminStat b{font-size:19px}.adminStat span{font-size:9px}.adminRow3,.adminRowProcessed{grid-template-columns:1fr!important}}
 </style>
 <div id="authGate"><div class="authCard">
-<div class="authBrand">홍익보험의 정신 · Firebase Secure Access</div><h2 id="authTitle">자손 · 자상 보상분석 <span style="font-size:13px;color:#64748b;font-weight:800">v1.03</span></h2>
+<div class="authBrand">홍익보험의 정신 · Firebase Secure Access</div><h2 id="authTitle">자손 · 자상 보상분석 <span style="font-size:13px;color:#64748b;font-weight:800">v1.16</span></h2>
 <p id="authIntro">승인된 사용자만 이용할 수 있습니다. 신규 사용자는 가입 신청 후 관리자 승인을 받아야 합니다.</p>
 <div class="authTabs"><button id="tabLogin" type="button">로그인</button><button id="tabRequest" type="button">가입 신청</button></div>
-<div id="loginPane"><input id="loginId" placeholder="아이디"><input id="loginPw" type="password" placeholder="비밀번호"><button class="authBtn" id="loginBtn" type="button">로그인</button><div style="font-size:11px;color:#64748b;margin-top:8px">관리자는 admin1 또는 admin2로 로그인합니다.</div></div>
-<div id="requestPane" style="display:none"><input id="reqName" placeholder="성명"><input id="reqContact" inputmode="tel" placeholder="연락처"><input id="reqWishId" placeholder="희망 아이디"><input id="reqPw" type="password" placeholder="비밀번호 (6자 이상)"><input id="reqPw2" type="password" placeholder="비밀번호 확인"><button class="authBtn authSub" id="requestBtn" type="button">가입 신청</button><div style="font-size:11px;color:#64748b;margin-top:8px">신청 즉시 승인대기 상태로 등록되며, 관리자가 승인한 뒤 이용할 수 있습니다.</div></div>
-<div id="authMsg" class="authMsg"></div><p style="margin-top:15px;color:#b91c1c;font-weight:800">※ 가입정보는 Firebase Authentication과 Firestore에서 관리됩니다. 승인 전에는 본 프로그램에 진입할 수 없습니다.</p></div></div>
-<button id="adminFloating" class="topAdminBtn" type="button">⚙ 관리자</button>
-<div id="adminPanel" class="adminPanel"><div class="adminBox"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><div><b style="font-size:22px">관리자 승인센터</b><div style="font-size:12px;color:#64748b;margin-top:4px">가입 신청 승인 · 처리자 통계 · 목록 정리</div></div><div style="display:flex;gap:8px"><button id="refreshAdminBtn" type="button" style="border:0;border-radius:10px;padding:10px 14px;background:#0f766e;color:#fff;font-weight:900">↻ 새로고침</button><button id="closeAdminBtn" type="button" style="border:0;border-radius:10px;padding:10px 14px;background:#0f4c75;color:#fff;font-weight:900">프로그램 보기</button></div></div><div id="adminList" style="margin-top:18px"></div><div style="margin-top:20px;padding:14px;background:#f8fafc;border-radius:12px;font-size:12px;color:#64748b;line-height:1.7">사용자는 가입 시 직접 비밀번호를 설정합니다. 처리 사용자에서 ‘목록삭제’를 눌러도 로그인 권한과 승인 통계는 유지되며 관리자 화면에서만 숨김 처리됩니다.</div></div></div>
+<div id="loginPane"><input id="loginId" placeholder="아이디"/><input id="loginPw" placeholder="비밀번호" type="password"/><button class="authBtn" id="loginBtn" type="button">로그인</button><div style="font-size:11px;color:#64748b;margin-top:8px">관리자는 admin1 또는 admin2로 로그인합니다.</div></div>
+<div id="requestPane" style="display:none"><input id="reqName" placeholder="성명"/><input id="reqContact" inputmode="tel" placeholder="연락처"/><input id="reqWishId" placeholder="희망 아이디"/><input id="reqPw" placeholder="비밀번호 (6자 이상)" type="password"/><input id="reqPw2" placeholder="비밀번호 확인" type="password"/><button class="authBtn authSub" id="requestBtn" type="button">가입 신청</button><div style="font-size:11px;color:#64748b;margin-top:8px">신청 즉시 승인대기 상태로 등록되며, 관리자가 승인한 뒤 이용할 수 있습니다.</div></div>
+<div class="authMsg" id="authMsg"></div><p style="margin-top:15px;color:#b91c1c;font-weight:800">※ 가입정보는 Firebase Authentication과 Firestore에서 관리됩니다. 승인 전에는 본 프로그램에 진입할 수 없습니다.</p></div></div>
+<button class="topAdminBtn" id="adminFloating" type="button">⚙ 관리자</button>
+<div class="adminPanel" id="adminPanel"><div class="adminBox"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><div><b style="font-size:22px">관리자 승인센터</b><div style="font-size:12px;color:#64748b;margin-top:4px">가입 신청 승인 · 처리자 통계 · 목록 정리</div></div><div style="display:flex;gap:8px"><button id="refreshAdminBtn" style="border:0;border-radius:10px;padding:10px 14px;background:#0f766e;color:#fff;font-weight:900" type="button">↻ 새로고침</button><button id="closeAdminBtn" style="border:0;border-radius:10px;padding:10px 14px;background:#0f4c75;color:#fff;font-weight:900" type="button">프로그램 보기</button></div></div><div id="adminList" style="margin-top:18px"></div><div style="margin-top:20px;padding:14px;background:#f8fafc;border-radius:12px;font-size:12px;color:#64748b;line-height:1.7">사용자는 가입 시 직접 비밀번호를 설정합니다. 처리 사용자에서 ‘목록삭제’를 눌러도 로그인 권한과 승인 통계는 유지되며 관리자 화면에서만 숨김 처리됩니다.</div></div></div>
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
@@ -489,63 +547,59 @@ onAuthStateChanged(auth,async u=>{
   try{const snap=await getDoc(doc(db,'users',u.uid)); if(snap.exists()&&snap.data().status==='approved'){gate.style.display='none';adminBtn.style.display='none';} else {gate.style.display='flex';}}catch{gate.style.display='flex'}
 });
 
-window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v1.03 · 자동차보상';badge.style.background='#065f46';}});
+window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v1.16 · 자동차보상';badge.style.background='#065f46';}});
 </script>
 <div class="wrap">
-<section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS · v1.03</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의정신(김성호,정진성) · 상담/교육용 시뮬레이션</div></section>
+<section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS · v1.16</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의정신(김성호,정진성) · 상담/교육용 시뮬레이션</div></section>
 <nav class="nav">
-<button id="n1" class="active" onclick="showPage(1)">기본정보</button>
+<button class="active" id="n1" onclick="showPage(1)">기본정보</button>
 <button id="n2" onclick="showPage(2)">부상한도</button>
 <button id="n3" onclick="showPage(3)">보상비교</button>
 <button id="n4" onclick="showPage(4)">약관 · 산정기준</button>
 </nav>
-
-<section id="p1" class="page active">
+<section class="page active" id="p1">
 <div class="panel">
 <div class="title">STEP 01 · 내 자동차보험 보상조건 확인</div>
-
 <div class="conditionLayout">
-  <div class="conditionLeft">
-    <div><label>① 보험회사 선택</label><select id="co"><option>현대해상</option><option>삼성화재</option><option>DB손해보험</option><option>KB손해보험</option><option>메리츠화재</option></select></div>
-    <div><label>② 사고일</label><input id="accDate" type="date" value="2026-10-23"></div>
-    <div><label>③ 부상급수 선택</label><select id="grade"></select></div>
-    <div class="hongikMini">
+<div class="conditionLeft">
+<div><label>① 보험회사 선택</label><select id="co"><option>현대해상</option><option>삼성화재</option><option>DB손해보험</option><option>KB손해보험</option><option>메리츠화재</option></select></div>
+<div><label>② 사고일</label><input id="accDate" type="date" value="2026-10-23"/></div>
+<div><label>③ 부상급수 선택</label><select id="grade"></select></div>
+<div class="hongikMini">
 <div class="hongikCopy">
-    <div class="hongikTitle">홍익보험의정신(김성호,정진성)</div>
-    <div class="hongikMain">보험으로 사람을 널리 이롭게 한다</div>
-    <div class="hongikSub">고객의 오늘을 지키고 · 가족의 내일을 세우며 · 끝까지 책임진다</div>
-  </div>
+<div class="hongikTitle">홍익보험의정신(김성호,정진성)</div>
+<div class="hongikMain">보험으로 사람을 널리 이롭게 한다</div>
+<div class="hongikSub">고객의 오늘을 지키고 · 가족의 내일을 세우며 · 끝까지 책임진다</div>
 </div>
-  </div>
-
-  <div class="conditionRight">
-    <div><label>④ 가입 담보 선택 <span style="color:#dc2626">(둘 중 하나만 선택)</span></label>
-      <div style="padding:14px;border:2px solid #dbe4ee;border-radius:16px;background:#f8fafc">
-        <div style="font-size:13px;font-weight:900;color:#475569;margin-bottom:9px">가입한 담보 버튼을 눌러주세요.</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <button type="button" id="chooseJasons" style="min-height:64px;border-radius:14px;font-size:15px;font-weight:900;cursor:pointer;word-break:keep-all;white-space:nowrap;padding:8px 5px">자기신체사고<br><span style="font-size:12px">(자손)</span></button>
-          <button type="button" id="chooseJasang" style="min-height:64px;border-radius:14px;font-size:16px;font-weight:900;cursor:pointer;word-break:keep-all;white-space:nowrap;padding:8px 5px">자동차상해<br><span style="font-size:12px">(자상)</span></button>
-        </div>
-        <div id="coverageSelectedText" style="margin-top:10px;padding:9px 11px;border-radius:10px;background:#fff;color:#334155;font-weight:900;text-align:center">아직 담보를 선택하지 않았습니다.</div>
-      </div>
-      <input type="hidden" id="coverType" value="">
-      <div id="jasonsPlanBox"><label>자손 부상 가입금액</label><select id="plan"></select><div class="muted">자손은 상해급수별 한도가 적용됩니다.</div></div>
-      <div id="jasangPlanBox" style="display:none"><label>자상 부상 가입금액</label><select id="jasangPlan"></select><div class="muted" id="jasangLimitHint">보험사를 선택하면 해당 회사의 자동차상해 부상 가입금액만 표시됩니다.</div></div>
-    </div>
-  </div>
 </div>
-
+</div>
+<div class="conditionRight">
+<div><label>④ 가입 담보 선택 <span style="color:#dc2626">(둘 중 하나만 선택)</span></label>
+<div style="padding:14px;border:2px solid #dbe4ee;border-radius:16px;background:#f8fafc">
+<div style="font-size:13px;font-weight:900;color:#475569;margin-bottom:9px">가입한 담보 버튼을 눌러주세요.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+<button id="chooseJasons" style="min-height:64px;border-radius:14px;font-size:15px;font-weight:900;cursor:pointer;word-break:keep-all;white-space:nowrap;padding:8px 5px" type="button">자기신체사고<br/><span style="font-size:12px">(자손)</span></button>
+<button id="chooseJasang" style="min-height:64px;border-radius:14px;font-size:16px;font-weight:900;cursor:pointer;word-break:keep-all;white-space:nowrap;padding:8px 5px" type="button">자동차상해<br/><span style="font-size:12px">(자상)</span></button>
+</div>
+<div id="coverageSelectedText" style="margin-top:10px;padding:9px 11px;border-radius:10px;background:#fff;color:#334155;font-weight:900;text-align:center">아직 담보를 선택하지 않았습니다.</div>
+</div>
+<input id="coverType" type="hidden" value=""/>
+<div id="jasonsPlanBox"><label>자손 부상 가입금액</label><select id="plan"></select><div class="muted">자손은 상해급수별 한도가 적용됩니다.</div></div>
+<div id="jasangPlanBox" style="display:none"><label>자상 부상 가입금액</label><select id="jasangPlan"></select><div class="muted" id="jasangLimitHint">보험사를 선택하면 해당 회사의 자동차상해 부상 가입금액만 표시됩니다.</div></div>
+</div>
+</div>
+</div>
 <div class="dashboard">
 <div class="statusCard">
 <div class="eyebrow">현재 선택 조건</div>
-<div id="basicHeadline" class="big">-</div>
-<div id="basicSub" class="sub">보험사와 부상급수를 선택하면 바로 확인됩니다.</div>
+<div class="big" id="basicHeadline">-</div>
+<div class="sub" id="basicSub">보험사와 부상급수를 선택하면 바로 확인됩니다.</div>
 </div>
 <div class="quickGrid">
 <div class="quick selfQ" id="selfQuickCard">
 <div class="qtitle">자기신체사고 · 자손 <span id="jasonsStatus"></span></div>
-<div id="basicSelf" class="qvalue">-</div>
-<div id="basicSelfDesc" class="muted">선택한 부상급수의 실제 보상한도를 바로 확인합니다.</div>
+<div class="qvalue" id="basicSelf">-</div>
+<div class="muted" id="basicSelfDesc">선택한 부상급수의 실제 보상한도를 바로 확인합니다.</div>
 <div class="btns"><button class="btn next" onclick="showPage(2)">선택 담보 부상한도 보기</button></div>
 </div>
 <div class="quick autoQ" id="autoQuickCard">
@@ -556,24 +610,20 @@ window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner'
 </div>
 </div>
 </div>
-
-<div id="policyVersionCard" class="callout" style="margin-top:14px;background:#f8fafc;border:2px solid #64748b;color:#111">
+<div class="callout" id="policyVersionCard" style="margin-top:14px;background:#f8fafc;border:2px solid #64748b;color:#111">
 <div style="font-size:15px;font-weight:900;margin-bottom:5px">적용 약관 수정기준</div>
-
 <div class="embeddedPolicyAction">
-  <div class="embeddedPolicyActionText">
-    <b>선택 보험사 자동차보험 약관</b>
-    <span>현재 선택한 보험사의 프로그램 내장 약관을 직접 확인합니다.</span>
-  </div>
-  <button type="button" id="criteriaPolicyButton" onclick="openEmbeddedPolicy(document.getElementById('co').value)">
-    <span id="criteriaPolicyCompany">선택 보험사</span> 약관 보기 (PDF)
+<div class="embeddedPolicyActionText">
+<b>선택 보험사 자동차보험 약관</b>
+<span>현재 선택한 보험사의 프로그램 내장 약관을 직접 확인합니다.</span>
+</div>
+<button id="criteriaPolicyButton" onclick="openEmbeddedPolicy(document.getElementById('co').value)" type="button">
+<span id="criteriaPolicyCompany">선택 보험사</span> 약관 보기 (PDF)
   </button>
 </div>
-
 <div id="policyVersionText" style="font-size:14px;font-weight:800;color:#111">-</div>
 <div style="margin-top:10px">
-  <a id="officialPolicyLink" href="#" target="_blank" rel="noopener noreferrer"
-     style="display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:11px;background:#0f4c75;color:#fff;text-decoration:none;font-size:13px;font-weight:900;word-break:keep-all">
+<a href="#" id="officialPolicyLink" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:11px;background:#0f4c75;color:#fff;text-decoration:none;font-size:13px;font-weight:900;word-break:keep-all" target="_blank">
     선택 보험사 내장 약관 보기 (PDF)
   </a>
 </div>
@@ -584,37 +634,44 @@ window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner'
 <div class="stepHint"><span class="stepNo">3</span> 실제 사고 보상 차이가 궁금하면 <b>보상비교</b>에서 치료비·입원·통원일수를 입력합니다.</div>
 </div>
 </section>
-
-<section id="p2" class="page">
+<section class="page" id="p2">
 <div class="tablebox"><div class="tablehead"><b id="tableTitle">부상급수별 한도표</b><span class="muted" id="verifyText"></span></div><div id="tableMsg"></div><table id="tbl"></table></div>
 <div class="btns"><button class="btn back" onclick="showPage(1)">← 기본정보</button><button class="btn next" onclick="showPage(3)">보상비교 →</button></div>
 </section>
-
-<section id="p3" class="page">
-<div class="panel"><div class="title">STEP 02 · 자손 vs 자상 단순 보상 비교</div>
+<section class="page" id="p3">
+<div class="panel"><div class="title">STEP 02 · 사고유형별 자손 vs 자상 보상 비교</div>
 <div class="inputLegend"><span><i class="legendDot" style="background:#f59e0b"></i>노란색 = 직접 입력해야 하는 항목</span><span><i class="legendDot" style="background:#10b981"></i>초록색 = 자동 계산 항목</span></div>
 <div class="accidentChooser">
-  <div class="accidentChooserTitle">사고유형 선택</div>
-  <div class="accidentToggle">
-    <button type="button" id="accidentSingleBtn" class="accidentBtn single active" onclick="setAccidentType('single')">단독사고 · 단독/일방과실</button>
-    <button type="button" id="accidentMutualBtn" class="accidentBtn mutual" onclick="setAccidentType('mutual')">쌍방사고 · 상대방 있음</button>
-  </div>
-  <input type="hidden" id="atype" value="single">
-  <div id="accidentTypeNote">단독사고 기준: 상대방 대인 공제 없이 자손·자상 자체담보의 보상 차이를 비교합니다.</div>
+<div class="accidentChooserTitle">사고유형 선택</div>
+<div class="accidentToggle">
+<button class="accidentBtn single active" id="accidentSingleBtn" onclick="setAccidentType('single')" type="button">단독사고 · 단독/일방과실</button>
+<button class="accidentBtn mutual" id="accidentMutualBtn" onclick="setAccidentType('mutual')" type="button">쌍방사고 · 상대방 있음</button>
 </div>
-<div class="inputs">
-<div class="entryBox"><label>치료관계비 (원)</label><input id="medical" type="number" placeholder="예: 1500000" min="0"><div class="muted" style="margin-top:5px">사고로 발생한 치료비를 입력합니다.</div></div>
-<div class="entryBox"><label>직불치료비 (원)</label><input id="directMedical" type="number" placeholder="예: 300000" min="0"><div class="muted" style="margin-top:5px">사고와 관련해 본인이 직접 지출한 치료비. 위 치료관계비와 중복 입력하지 마세요.</div></div>
-<div class="autoBox"><label>부상 위자료 (급수 자동)</label><input id="comfort" type="text" readonly></div>
-<div class="entryBox"><label>입원일수 = 휴업일수 기본값</label><input id="inDays" type="number" placeholder="입원일수" min="0"></div>
-<div class="entryBox wageBox" style="grid-column:1/-1"><label>자동차보험 일용근로자 1일 임금 <span id="dailyWagePeriodLabel" style="color:#2563eb">사고일 기준 자동적용</span></label>
+<input id="atype" type="hidden" value="single"/>
+<div id="accidentTypeNote">단독사고 기준: 상대방 대인 공제 없이 자손·자상 자체담보의 보상 차이를 비교합니다.</div>
+</div>
+<div class="scenarioLogic" id="scenarioLogic">
+<div class="logicTitle">사고처리 로직 · 자동 흐름도</div>
+<div class="logicSelectors">
+<label>부상급수 선택<select aria-label="사고처리 로직 부상급수 선택" id="logicGrade"></select></label>
+<label>사고일 선택<input aria-label="사고처리 로직 사고일 선택" id="logicAccDate" type="date"/></label>
+<label>현재 가입담보<div class="logicCoverDisplay" id="logicCoverDisplay">담보 선택 전</div></label>
+</div>
+<div aria-live="polite" class="flowChart" id="scenarioFlowChart"></div>
+<div class="logicSummary" id="scenarioLogicBody">사고유형·가입담보·부상급수·사고일을 선택하면 처리 흐름을 안내합니다.</div>
+</div><div class="calcInputHeader"><div class="calcInputTitle">손해액 입력 · 자동계산</div><div class="calcInputDesc">위 사고처리 흐름을 확인한 뒤 실제 손해항목을 입력하면 자손·자상 및 대인 선처리 참고금액이 자동으로 다시 계산됩니다.</div></div><div class="inputs">
+<div class="entryBox" style="order:7"><label>치료관계비 (원)</label><input autocomplete="off" id="medical" inputmode="decimal" placeholder="예: 1,500,000" type="text"/><div class="muted" style="margin-top:5px">사고로 발생한 치료비를 입력합니다.</div></div>
+<div class="entryBox" style="order:8"><label>직불치료비 (원)</label><input autocomplete="off" id="directMedical" inputmode="decimal" placeholder="예: 300,000" type="text"/><div class="muted" style="margin-top:5px">사고와 관련해 본인이 직접 지출한 치료비. 위 치료관계비와 중복 입력하지 마세요.</div></div>
+<div class="autoBox" style="order:1"><label>부상 위자료 (급수 자동)</label><input id="comfort" readonly="" type="text"/></div>
+<div class="entryBox" style="order:2"><label>입원일수 = 휴업일수 기본값</label><input id="inDays" min="0" placeholder="입원일수" type="number"/></div>
+<div class="entryBox wageBox" style="grid-column:1/-1;order:5"><label>자동차보험 일용근로자 1일 임금 <span id="dailyWagePeriodLabel" style="color:#2563eb">사고일 기준 자동적용</span></label>
 <div class="wageAutoRow">
-  <input id="dailyWage" type="number" value="134232.5" min="0" step="0.5" aria-label="자동차보험 일용근로자 1일 임금">
-  <span id="dailyWageAutoBadge" class="wageBadge">사고일 자동</span>
+<input aria-label="자동차보험 일용근로자 1일 임금" autocomplete="off" id="dailyWage" inputmode="decimal" type="text" value="134,232.5"/>
+<span class="wageBadge" id="dailyWageAutoBadge">사고일 자동</span>
 </div>
-<div id="dailyWageBasis" class="muted" style="margin-top:6px">사고일을 기준으로 최근 2년 자동차보험 일용근로자 임금을 자동 적용합니다. 필요하면 금액을 직접 수정할 수 있습니다.</div>
-<button type="button" id="wageTableToggle" class="wageTableToggle">최근 2년 일용근로자 임금 기준표 보기</button>
-<div id="wageTableWrap" class="wageTableWrap" style="display:none">
+<div class="muted" id="dailyWageBasis" style="margin-top:6px">사고일을 기준으로 최근 2년 자동차보험 일용근로자 임금을 자동 적용합니다. 필요하면 금액을 직접 수정할 수 있습니다.</div>
+<button class="wageTableToggle" id="wageTableToggle" type="button">최근 2년 일용근로자 임금 기준표 보기</button>
+<div class="wageTableWrap" id="wageTableWrap" style="display:none">
 <table class="wageTable"><thead><tr><th>적용기간</th><th>공사 보통인부</th><th>제조 단순노무</th><th>자동차보험 1일 임금</th><th>85% 기준</th></tr></thead><tbody>
 <tr><td>2026.09.01~현재*</td><td>172,698원</td><td>95,767원</td><td><b>134,232.5원</b></td><td>114,097.6원</td></tr>
 <tr><td>2026.07.01~08.31</td><td>172,068원</td><td>95,767원</td><td><b>133,917.5원</b></td><td>113,829.9원</td></tr>
@@ -626,47 +683,110 @@ window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner'
 </tbody></table>
 <div class="wageFoot">* 현재 확인된 2026년 10월 기준. 자동차보험 약관상 일용근로자 임금은 공사부문 보통인부와 제조부문 단순노무종사원 임금의 평균값으로 계산하며, 실제 적용 시 사고일과 적용 약관을 확인합니다.</div>
 </div></div>
-<div class="autoBox"><label>휴업손해 (자동계산)</label><input id="lost" type="text" readonly></div>
-<div class="entryBox"><label>통원일수</label><input id="outDays" type="number" placeholder="실제 통원일수" min="0"></div>
-<div class="autoBox"><label>통원비 (자동계산)</label><input id="other" type="text" readonly></div>
-<div class="entryBox"><label>기타 인정비용 (원)</label><input id="extraCost" type="number" placeholder="예: 100000" min="0"><div class="muted" style="margin-top:5px">약관상 인정 여부 및 증빙 확인이 필요한 비용</div></div>
-<input id="autoLimit" type="hidden" value="0">
+<div class="autoBox" style="order:3"><label>휴업손해 (자동계산)</label><input id="lost" readonly="" type="text"/></div>
+<div class="entryBox" style="order:4"><label>통원일수</label><input id="outDays" min="0" placeholder="실제 통원일수" type="number"/></div>
+<div class="autoBox" style="order:6"><label>통원비 (자동계산)</label><input id="other" readonly="" type="text"/></div>
+<div class="entryBox" style="order:9"><label>기타 인정비용 (원)</label><input autocomplete="off" id="extraCost" inputmode="decimal" placeholder="예: 100,000" type="text"/><div class="muted" style="margin-top:5px">약관상 인정 여부 및 증빙 확인이 필요한 비용</div></div>
+<input id="autoLimit" type="hidden" value="0"/>
 </div>
-<div class="callout" style="margin-top:12px">
-<b>자손 · 자상 비교 기준</b><br>
-<b>자손</b>은 실제 발생한 치료관계비를 기준으로 선택한 부상급수별 한도 내에서 비교합니다.<br>
-<b>자상</b>은 치료관계비에 <b>부상 위자료·휴업손해·통원 관련 손해·기타 인정손해</b>를 더한 손해액을 기준으로 선택한 자동차상해 부상 가입금액 한도 내에서 비교합니다.<br>
-<span class="muted">휴업손해는 입력한 입원일수를 기본 휴업일수로 보고 1일 수입감소액 × 일수 × 85%로 계산합니다. 실제 보험금은 사고일·계약조건·증빙·적용약관에 따라 달라질 수 있으며 본 결과는 상담/교육용입니다.</span>
-</div></div>
+<div id="mutualDetailBox">
+<div class="mutualGrid">
+<label>본인 과실률 (%)<input id="faultRate" max="100" min="0" step="1" type="number" value="50"/></label>
+<label>경상환자 과실책임 적용대상 구분<select id="minorApplicability">
+<option value="driver">차량운전자 등 적용대상</option>
+<option value="excluded">보행자·이륜차·자전거·경운기 운전자 등 제외대상</option>
+<option value="unknown">적용대상 여부 확인 필요</option>
+</select></label>
+</div>
+<div class="mutualRouteBox" id="mutualRouteBox">
+<div class="mutualRouteTitle">쌍방사고 처리방식 선택</div>
+<div class="mutualRouteToggle">
+<button class="routeBtn opponentFirst active" id="routeOpponentFirstBtn" onclick="setMutualRoute('opponentFirst')" type="button">① 상대방 대인 선처리 → 자손·자상 후처리 비교</button>
+<button class="routeBtn jasangFirst" id="routeJasangFirstBtn" onclick="setMutualRoute('jasangFirst')" type="button">② 내 자동차상해(자상) 선처리</button>
+</div>
+<input id="mutualRoute" type="hidden" value="opponentFirst"/>
+<div id="routeOpponentPanel">
+<div class="routeInputGrid" style="grid-template-columns:220px 1fr 1.2fr">
+<label>대인 공제액 산정방식
+          <select id="opponentAmountMode">
+<option value="auto">입력항목 기준 자동산정</option>
+<option value="manual">보험사 확인액 직접입력</option>
+</select>
+</label>
+<label>상대 대인 공제대상액 (원)
+          <input autocomplete="off" id="opponentBodilyAmount" inputmode="decimal" placeholder="자동 계산" readonly="" type="text"/>
+<div class="muted" id="opponentAmountStatus" style="margin-top:5px;color:#0f766e;font-weight:900">위자료·휴업손해·통원비·치료비·기타손해를 항목별로 자동 산정</div>
+</label>
+<div class="opponentExplainGrid">
+<div id="opponentBreakdown"></div>
+<div class="routeDetail"><b>자동산정 원칙</b><br/>대인 공제대상 참고액을 통짜리 과실상계로 계산하지 않습니다. <b>위자료·휴업손해·통원비·기타손해는 상대과실분</b>을 계산하고, <b>치료비는 12~14급·2023.1.1 이후 차량운전자 여부에 따라 대인Ⅰ 한도 + 대인Ⅱ 초과치료비의 상대과실분</b>을 별도로 산정한 뒤 합산합니다.<br/><br/><b>자손 후처리 핵심</b><br/>대인 공제액이 발생하는 쌍방사고에서는 자손도 단순 치료비만 보는 것이 아니라 <b>실제손해액 + 비용 - 공제액</b>을 계산한 뒤 해당 급수의 자손 한도를 적용합니다. 보험사가 확정한 공제액이 있으면 <b>직접입력</b>을 우선합니다.</div>
+</div>
+</div>
+</div>
+<div id="routeJasangPanel" style="display:none">
+<div class="routeDetail"><b>자상 선처리 원칙</b><br/>고객은 자기 보험회사에서 자동차상해 보험금을 먼저 지급받고, 같은 인적손해에 대해 상대방 대인보험금을 다시 중복 수령하는 구조가 아닙니다. 보상된 범위의 상대방 책임분은 보험회사 간 구상·정산 영역으로 넘깁니다. 단, 가입한도·면책·약관상 미보상으로 손해가 남는 경우 그 미보상분은 별도 검토가 필요합니다.</div>
+</div>
+</div>
+<div class="routeResultPanel" id="mutualRouteResult" style="display:none"></div>
+<div id="liveCalcSummary" style="display:none;margin-top:10px;padding:12px;border-radius:13px;border:1px solid #cbd5e1;background:#f8fafc">
+<div style="font-size:14px;font-weight:900;color:#102a43;margin-bottom:8px">실시간 계산 요약</div>
+<div id="liveCalcSummaryBody" style="display:grid;grid-template-columns:repeat(5,minmax(120px,1fr));gap:8px"></div>
+</div>
+<div class="muted" style="margin-top:8px">※ 쌍방사고의 실제 자손·자상 지급액은 상대 대인 지급액·과실·약관 공제에 따라 달라집니다. ‘대인 + 자기담보’를 단순 합산해 중복 수령 가능한 금액으로 해석하면 안 됩니다.</div>
+</div>
+<div id="minorRulePanel">
+<div class="minorRuleHead"><b>12~14급 경상환자 · 사고일·책임개시일별 특별 처리</b><span>사고일은 치료비 과실책임·장기치료 절차를, 책임개시일은 개정 향후치료비 지급기준 적용 여부를 판단하는 핵심값입니다.</span></div>
+<div class="minorRuleBody">
+<div class="minorEra" id="minorEraText"></div>
+<div class="treatmentDurationBox">
+<label>사고일부터 예상 치료기간(일)<input id="treatmentDurationDays" min="0" placeholder="예: 35" step="1" type="number"/></label>
+<label>선택 부상급수 대인Ⅰ 한도<input id="paiLimitDisplay" readonly="" type="text"/></label>
+<label>보험계약 책임개시일<input aria-label="보험계약 책임개시일" id="policyStartDate" type="date"/><div class="responsibilityHint">보험증권의 보험기간 시작일을 입력하세요. 사고일보다 늦으면 입력 오류입니다.</div></label>
+</div>
+<div aria-live="polite" class="futureRuleBox legacy" id="futureTreatmentRule"></div>
+<div id="minorCalcArea"></div>
+<div class="eraTableWrap"><table class="eraTable"><thead><tr><th>구분</th><th>12/13/14급 대인Ⅰ 한도</th><th>치료비 과실책임</th><th>장기치료</th><th>향후치료비 판단</th></tr></thead><tbody>
+<tr><td>2016.3.31 이전 사고</td><td>80 / 80 / 80만원</td><td>2023 제도 미적용</td><td>현행 특별절차 이전</td><td>당시 적용 약관·합의기준 확인</td></tr>
+<tr><td>2016.4.1 ~ 2022.12.31 사고</td><td>120 / 80 / 50만원</td><td>2023 제도 미적용</td><td>현행 특별절차 이전</td><td>당시 적용 약관·합의기준 확인</td></tr>
+<tr><td>2023.1.1 ~ 2026.9.9 사고</td><td>120 / 80 / 50만원</td><td>대인Ⅰ 초과 치료비 중 본인과실분 부담(적용대상자)</td><td>4주 초과 진단서 기준</td><td>기존 약관·보험사 합의기준 확인</td></tr>
+<tr><td>2026.9.10 이후 사고</td><td>120 / 80 / 50만원</td><td>동일</td><td>8주 초과 치료 필요성 검토 절차</td><td><b>실무상 경상환자 향후치료비 제한 경고</b></td></tr>
+<tr><td>책임개시일 2026.10.25 이후</td><td>사고일 기준 동일</td><td>사고일 기준 적용</td><td>사고일 9.10 이후면 8주 절차</td><td><b>개정 지급기준 적용 구간 확인</b> · 12~14급은 실제 발생 치료비 중심</td></tr>
+</tbody></table></div>
+<div class="muted oneLineNotice" style="margin-top:8px">※ 개정 향후치료비 지급기준은 2026.9.10 이후 계약 체결 및 2026.10.25 이후 보험기간 개시 계약부터 적용되는 것으로 안내되고 있습니다. 책임개시일만으로 계약 체결일까지 자동 확정하지 않으므로 실제 증권·갱신일을 최종 확인하세요.</div>
+</div>
+</div>
+
+<div class="callout compactOneLine" id="compareBasis" style="margin-top:12px"><b>자손·자상 비교 기준</b> · <b>자손</b>: 단독은 실제 치료비·급수한도, 쌍방은 실제손해액+비용-대인공제 후 급수한도 적용 · <b>자상</b>: 위자료→휴업손해→통원비→치료비→기타손해 합계에서 대인공제 후 가입한도 적용 · 휴업손해=1일 수입감소액×일수×85% · <span class="muted">상담/교육용</span></div></div>
 <div class="results">
-<div class="result" id="selfResultCard"><h2>자손 예상 보험금</h2><div id="selfPay" class="amount self">-</div><div id="selfRows"></div></div>
-<div class="result" id="autoResultCard"><h2>자상 예상 보험금</h2><div id="autoPay" class="amount auto">-</div><div id="autoRows"></div></div>
+<div class="result" id="selfResultCard"><h2>자손 예상 보험금</h2><div class="amount self" id="selfPay">-</div><div id="selfRows"></div></div>
+<div class="result" id="autoResultCard"><h2>자상 예상 보험금</h2><div class="amount auto" id="autoPay">-</div><div id="autoRows"></div></div>
 </div>
 <div class="compareMatrix">
-  <div class="compareHead">
-    <b>자동차상해 가입 시 · 자손 가입 가정 비교표</b>
-    <span>같은 사고 · 같은 치료조건 기준</span>
-  </div>
-  <div class="compareScroll">
-    <table class="compareTable">
-      <thead><tr>
-        <th>비교항목</th>
-        <th>자기신체사고(자손) 가입 가정
-          <div class="comparePlanControl"><span>가입금액</span><select id="compareSelfPlan" class="comparePlanSelect" aria-label="자손 가입가정 금액"></select></div>
-        </th>
-        <th>자동차상해(자상) 가입 가정
-          <div class="comparePlanControl"><span>가입금액</span><select id="compareAutoPlan" class="comparePlanSelect auto" aria-label="자상 가입가정 금액"></select></div>
-        </th>
-      </tr></thead>
-      <tbody id="comparisonDetailBody">
-        <tr><td>치료관계비</td><td class="selfCell">-</td><td class="autoCell">-</td></tr>
-        <tr><td>부상 위자료</td><td class="selfCell">보상안함</td><td class="autoCell">-</td></tr>
-        <tr><td>휴업손해</td><td class="selfCell">보상안함</td><td class="autoCell">-</td></tr>
-        <tr><td>예상 보험금</td><td class="selfCell">-</td><td class="autoCell">-</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="compareNote"><b>가입가정 선택:</b> 상단 부상한도 비교표와 아래 상세 비교표의 자손·자상 가입금액 선택바는 서로 연동됩니다. 어느 곳에서 바꿔도 같은 사고조건에서 예상보험금과 차액이 즉시 다시 계산됩니다.<br><b>자손 가입가정:</b> 5개사 모두 1,500 / 3,000 / 5,000만원 / 1억원 선택 비교가 가능하도록 통일했습니다. 실제 계약 가능 금액은 증권·설계화면을 우선 확인하세요.<br><b>핵심:</b> 자손은 부상급수별 한도 내 실제 치료비 중심, 자상은 부상 가입금액 한도 내에서 치료비뿐 아니라 위자료·휴업손해 등 약관상 손해액까지 비교합니다.</div>
+<div class="compareHead">
+<b>자동차상해 가입 시 · 자손 가입 가정 비교표</b>
+<span>같은 사고 · 같은 치료조건 기준</span>
+</div>
+<div class="compareScroll">
+<table class="compareTable">
+<thead><tr>
+<th>비교항목</th>
+<th>자기신체사고(자손) 가입 가정
+          <div class="comparePlanControl"><span>가입금액</span><select aria-label="자손 가입가정 금액" class="comparePlanSelect" id="compareSelfPlan"></select></div>
+</th>
+<th>자동차상해(자상) 가입 가정
+          <div class="comparePlanControl"><span>가입금액</span><select aria-label="자상 가입가정 금액" class="comparePlanSelect auto" id="compareAutoPlan"></select></div>
+</th>
+</tr></thead>
+<tbody id="comparisonDetailBody">
+<tr><td>부상 위자료</td><td class="selfCell">보상안함</td><td class="autoCell">-</td></tr>
+<tr><td>휴업손해</td><td class="selfCell">보상안함</td><td class="autoCell">-</td></tr>
+<tr><td>통원비</td><td class="selfCell">별도 산정 없음</td><td class="autoCell">-</td></tr>
+<tr><td>치료관계비</td><td class="selfCell">-</td><td class="autoCell">-</td></tr>
+<tr><td>예상 보험금</td><td class="selfCell">-</td><td class="autoCell">-</td></tr>
+</tbody>
+</table>
+</div>
+<div class="compareNote"><b>가입가정 선택:</b> 상단 부상한도 비교표와 아래 상세 비교표의 자손·자상 가입금액 선택바는 서로 연동됩니다. 어느 곳에서 바꿔도 같은 사고조건에서 예상보험금과 차액이 즉시 다시 계산됩니다.<br/><b>자손 가입가정:</b> 5개사 모두 1,500 / 3,000 / 5,000만원 / 1억원 선택 비교가 가능하도록 통일했습니다. 실제 계약 가능 금액은 증권·설계화면을 우선 확인하세요.<br/><b>핵심:</b> 자손은 부상급수별 한도 내 실제 치료비 중심, 자상은 부상 가입금액 한도 내에서 치료비뿐 아니라 위자료·휴업손해 등 약관상 손해액까지 비교합니다.</div>
 </div>
 <div class="panel" style="margin-top:13px;background:linear-gradient(135deg,#fff,#f7f4ff)">
 <div class="title" style="margin-bottom:8px">핵심 비교 결과 · 자손 vs 자상</div>
@@ -677,42 +797,41 @@ window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner'
 </div>
 <div id="cmpSentence" style="margin-top:10px;padding:12px;border-radius:12px;background:#102a43;color:#fff;font-weight:800;text-align:center;line-height:1.6"></div>
 </div>
-<div id="memo" class="callout"></div>
+<div class="callout" id="memo"></div>
 <div class="btns"><button class="btn back" onclick="showPage(2)">← 부상한도표</button><button class="btn next" onclick="showPage(4)">약관·산정기준 →</button><button class="btn print" onclick="window.print()">인쇄 · PDF</button></div>
 </section>
-
-<section id="p4" class="page termsPage">
+<section class="page termsPage" id="p4">
 <div class="panel"><div class="title">약관 · 산정기준</div>
 <div class="policyTopAction">
-  <div><b>현재 선택 보험사 약관</b><span id="p4SelectedCompanyText">현대해상</span></div>
-  <div class="policyTopButtons">
-<button type="button" onclick="openEmbeddedPolicy(document.getElementById('co').value)">현재 선택 보험사 약관 바로 열기</button>
-<button type="button" class="policyTopDownload" onclick="downloadEmbeddedPolicy(document.getElementById('co').value)">PDF 저장</button>
+<div><b>현재 선택 보험사 약관</b><span id="p4SelectedCompanyText">현대해상</span></div>
+<div class="policyTopButtons">
+<button onclick="openEmbeddedPolicy(document.getElementById('co').value)" type="button">현재 선택 보험사 약관 바로 열기</button>
+<button class="policyTopDownload" onclick="downloadEmbeddedPolicy(document.getElementById('co').value)" type="button">PDF 저장</button>
 </div>
 </div>
-<div id="sourceBox" class="callout"></div>
+<div class="callout" id="sourceBox"></div>
 <div style="margin-top:12px">
 <div class="title">보험사별 약관 반영 현황</div>
 <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
-<div class="callout" style="margin:0;background:#fff;border:2px solid #2563eb;color:#111"><b style="font-size:18px">현대해상</b><br>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br><span class="muted" style="color:#111">하이카 개인용자동차보험(공동) · 2026.09.10 개정</span><div class="policyCardActions">
-<button type="button" class="policyCardBtn" onclick="openEmbeddedPolicy('현대해상')">현대해상 약관 바로 열기</button>
-<button type="button" class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('현대해상')">PDF 저장</button>
+<div class="callout" style="margin:0;background:#fff;border:2px solid #2563eb;color:#111"><b style="font-size:18px">현대해상</b><br/>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br/><span class="muted" style="color:#111">하이카 개인용자동차보험(공동) · 2026.09.10 개정</span><div class="policyCardActions">
+<button class="policyCardBtn" onclick="openEmbeddedPolicy('현대해상')" type="button">현대해상 약관 바로 열기</button>
+<button class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('현대해상')" type="button">PDF 저장</button>
 </div></div>
-<div class="callout" style="margin:0;background:#fff;border:2px solid #7c3aed;color:#111"><b style="font-size:18px">삼성화재</b><br>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br><span class="muted" style="color:#111">개인용(공동) 자동차보험 · 2026.10.21 개정</span><div class="policyCardActions">
-<button type="button" class="policyCardBtn" onclick="openEmbeddedPolicy('삼성화재')">삼성화재 약관 바로 열기</button>
-<button type="button" class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('삼성화재')">PDF 저장</button>
+<div class="callout" style="margin:0;background:#fff;border:2px solid #7c3aed;color:#111"><b style="font-size:18px">삼성화재</b><br/>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br/><span class="muted" style="color:#111">개인용(공동) 자동차보험 · 2026.10.21 개정</span><div class="policyCardActions">
+<button class="policyCardBtn" onclick="openEmbeddedPolicy('삼성화재')" type="button">삼성화재 약관 바로 열기</button>
+<button class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('삼성화재')" type="button">PDF 저장</button>
 </div></div>
-<div class="callout" style="margin:0;background:#fff;border:2px solid #059669;color:#111"><b style="font-size:18px">DB손해보험</b><br>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br><span class="muted" style="color:#111">공동물건 약관 · 2026.09.10 표준약관 개정 적용</span><div class="policyCardActions">
-<button type="button" class="policyCardBtn" onclick="openEmbeddedPolicy('DB손해보험')">DB손해보험 약관 바로 열기</button>
-<button type="button" class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('DB손해보험')">PDF 저장</button>
+<div class="callout" style="margin:0;background:#fff;border:2px solid #059669;color:#111"><b style="font-size:18px">DB손해보험</b><br/>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br/><span class="muted" style="color:#111">공동물건 약관 · 2026.09.10 표준약관 개정 적용</span><div class="policyCardActions">
+<button class="policyCardBtn" onclick="openEmbeddedPolicy('DB손해보험')" type="button">DB손해보험 약관 바로 열기</button>
+<button class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('DB손해보험')" type="button">PDF 저장</button>
 </div></div>
-<div class="callout" style="margin:0;background:#fff;border:2px solid #f59e0b;color:#111"><b style="font-size:18px">KB손해보험</b><br>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br><span class="muted" style="color:#111">약관 2026.10.25 개정(승인 2026.09.18) · 자동차상해/부상가입금액 확장 특별약관 반영</span><div class="policyCardActions">
-<button type="button" class="policyCardBtn" onclick="openEmbeddedPolicy('KB손해보험')">KB손해보험 약관 바로 열기</button>
-<button type="button" class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('KB손해보험')">PDF 저장</button>
+<div class="callout" style="margin:0;background:#fff;border:2px solid #f59e0b;color:#111"><b style="font-size:18px">KB손해보험</b><br/>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br/><span class="muted" style="color:#111">약관 2026.10.25 개정(승인 2026.09.18) · 자동차상해/부상가입금액 확장 특별약관 반영</span><div class="policyCardActions">
+<button class="policyCardBtn" onclick="openEmbeddedPolicy('KB손해보험')" type="button">KB손해보험 약관 바로 열기</button>
+<button class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('KB손해보험')" type="button">PDF 저장</button>
 </div></div>
-<div class="callout" style="margin:0;background:#fff;border:2px solid #dc2626;color:#111"><b style="font-size:18px">메리츠화재</b><br>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br><span class="muted" style="color:#111">개인용자동차보험 약관 제작·개정 2026.09.10</span><div class="policyCardActions">
-<button type="button" class="policyCardBtn" onclick="openEmbeddedPolicy('메리츠화재')">메리츠화재 약관 바로 열기</button>
-<button type="button" class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('메리츠화재')">PDF 저장</button>
+<div class="callout" style="margin:0;background:#fff;border:2px solid #dc2626;color:#111"><b style="font-size:18px">메리츠화재</b><br/>자손 가입가정 1,500/3,000/5,000만원/1억원 선택 비교 반영<br/><span class="muted" style="color:#111">개인용자동차보험 약관 제작·개정 2026.09.10</span><div class="policyCardActions">
+<button class="policyCardBtn" onclick="openEmbeddedPolicy('메리츠화재')" type="button">메리츠화재 약관 바로 열기</button>
+<button class="policyDownloadBtn" onclick="downloadEmbeddedPolicy('메리츠화재')" type="button">PDF 저장</button>
 </div></div>
 </div>
 </div>
@@ -759,6 +878,7 @@ const DATA={
 };
 // 핵심 입력요소를 명시적으로 참조하여 브라우저별 id 전역변수 의존 오류를 제거합니다.
 const co=document.getElementById("co"), grade=document.getElementById("grade"), plan=document.getElementById("plan"), jasangPlan=document.getElementById("jasangPlan"), coverType=document.getElementById("coverType");
+const logicGrade=document.getElementById("logicGrade"), logicAccDate=document.getElementById("logicAccDate"), logicCoverDisplay=document.getElementById("logicCoverDisplay"), scenarioFlowChart=document.getElementById("scenarioFlowChart");
 const tbl=document.getElementById("tbl"), tableTitle=document.getElementById("tableTitle"), tableMsg=document.getElementById("tableMsg"), verifyText=document.getElementById("verifyText");
 const chooseJasons=document.getElementById("chooseJasons"), chooseJasang=document.getElementById("chooseJasang"), jasonsPlanBox=document.getElementById("jasonsPlanBox"), jasangPlanBox=document.getElementById("jasangPlanBox"), coverageSelectedText=document.getElementById("coverageSelectedText");
 const atype=document.getElementById("atype"), comfort=document.getElementById("comfort"), lost=document.getElementById("lost"), other=document.getElementById("other"), memo=document.getElementById("memo");
@@ -768,6 +888,48 @@ const selfQuickCard=document.getElementById("selfQuickCard"), autoQuickCard=docu
 grade.innerHTML="";
 for(let i=1;i<=14;i++) grade.add(new Option(i+"급",String(i)));
 grade.value="9";
+if(logicGrade){
+  logicGrade.innerHTML="";
+  for(let i=1;i<=14;i++) logicGrade.add(new Option(i+"급",String(i)));
+  logicGrade.value=grade.value;
+}
+function syncLogicControlsFromMain(){
+  if(logicGrade && logicGrade.value!==grade.value) logicGrade.value=grade.value;
+  const mainDate=document.getElementById("accDate");
+  if(logicAccDate && mainDate && logicAccDate.value!==mainDate.value) logicAccDate.value=mainDate.value;
+  if(logicCoverDisplay){
+    logicCoverDisplay.textContent=coverType.value==="jasons"?"자기신체사고(자손)":coverType.value==="jasang"?"자동차상해(자상)":"담보 선택 전";
+  }
+}
+function flowNodeHtml(label,cls,idx){return `<div class="flowNode ${cls||""}"><span class="flowStep">STEP ${String(idx+1).padStart(2,"0")}</span><b>${label}</b></div>`;}
+function renderScenarioFlow(accidentType,selectedCover,gr,accDate){
+  if(!scenarioFlowChart) return;
+  const isMinor=gr>=12&&gr<=14;
+  const post2023=!!accDate && accDate>="2023-01-01";
+  const post2026=!!accDate && accDate>="2026-09-10";
+  const policyStartDate=(document.getElementById("policyStartDate")?.value||"");
+  const futureFormal=isMinor&&post2026&&policyStartDate>="2026-10-25"&&policyStartDate<=accDate;
+  const route=(document.getElementById("mutualRoute")?.value||"opponentFirst");
+  let nodes=[];
+  if(!selectedCover){
+    nodes=[[accidentType==="mutual"?"쌍방사고 선택":"단독사고 선택","primary"],[`${gr}급 · 사고일 확인`,isMinor?"warn":""],["가입담보 선택","cover"],["자손·자상 보상비교","result"]];
+  }else if(accidentType==="single"&&selectedCover==="jasons"){
+    nodes=[["단독사고","primary"],[`${gr}급 부상급수 확인`,isMinor?"warn":""],["자손 가입금액·급수별 한도 확인","cover"],["실제 치료비와 자손 한도 비교",""],["자손 예상보험금","result"]];
+  }else if(accidentType==="single"&&selectedCover==="jasang"){
+    nodes=[["단독사고","primary"],[`${gr}급 · 사고일 확인`,isMinor?"warn":""],["위자료 → 휴업손해 → 통원비 → 치료비","cover"],["기타 인정손해 합산",""],["자상 가입한도 내 실제손해액","result"]];
+  }else if(accidentType==="mutual"&&route==="opponentFirst"){
+    nodes=[["쌍방사고","primary"],["① 상대방 대인 선처리",""],["대인Ⅰ·Ⅱ 공제대상액 확인",""],[`${gr}급 · 사고일 확인`,isMinor?"warn":""]];
+    if(isMinor&&post2023){nodes.push([post2026?"12~14급 과실책임 + 8주 절차 확인":"12~14급 치료비 과실책임 확인","warn"]);if(post2026)nodes.push([futureFormal?"향후치료비 개정기준 확인":"향후치료비 실무기준·책임개시일 확인","warn"]);}
+    nodes.push(["대인 공제 후 자손·자상 후처리 각각 산정","cover"],["자손 vs 자상 후처리 비교","result"]);
+  }else if(accidentType==="mutual"&&route==="jasangFirst"){
+    nodes=[["쌍방사고","primary"],["② 자동차상해(자상) 선처리","cover"],[`${gr}급 · 사고일 확인`,isMinor?"warn":""]];
+    if(isMinor&&post2023){nodes.push([post2026?"12~14급 과실책임 + 8주 절차 확인":"12~14급 치료비 과실책임 확인","warn"]);if(post2026)nodes.push([futureFormal?"향후치료비 개정기준 확인":"향후치료비 실무기준·책임개시일 확인","warn"]);}
+    nodes.push(["자상 가입한도 내 약관상 손해 우선보상",""],["고객 동일손해 추가 대인수령 없음","result"],["보험사 간 대위·구상 및 정산",""]);
+  }
+  scenarioFlowChart.innerHTML=nodes.map((n,i)=>flowNodeHtml(n[0],n[1],i)+(i<nodes.length-1?'<div class="flowArrow">→</div>':'')).join('');
+}
+
+syncLogicControlsFromMain();
 function showPage(n){
  const p4c=document.getElementById("p4SelectedCompanyText");
  if(p4c && typeof co!=="undefined") p4c.textContent=co.value;document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".nav button").forEach(x=>x.classList.remove("active"));document.getElementById("p"+n).classList.add("active");document.getElementById("n"+n).classList.add("active");if(n===2)draw();if(n===3)calc();if(n===4)source();}
@@ -797,7 +959,7 @@ function applyDailyWageByAccidentDate(recalc=true){
  if(!dateEl||!wageEl) return;
  const p=getAutoDailyWagePeriod(dateEl.value);
  if(p){
-   wageEl.value=String(p.wage);
+   wageEl.value=formatCommaNumber(p.wage);
    wageEl.dataset.autoApplied="1";
    if(label) label.textContent=`(${formatPeriodDate(p.from)}~${p.to==="2026-12-31"?"현재 확인기준":formatPeriodDate(p.to)} · 자동)`;
    if(basis) basis.innerHTML=`사고일 <b>${dateEl.value}</b> 기준 자동 적용 · 공사부문 보통인부 <b>${p.construction.toLocaleString()}원</b> + 제조부문 단순노무종사원 <b>${p.manufacturing.toLocaleString()}원</b> ÷ 2 = <b>${p.wage.toLocaleString(undefined,{minimumFractionDigits:p.wage%1?1:0,maximumFractionDigits:1})}원</b>`;
@@ -813,7 +975,30 @@ function applyDailyWageByAccidentDate(recalc=true){
 }
 function money(x){return Math.round(x).toLocaleString()+"만원"}
 function won(x){return Math.round(x).toLocaleString()+"원"}
-function num(id){const el=document.getElementById(id);return el?Math.max(0,+el.value||0):0}
+function parseCommaNumber(v){
+ const n=Number(String(v??"").replace(/,/g,"").trim());
+ return Number.isFinite(n)?n:0;
+}
+function formatCommaNumber(v){
+ const raw=String(v??"").replace(/,/g,"").trim();
+ if(raw==="") return "";
+ const n=Number(raw);
+ if(!Number.isFinite(n)) return raw;
+ const decimals=(raw.includes(".")?raw.split(".")[1].length:0);
+ return n.toLocaleString("ko-KR",{minimumFractionDigits:decimals,maximumFractionDigits:Math.max(decimals,1)}).replace(/\.0$/,(raw.includes(".")?".0":""));
+}
+function formatMoneyInput(el){
+ if(!el) return;
+ let raw=String(el.value||"").replace(/,/g,"").replace(/[^0-9.]/g,"");
+ const firstDot=raw.indexOf(".");
+ if(firstDot>=0) raw=raw.slice(0,firstDot+1)+raw.slice(firstDot+1).replace(/\./g,"");
+ if(raw===""){el.value="";return;}
+ const parts=raw.split(".");
+ const intPart=(parts[0]||"0").replace(/^0+(?=\d)/,"");
+ const formatted=(Number(intPart||0)).toLocaleString("ko-KR");
+ el.value=parts.length>1?formatted+"."+parts[1]:formatted;
+}
+function num(id){const el=document.getElementById(id);return el?Math.max(0,parseCommaNumber(el.value)||0):0}
 function row(a,b){return `<div class="row"><span>${a}</span><b>${b}</b></div>`}
 function formatMan(v){
  const n=Number(v)||0;
@@ -955,36 +1140,65 @@ function draw(){
 }
 function buildTable(){draw();}
 
+function setMutualRoute(route){
+ const valid=["opponentFirst","jasangFirst"];
+ const normalized=valid.includes(route)?route:"opponentFirst";
+ const hidden=document.getElementById("mutualRoute");
+ const b1=document.getElementById("routeOpponentFirstBtn");
+ const b2=document.getElementById("routeJasangFirstBtn");
+ const oppPanel=document.getElementById("routeOpponentPanel");
+ const jasPanel=document.getElementById("routeJasangPanel");
+ if(hidden) hidden.value=normalized;
+ if(b1) b1.classList.toggle("active",normalized==="opponentFirst");
+ if(b2) b2.classList.toggle("active",normalized==="jasangFirst");
+ if(oppPanel) oppPanel.style.display=normalized==="opponentFirst"?"block":"none";
+ if(jasPanel) jasPanel.style.display=normalized==="jasangFirst"?"block":"none";
+ if(normalized==="jasangFirst" && typeof setCover==="function" && coverType && coverType.value!=="jasang"){
+   setCover("jasang");
+   return;
+ }
+ try{calc();}catch(e){console.error(e);}
+}
 function setAccidentType(type){
-  const at=document.getElementById("atype");
-  const s=document.getElementById("accidentSingleBtn");
-  const m=document.getElementById("accidentMutualBtn");
-  const note=document.getElementById("accidentTypeNote");
-  const normalized=type==="mutual"?"mutual":"single";
-  if(at) at.value=normalized;
-  if(s) s.classList.toggle("active",normalized==="single");
-  if(m) m.classList.toggle("active",normalized==="mutual");
-  if(note){
-    note.textContent=normalized==="single"
-      ? "단독사고 기준: 상대방 대인 공제 없이 자손·자상 자체담보의 보상 차이를 비교합니다."
-      : "쌍방사고 기준: 현재 버전은 과실률·건강보험·상대방 대인 공제를 계산하지 않고, 동일 사고조건에서 자손과 자상 자체담보 차이만 비교합니다.";
-  }
-  try{ calc(); }catch(e){}
+ const at=document.getElementById("atype");
+ const s=document.getElementById("accidentSingleBtn");
+ const m=document.getElementById("accidentMutualBtn");
+ const note=document.getElementById("accidentTypeNote");
+ const mutualBox=document.getElementById("mutualDetailBox");
+ const normalized=type==="mutual"?"mutual":"single";
+ if(at) at.value=normalized;
+ if(s) s.classList.toggle("active",normalized==="single");
+ if(m) m.classList.toggle("active",normalized==="mutual");
+ if(mutualBox) mutualBox.style.display=normalized==="mutual"?"block":"none";
+ const routeResult=document.getElementById("mutualRouteResult");
+ if(routeResult && normalized!=="mutual") routeResult.style.display="none";
+ if(note){
+   note.textContent=normalized==="single"
+     ? "단독사고: 상대방 대인배상이 없으므로 내 자손·자상 담보 자체의 보상구조를 비교합니다."
+      : "쌍방사고: ‘상대방 대인 선처리 후 자손·자상 후처리 비교’ 또는 ‘자상 선처리’ 중 하나를 선택해 공제·정산 구조를 확인합니다.";
+ }
+ if(normalized==="mutual"){
+   const currentRoute=(document.getElementById("mutualRoute")?.value||"opponentFirst");
+   setMutualRoute(currentRoute==="jasangFirst"?"jasangFirst":"opponentFirst");
+   return;
+ }
+ try{calc();}catch(e){console.error(e);}
+}
+function getFutureTreatmentStatus(accDate,policyStartDate,gr){
+ const minor=gr>=12&&gr<=14;
+ if(!minor) return {mode:"na",html:""};
+ if(!accDate) return {mode:"legacy",html:'<span class="futureRuleTag">확인 필요</span><b>사고일을 먼저 입력하세요.</b> 사고일과 책임개시일을 함께 확인해야 12~14급 향후치료비 기준을 판단할 수 있습니다.'};
+ if(policyStartDate && policyStartDate>accDate) return {mode:"error",html:`<span class="futureRuleTag">입력 오류</span><b>책임개시일(${policyStartDate})이 사고일(${accDate})보다 늦습니다.</b><div class="futureRuleSub">해당 사고를 담보한 보험증권의 보험기간 시작일을 다시 확인하세요.</div>`};
+ if(accDate<"2026-09-10") return {mode:"legacy",html:`<span class="futureRuleTag">기존 사고</span><b>${accDate} 사고는 2026.9.10 이후 장기치료 개편 대상이 아닙니다.</b><div class="futureRuleSub">향후치료비 여부는 사고 당시 적용 약관·보험사 합의기준을 별도로 확인합니다.</div>`};
+ if(!policyStartDate) return {mode:"practice",html:`<span class="futureRuleTag">9/10 이후 사고</span><b>보험사 실무상 12~14급 향후치료비를 별도 지급하지 않고 실제 발생 치료비 중심으로 처리하는 사례가 일반화된 구간입니다.</b><div class="futureRuleSub">다만 개정 지급기준의 계약상 적용 여부는 책임개시일과 계약 체결일을 확인해야 합니다. 보험계약 책임개시일을 입력하세요.</div>`};
+ if(policyStartDate>="2026-10-25") return {mode:"formal",html:`<span class="futureRuleTag">개정기준 확인</span><b>책임개시일 ${policyStartDate} · 12~14급은 향후치료비 대신 실제 발생 치료비 중심으로 처리하는 개정 지급기준 적용 구간에 해당할 가능성이 높습니다.</b><div class="futureRuleSub">단, 공식 안내는 <b>2026.9.10 이후 계약 체결 + 2026.10.25 이후 보험기간 개시</b>를 함께 요구하므로 실제 계약 체결일·갱신일을 최종 확인하세요.</div>`};
+ return {mode:"practice",html:`<span class="futureRuleTag">실무상 제한 구간</span><b>${accDate} 사고는 2026.9.10 이후이지만 책임개시일은 ${policyStartDate}로 2026.10.25 이전입니다.</b><div class="futureRuleSub">개정 지급기준을 계약상 자동 적용한다고 단정하지 않습니다. 다만 보험사 실무상 경상환자 향후치료비를 제한하고 실제 발생 치료비 중심으로 처리할 수 있으므로 담당 보험사의 보상지침을 확인하세요.</div>`};
 }
 function calc(){
  const accidentType=(document.getElementById("atype")?.value||"single");
  const accidentLabel=accidentType==="mutual"?"쌍방사고":"단독사고";
- if(!coverType.value){
-   if(memo) memo.innerHTML='<b>자손 또는 자상 버튼을 먼저 선택해 주세요.</b>';
-   return;
- }
- const d=DATA[co.value], gr=Math.min(14,Math.max(1,Number(grade.value)||9));
- const compareSelfKey=(compareSelfPlan&&compareSelfPlan.value)?compareSelfPlan.value:plan.value;
- const arr=d.plans[compareSelfKey];
- const selfLimitMan=arr?arr[gr-1]:null;
- const selfLimitWon=selfLimitMan==null?null:selfLimitMan*10000;
-
- // 동일 사고조건의 비교용 손해액을 구성합니다.
+ const gr=Math.min(14,Math.max(1,Number(grade.value)||9));
+ const accDate=(document.getElementById("accDate")?.value||"");
  const insurerMedical=num("medical");
  const directMedical=num("directMedical");
  const treatmentWon=insurerMedical+directMedical;
@@ -993,65 +1207,249 @@ function calc(){
  const appliedDailyWage=num("dailyWage");
  const lostWon=appliedDailyWage*inDays*0.85;
  const outpatientWon=OUTPATIENT_PER_DAY*outDays;
- comfort.value=won(comfortWon); lost.value=won(lostWon); other.value=won(outpatientWon);
+ if(comfort) comfort.value=won(comfortWon); if(lost) lost.value=won(lostWon); if(other) other.value=won(outpatientWon);
 
- // 자손은 치료비 중심, 자상은 위자료·휴업손해 등을 포함한 약관상 손해액 기준으로 비교합니다.
+ // 4가지 사고유형 안내 및 흐름도
+ syncLogicControlsFromMain();
+ const logic=document.getElementById("scenarioLogicBody");
+ const selectedCover=coverType.value;
+ renderScenarioFlow(accidentType,selectedCover,gr,accDate);
+ if(logic){
+   let msg=`현재 조건: <b>${accidentLabel} · ${gr}급 · ${accDate||"사고일 미입력"}</b>. 가입담보를 선택하면 사고유형별 처리 논리를 표시합니다.`;
+   if(accidentType==="single"&&selectedCover==="jasons") msg='<span class="logicTag">① 단독 + 자손</span>상대 대인배상 없음 → <b>부상급수별 자손 한도 내 실제 치료비 중심</b>으로 봅니다. 위자료·휴업손해는 자손 부상보험금에 별도 합산하지 않습니다.';
+   if(accidentType==="single"&&selectedCover==="jasang") msg='<span class="logicTag">② 단독 + 자상</span>상대 대인배상 없음 → <b>위자료·휴업손해·통원비·치료비 등 약관상 손해액</b>을 자상 가입한도 내에서 봅니다.';
+   const route=(document.getElementById("mutualRoute")?.value||"opponentFirst");
+   if(accidentType==="mutual"&&route==="opponentFirst") msg='<span class="logicTag">③ 쌍방 · 상대 대인 선처리</span><b>상대방 대인Ⅰ·Ⅱ에서 보상받을 수 있는 금액을 먼저 산정·공제</b>한 뒤, 동일 사고조건에서 자손 후처리와 자상 후처리 금액을 모두 계산해 비교합니다.';
+   if(accidentType==="mutual"&&route==="jasangFirst") msg='<span class="logicTag">④ 쌍방 · 자상 선처리</span>고객은 내 자동차상해로 약관상 손해를 먼저 보상받고, <b>같은 인적손해에 대한 상대방 대인보험금을 다시 추가 수령하지 않습니다.</b> 보상된 상대방 책임분은 보험회사 간 대위·구상 및 정산으로 넘어갑니다.';
+   logic.innerHTML=msg;
+ }
+
+ // 12~14급 사고일별 특별 로직
+ const minorPanel=document.getElementById("minorRulePanel");
+ const minorEraText=document.getElementById("minorEraText");
+ const minorCalcArea=document.getElementById("minorCalcArea");
+ const paiDisplay=document.getElementById("paiLimitDisplay");
+ const faultRate=Math.min(100,Math.max(0,num("faultRate")));
+ const applicability=(document.getElementById("minorApplicability")?.value||"driver");
+ const duration=Math.max(0,num("treatmentDurationDays"));
+ const policyStartDate=(document.getElementById("policyStartDate")?.value||"");
+ const futureTreatmentRule=document.getElementById("futureTreatmentRule");
+ const isMinor=gr>=12&&gr<=14;
+ let paiLimitWon=0, era="";
+ if(isMinor){
+   const pre2016=!!accDate && accDate<"2016-04-01";
+   const post2023=!!accDate && accDate>="2023-01-01";
+   const post2026=!!accDate && accDate>="2026-09-10";
+   const oldLimits={12:800000,13:800000,14:800000};
+   const newLimits={12:1200000,13:800000,14:500000};
+   paiLimitWon=(pre2016?oldLimits:newLimits)[gr];
+   if(minorPanel) minorPanel.style.display="block";
+   if(paiDisplay) paiDisplay.value=won(paiLimitWon)+` (${gr}급)`;
+   if(!accDate){
+     era='<strong>사고일을 입력해 주세요.</strong> 12~14급은 사고일에 따라 적용제도가 달라집니다.';
+   }else if(accDate<"2016-04-01"){
+     era=`<strong>${accDate} 사고 · 2016.3.31 이전 기준</strong><br>대인Ⅰ 부상한도는 ${gr}급 <b>${won(paiLimitWon)}</b>입니다. 2023년 경상환자 치료비 과실책임주의와 현행 4주·8주 장기치료 절차는 적용 전 사고입니다.`;
+   }else if(accDate<"2023-01-01"){
+     era=`<strong>${accDate} 사고 · 2016.4.1~2022.12.31 기준</strong><br>대인Ⅰ 부상한도는 ${gr}급 <b>${won(paiLimitWon)}</b>입니다. 2023년부터 도입된 경상환자 대인Ⅱ 치료비 과실책임주의는 적용되지 않는 사고입니다.`;
+   }else if(accDate<"2026-09-10"){
+     era=`<strong>${accDate} 사고 · 2023.1.1~2026.9.9 기준</strong><br>12~14급 차량운전자 등 적용대상자는 대인Ⅰ 한도 초과 치료비에 본인과실분이 반영됩니다. 4주(28일) 초과 치료는 진단서상 추가치료 필요기간을 확인합니다.`;
+   }else{
+     era=`<strong>${accDate} 사고 · 2026.9.10 이후 기준</strong><br>2023년 치료비 과실책임주의에 더해 장기치료 절차가 강화됩니다. 4주 초과 시 진단서 절차가 적용되고, 8주를 초과하려는 경상환자는 자료 제출·자동차손해배상진흥원 검토 절차를 확인해야 합니다.`;
+   }
+   if(minorEraText) minorEraText.innerHTML=era;
+   const futureStatus=getFutureTreatmentStatus(accDate,policyStartDate,gr);
+   if(futureTreatmentRule){
+     futureTreatmentRule.className="futureRuleBox "+(futureStatus.mode||"legacy");
+     futureTreatmentRule.innerHTML=futureStatus.html;
+   }
+
+   let calcHtml="";
+   if(accidentType==="mutual"){
+     const post2023=!!accDate && accDate>="2023-01-01";
+     const applies=applicability==="driver";
+     const excess=Math.max(0,treatmentWon-paiLimitWon);
+     const ownFaultTreatment=(post2023&&applies)?excess*(faultRate/100):0;
+     const opponentTreatment=Math.max(0,treatmentWon-ownFaultTreatment);
+     calcHtml+=`<div class="minorCalcGrid">
+       <div class="minorMetric"><span>총 치료비</span><b>${won(treatmentWon)}</b></div>
+       <div class="minorMetric"><span>대인Ⅰ ${gr}급 한도</span><b>${won(paiLimitWon)}</b></div>
+       <div class="minorMetric"><span>대인Ⅰ 초과 치료비</span><b>${won(excess)}</b></div>
+       <div class="minorMetric"><span>본인과실 치료비 검토액</span><b>${won(ownFaultTreatment)}</b></div>
+     </div>`;
+     if(!post2023) calcHtml+=`<div class="minorWarn minorInfo"><b>사고일 기준:</b> 2023.1.1 이전 사고이므로 본 프로그램은 경상환자 대인Ⅱ 치료비 과실책임주의 계산을 적용하지 않습니다.</div>`;
+     else if(applicability==="excluded") calcHtml+=`<div class="minorWarn minorInfo"><b>적용 제외 선택:</b> 보행자·이륜차·자전거·경운기 운전자 등은 2023년 경상환자 치료비 과실책임주의의 적용 제외 범주를 확인해야 합니다. 본인과실 치료비를 0원으로 표시했습니다.</div>`;
+     else if(applicability==="unknown") calcHtml+=`<div class="minorWarn"><b>적용대상 확인 필요:</b> 대상 여부가 확정되지 않아 본인과실 치료비를 자동 확정값으로 보지 마십시오.</div>`;
+     else if(excess<=0) calcHtml+=`<div class="minorWarn minorOk">총 치료비가 대인Ⅰ ${gr}급 한도 이내이므로 이 산식상 대인Ⅱ 초과치료비의 본인과실 부담액은 없습니다.</div>`;
+     else calcHtml+=`<div class="minorWarn"><b>단순 산식:</b> (${won(treatmentWon)} - ${won(paiLimitWon)}) × 본인과실 ${faultRate}% = <b>${won(ownFaultTreatment)}</b>. 이 금액은 자손·자상 또는 자비 처리 검토대상 치료비이며, 상대 대인 부담분은 단순 환산 시 약 <b>${won(opponentTreatment)}</b>입니다. 실제 지급·정산은 보험사 산정이 우선합니다.</div>`;
+   }else{
+     calcHtml+=`<div class="minorWarn minorInfo">단독사고는 상대방 대인Ⅰ·Ⅱ가 없으므로 ‘대인Ⅰ 초과치료비 × 과실률’ 계산을 적용하지 않습니다. 가입한 자손·자상 자체담보로 처리구조를 확인합니다.</div>`;
+   }
+   if(accDate>="2023-01-01"&&duration>28) calcHtml+=`<div class="minorWarn"><b>4주 초과 치료:</b> 입력한 치료기간은 ${duration}일입니다. 진단서상 추가 치료 필요기간 확인이 필요합니다.</div>`;
+   if(accDate>="2026-09-10"&&duration>56) calcHtml+=`<div class="minorWarn"><b>8주 초과 장기치료:</b> 입력한 치료기간은 ${duration}일입니다. 2026.9.10 이후 사고는 장기치료 필요성·기간에 관한 자동차손해배상진흥원 검토 절차를 확인해야 합니다. 8주가 치료 종료일이라는 뜻은 아닙니다.</div>`;
+   if(accDate>="2026-09-10"&&duration>=0&&duration<=56) calcHtml+=`<div class="minorWarn minorOk">2026.9.10 이후 사고입니다. 8주(56일) 초과 치료를 계획하는 경우 별도 장기치료 검토 절차가 작동하므로 치료 경과에 따라 다시 확인하세요.</div>`;
+   if(accDate>="2026-09-10") calcHtml+=`<div class="minorWarn ${policyStartDate>="2026-10-25"&&policyStartDate<=accDate?"":"minorInfo"}"><b>향후치료비:</b> 사고일 9/10 이후라는 이유만으로 개정약관 적용을 자동 확정하지 않습니다. ${policyStartDate?(policyStartDate>="2026-10-25"&&policyStartDate<=accDate?`책임개시일 ${policyStartDate}는 개정 지급기준 적용 구간에 해당할 가능성이 높으므로 계약 체결일을 함께 확인하세요.`:`책임개시일 ${policyStartDate}는 10/25 이전이므로 개정 지급기준의 계약상 자동 적용으로 단정하지 않고 보험사 실무기준을 확인합니다.`):`책임개시일을 입력하여 개정 지급기준 적용 여부를 확인하세요.`}</div>`;
+   if(minorCalcArea) minorCalcArea.innerHTML=calcHtml;
+ }else{
+   if(minorPanel) minorPanel.style.display="none";
+   if(futureTreatmentRule) futureTreatmentRule.innerHTML="";
+ }
+
+ if(!coverType.value){
+   if(memo) memo.innerHTML='<b>자손 또는 자상 버튼을 먼저 선택해 주세요.</b>';
+   return;
+ }
+ const d=DATA[co.value];
+ const compareSelfKey=(compareSelfPlan&&compareSelfPlan.value)?compareSelfPlan.value:plan.value;
+ const arr=d.plans[compareSelfKey];
+ const selfLimitMan=arr?arr[gr-1]:null;
+ const selfLimitWon=selfLimitMan==null?null:selfLimitMan*10000;
  const selfDamage=treatmentWon;
- const autoDamage=treatmentWon+comfortWon+lostWon+outpatientWon+extraCost;
+ const autoDamage=comfortWon+lostWon+outpatientWon+treatmentWon+extraCost;
  const self=selfLimitWon==null?null:Math.min(selfLimitWon,selfDamage);
  const jasangSelectedMan=Number((compareAutoPlan&&compareAutoPlan.value)?compareAutoPlan.value:jasangPlan.value)||0;
  const jasangLimitWon=jasangSelectedMan*10000;
  const auto=Math.min(jasangLimitWon,autoDamage);
+ const route=(document.getElementById("mutualRoute")?.value||"opponentFirst");
+ // 상대 대인 공제대상액 자동산정: 항목별 산정 후 합산합니다.
+ // 비치료 손해(위자료·휴업손해·통원비·기타)는 상대과실분을 반영하고,
+ // 치료비는 2023년 이후 12~14급 차량운전자에 한해 대인Ⅰ 한도 + 초과분 상대과실로 분리합니다.
+ const opponentMode=(document.getElementById("opponentAmountMode")?.value||"auto");
+ const opponentInput=document.getElementById("opponentBodilyAmount");
+ const opponentStatus=document.getElementById("opponentAmountStatus");
+ const opponentBreakdown=document.getElementById("opponentBreakdown");
+ const otherFaultShare=Math.max(0,Math.min(1,(100-faultRate)/100));
+ const ownFaultShare=Math.max(0,Math.min(1,faultRate/100));
+ const post2023Accident=!!accDate && accDate>="2023-01-01";
+ const minorDriverRule=isMinor && post2023Accident && applicability==="driver";
+ const minorUnknownRule=isMinor && post2023Accident && applicability==="unknown";
 
+ let opponentComfort=0, opponentLost=0, opponentOutpatient=0, opponentTreatment=0, opponentExtra=0;
+ let ownFaultTreatment=0, compulsoryPart=0, excessPart=0;
+ if(accidentType==="mutual" && faultRate<100){
+   opponentComfort=comfortWon*otherFaultShare;
+   opponentLost=lostWon*otherFaultShare;
+   opponentOutpatient=outpatientWon*otherFaultShare;
+   opponentExtra=extraCost*otherFaultShare;
+   if(minorDriverRule || minorUnknownRule){
+     compulsoryPart=Math.min(treatmentWon,paiLimitWon||0);
+     excessPart=Math.max(0,treatmentWon-(paiLimitWon||0));
+     opponentTreatment=compulsoryPart+(excessPart*otherFaultShare);
+     ownFaultTreatment=excessPart*ownFaultShare;
+   }else{
+     // 1~11급, 2023년 이전 사고 또는 경상환자 과실책임 제외대상: 치료비는 기존 전액지급 구조를 참고
+     opponentTreatment=treatmentWon;
+     ownFaultTreatment=0;
+   }
+ }
+ const opponentAutoAmount=opponentComfort+opponentLost+opponentOutpatient+opponentTreatment+opponentExtra;
+
+ if(opponentMode==="auto"){
+   if(opponentInput){
+     opponentInput.readOnly=true;
+     opponentInput.value=formatCommaNumber(Math.round(opponentAutoAmount));
+   }
+   if(opponentStatus){
+     let ruleText=`항목별 자동산정 · 상대과실 ${(otherFaultShare*100).toFixed(0)}%`;
+     if(minorDriverRule) ruleText+=` · 12~14급 치료비 과실책임 반영`;
+     if(minorUnknownRule) ruleText+=` · 적용대상 여부 확인 필요`;
+     opponentStatus.textContent=ruleText;
+     opponentStatus.style.color=minorUnknownRule?"#b45309":"#0f766e";
+   }
+   if(opponentBreakdown){
+     const treatmentFormula=(minorDriverRule||minorUnknownRule)
+       ? `대인Ⅰ ${won(compulsoryPart)} + 초과치료비 ${won(excessPart)} × 상대과실 ${(otherFaultShare*100).toFixed(0)}% = <b>${won(opponentTreatment)}</b>`
+       : `치료비 전액지급 구조 참고 = <b>${won(opponentTreatment)}</b>`;
+     opponentBreakdown.innerHTML=`<div class="breakdownTitle">대인 공제대상 참고액 산출내역</div>`+
+       `<span class="breakdownRow">위자료 ${won(comfortWon)} × 상대과실 ${(otherFaultShare*100).toFixed(0)}% = <b>${won(opponentComfort)}</b></span>`+
+       `<span class="breakdownRow">휴업손해 ${won(lostWon)} × 상대과실 ${(otherFaultShare*100).toFixed(0)}% = <b>${won(opponentLost)}</b></span>`+
+       `<span class="breakdownRow">통원비 ${won(outpatientWon)} × 상대과실 ${(otherFaultShare*100).toFixed(0)}% = <b>${won(opponentOutpatient)}</b></span>`+
+       `<span class="breakdownRow">치료비: ${treatmentFormula}</span>`+
+       `<span class="breakdownRow">기타 인정손해 ${won(extraCost)} × 상대과실 ${(otherFaultShare*100).toFixed(0)}% = <b>${won(opponentExtra)}</b></span>`+
+       `<span class="breakdownTotal">합계 ${won(opponentAutoAmount)}</span>`+
+       ((minorDriverRule||minorUnknownRule)?`<span class="breakdownNote">본인과실 치료비 검토액: ${won(ownFaultTreatment)}${minorUnknownRule?' · 적용대상 여부 확정 전 잠정치':''}</span>`:``);
+   }
+ }else{
+   if(opponentInput) opponentInput.readOnly=false;
+   if(opponentStatus){opponentStatus.textContent="보험사에서 확인한 대인Ⅰ·Ⅱ 공제대상액을 직접 입력";opponentStatus.style.color="#b45309";}
+   if(opponentBreakdown) opponentBreakdown.innerHTML='<div class="breakdownTitle">직접입력 모드</div><span class="breakdownRow">보험사가 확정한 대인Ⅰ·Ⅱ 공제대상액을 입력하면 그 금액을 우선 사용합니다.</span><span class="breakdownNote">자동산정 대신 확정 통보액을 우선 반영합니다.</span>';
+ }
+ const opponentBodilyAmount=opponentMode==="auto"?opponentAutoAmount:num("opponentBodilyAmount");
+ // 쌍방사고 + 대인 선처리: 자손·자상은 실제손해액에서 대인Ⅰ·Ⅱ로 보상받을 수 있는 금액을 공제하는 구조를 참고합니다.
+ const selfMutualGross=autoDamage;
+ const selfAfterOpponent=selfLimitWon==null?null:Math.min(selfLimitWon,Math.max(0,selfMutualGross-opponentBodilyAmount));
+ const autoAfterOpponent=Math.min(jasangLimitWon,Math.max(0,autoDamage-opponentBodilyAmount));
+ const autoFirstPaid=Math.min(jasangLimitWon,autoDamage);
+ const autoFirstUncovered=Math.max(0,autoDamage-autoFirstPaid);
+ const routeSelf=accidentType!=="mutual"?self:selfAfterOpponent;
+ const routeAuto=accidentType!=="mutual"?auto:(route==="jasangFirst"?autoFirstPaid:autoAfterOpponent);
+ const liveSummary=document.getElementById("liveCalcSummary");
+ const liveSummaryBody=document.getElementById("liveCalcSummaryBody");
+ if(liveSummary && liveSummaryBody){
+   liveSummary.style.display="block";
+   const card=(label,value,accent)=>`<div style="padding:9px;border-radius:10px;background:#fff;border:1px solid #e2e8f0"><span style="display:block;font-size:11px;color:#64748b;font-weight:800">${label}</span><b style="display:block;margin-top:3px;color:${accent||'#102a43'}">${value}</b></div>`;
+   liveSummaryBody.innerHTML=card("치료비 합계",won(treatmentWon),"#0f766e")+
+     card("전체 손해액 산정기초",won(autoDamage),"#334155")+
+     card("상대 대인 공제대상",accidentType==="mutual"?won(opponentBodilyAmount):"해당 없음","#b45309")+
+      card("자손 처리 참고액",routeSelf==null?"미검증":won(routeSelf),"#2563eb")+
+      card("자상 처리 참고액",routeAuto==null?"미검증":won(routeAuto),"#059669");
+ }
  const isJasons=coverType.value==="jasons";
  const selfResult=document.getElementById("selfResultCard"), autoResult=document.getElementById("autoResultCard");
- if(selfResult) selfResult.style.display="block";
- if(autoResult) autoResult.style.display="block";
- selfPay.textContent=self==null?"계산 차단":won(self);
- autoPay.textContent=won(auto);
+ if(selfResult) selfResult.style.display="block"; if(autoResult) autoResult.style.display="block";
+ selfPay.textContent=routeSelf==null?"계산 차단":won(routeSelf); autoPay.textContent=routeAuto==null?"계산 차단":won(routeAuto);
 
- selfRows.innerHTML=row("사고유형",accidentLabel)+row("자손 가입가정",Number(compareSelfKey).toLocaleString()+"만원형")+
-   row("실제 치료관계비 합계",won(treatmentWon))+
-   row("부상 위자료","보상안함")+
-   row("휴업손해","보상안함")+
-   row("통원 관련 손해","별도 산정 없음")+
-   row("선택 부상급수",gr+"급")+
-   row("자손 급수별 부상한도",selfLimitWon==null?"미검증":won(selfLimitWon))+
-   row("자손 예상 보험금",self==null?"미검증":won(self));
- autoRows.innerHTML=row("사고유형",accidentLabel)+row("자상 가입가정",formatMan(jasangSelectedMan))+
-   row("자상 산정 손해액",won(autoDamage))+
-   row("치료관계비 합계",won(treatmentWon))+
-   row("부상 위자료 ("+gr+"급)",won(comfortWon))+
-   row("휴업손해",won(lostWon)+" · "+inDays+"일 × "+won(appliedDailyWage)+" × 85%")+
-   row("통원 관련 손해",won(outpatientWon)+" · "+outDays+"일 × 8,000원")+
-   row("기타 인정손해",won(extraCost))+
-   row("자상 부상 가입한도",won(jasangLimitWon))+
-   row("자상 예상 보험금",won(auto));
-
+ const routeResult=document.getElementById("mutualRouteResult");
+ if(routeResult){
+   if(accidentType!=="mutual"){
+     routeResult.style.display="none";
+   }else if(route==="opponentFirst"){
+     routeResult.style.display="block";
+     routeResult.innerHTML=`<div class="routeResultTitle">① 상대방 대인 선처리 → 자손·자상 후처리 비교</div>
+       <div class="routeMetrics"><div class="routeMetric"><span>상대 대인 공제대상 참고액</span><b>${won(opponentBodilyAmount)}</b></div><div class="routeMetric"><span>본인과실 치료비 검토액</span><b>${won(ownFaultTreatment)}</b></div><div class="routeMetric primary"><span>자손 후처리 참고액</span><b>${selfAfterOpponent==null?"미검증":won(selfAfterOpponent)}</b></div><div class="routeMetric auto"><span>자상 후처리 참고액</span><b>${won(autoAfterOpponent)}</b></div></div>
+       <div class="routeResultNote">${opponentMode==="auto"?"현재 공제대상액은 <b>항목별 자동산정</b>한 상담용 참고치입니다.":"현재 공제대상액은 사용자가 입력한 <b>보험사 확인액</b>입니다."} 동일한 대인 공제대상액을 기준으로 자손과 자상의 후처리 가능범위를 각각 계산해 비교합니다.</div>`;
+   }else{
+     routeResult.style.display="block";
+     const full=autoFirstUncovered<=0;
+     routeResult.innerHTML=`<div class="routeResultTitle">② 자동차상해(자상) 선처리 → 보험사 간 대위·구상 및 정산</div>
+       <div class="routeMetrics"><div class="routeMetric auto"><span>내 보험사 자상 선지급 참고액</span><b>${won(autoFirstPaid)}</b></div><div class="routeMetric"><span>동일손해 상대 대인 고객 추가수령</span><b>${full?"0원":"미보상분만 별도 검토"}</b></div><div class="routeMetric warn"><span>자상 미보상 손해</span><b>${won(autoFirstUncovered)}</b></div></div>
+       <div class="routeResultNote ${full?"ok":""}">${full?"현재 입력한 약관상 손해가 자상 가입한도 내에서 모두 보상되는 가정입니다. 고객은 같은 손해에 대해 상대방 대인보험금을 다시 추가 수령하는 것으로 계산하지 않습니다. 이후 상대방 책임분은 보험회사 간 대위·구상 및 정산 영역입니다.":"자상 가입한도 또는 약관상 미보상 손해가 남습니다. 그 미보상분에 한해 상대방 책임범위를 별도 검토합니다."}</div>`;
+   }
+ }
+ // 결과 항목: 위자료 → 휴업손해 → 통원비 → 치료비 → 기타
+ if(accidentType==="mutual"&&route==="opponentFirst"){
+   selfRows.innerHTML=row("처리경로","상대 대인 선처리 → 자손 후처리")+row("자손 가입가정",Number(compareSelfKey).toLocaleString()+"만원형")+row("부상 위자료",won(comfortWon)+" · 실제손해액 산정기초")+row("휴업손해",won(lostWon)+" · 실제손해액 산정기초")+row("통원비",won(outpatientWon)+" · 실제손해액 산정기초")+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("상대 대인 공제대상 합계",won(opponentBodilyAmount))+row("공제 후 자손 산정기초",won(Math.max(0,selfMutualGross-opponentBodilyAmount))+" · 실제손해액 - 공제액")+row("자손 급수별 부상한도",selfLimitWon==null?"미검증":won(selfLimitWon))+row("자손 후처리 참고액",selfAfterOpponent==null?"미검증":won(selfAfterOpponent)+" · min(공제 후 산정기초, 급수별 한도) ");
+   autoRows.innerHTML=row("처리경로","상대 대인 선처리 → 자상 후처리")+row("자상 가입가정",formatMan(jasangSelectedMan))+row("부상 위자료 ("+gr+"급)",won(comfortWon))+row("휴업손해",won(lostWon))+row("통원비",won(outpatientWon))+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("자상 산정 손해액",won(autoDamage))+row("상대 대인 공제대상 합계",won(opponentBodilyAmount))+row("자상 후처리 참고액",won(autoAfterOpponent));
+ }else if(accidentType==="mutual"&&route==="jasangFirst"){
+   selfRows.innerHTML=row("비교가정","상대 대인 선처리 → 자손 후처리")+row("자손 가입가정",Number(compareSelfKey).toLocaleString()+"만원형")+row("상대 대인 공제대상 합계",won(opponentBodilyAmount))+row("자손 급수별 부상한도",selfLimitWon==null?"미검증":won(selfLimitWon))+row("자손 비교가정액",selfAfterOpponent==null?"미검증":won(selfAfterOpponent));
+   autoRows.innerHTML=row("선택 처리경로","자상 선처리 → 보험사 간 대위·구상 및 정산")+row("자상 가입가정",formatMan(jasangSelectedMan))+row("부상 위자료 ("+gr+"급)",won(comfortWon))+row("휴업손해",won(lostWon))+row("통원비",won(outpatientWon))+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("자상 산정 손해액",won(autoDamage))+row("자상 선지급 참고액",won(autoFirstPaid))+row("자상 미보상 손해",won(autoFirstUncovered))+row("동일손해 상대 대인 고객 추가수령",autoFirstUncovered<=0?"0원":"미보상분 범위 내 별도 검토")+row("후속처리","보험회사 간 대위·구상 및 정산");
+ }else{
+   selfRows.innerHTML=row("사고유형",accidentLabel)+row("자손 가입가정",Number(compareSelfKey).toLocaleString()+"만원형")+row("부상 위자료","보상안함")+row("휴업손해","보상안함")+row("통원비","별도 산정 없음")+row("치료관계비 합계",won(treatmentWon))+row("선택 부상급수",gr+"급")+row("자손 급수별 부상한도",selfLimitWon==null?"미검증":won(selfLimitWon))+row("자손 비교가정액",self==null?"미검증":won(self));
+   autoRows.innerHTML=row("사고유형",accidentLabel)+row("자상 가입가정",formatMan(jasangSelectedMan))+row("부상 위자료 ("+gr+"급)",won(comfortWon))+row("휴업손해",won(lostWon)+" · "+inDays+"일 × "+won(appliedDailyWage)+" × 85%")+row("통원비",won(outpatientWon)+" · "+outDays+"일 × 8,000원")+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("자상 산정 손해액",won(autoDamage))+row("자상 부상 가입한도",won(jasangLimitWon))+row("자상 비교가정액",won(auto));
+ }
  if(comparisonDetailBody){
    const selfLimitLabel=selfLimitWon==null?"미검증":won(selfLimitWon);
-   comparisonDetailBody.innerHTML=`
-     <tr><td>치료관계비</td><td class="selfCell">${won(treatmentWon)}</td><td class="autoCell">${won(treatmentWon)}</td></tr>
-     <tr><td>부상 위자료 (${gr}급)</td><td class="selfCell noPay">보상안함</td><td class="autoCell">${won(comfortWon)}</td></tr>
-     <tr><td>휴업손해</td><td class="selfCell noPay">보상안함</td><td class="autoCell">${won(lostWon)}</td></tr>
-     <tr><td>통원 관련 손해</td><td class="selfCell noPay">별도 산정 없음</td><td class="autoCell">${won(outpatientWon)}</td></tr>
-     <tr><td>기타 인정손해</td><td class="selfCell noPay">별도 산정 없음</td><td class="autoCell">${won(extraCost)}</td></tr>
-     <tr><td>가입가정</td><td class="selfCell">${Number(compareSelfKey).toLocaleString()}만원형</td><td class="autoCell">${formatMan(jasangSelectedMan)}</td></tr>
-     <tr><td>부상 보상한도</td><td class="selfCell">${selfLimitLabel} (${gr}급)</td><td class="autoCell">${won(jasangLimitWon)}</td></tr>
-     <tr class="totalRow"><td>예상 보험금</td><td class="selfCell">${self==null?"미검증":won(self)}</td><td class="autoCell">${won(auto)}</td></tr>`;
+   if(accidentType==="mutual"&&route==="opponentFirst") comparisonDetailBody.innerHTML=`<tr><td>처리방식</td><td class="selfCell"><b>대인 → 자손 후처리</b></td><td class="autoCell"><b>대인 → 자상 후처리</b></td></tr><tr><td>상대 대인 공제대상액</td><td class="selfCell">-${won(opponentBodilyAmount)}</td><td class="autoCell">-${won(opponentBodilyAmount)}</td></tr><tr><td>공제 후 산정기초</td><td class="selfCell">${won(Math.max(0,selfMutualGross-opponentBodilyAmount))}</td><td class="autoCell">${won(Math.max(0,autoDamage-opponentBodilyAmount))}</td></tr><tr><td>자손 부상한도</td><td class="selfCell">${selfLimitLabel} (${gr}급)</td><td class="autoCell">-</td></tr><tr><td>자상 약관상 손해액</td><td class="selfCell">-</td><td class="autoCell">${won(autoDamage)}</td></tr><tr class="totalRow"><td>후처리 참고액</td><td class="selfCell">${selfAfterOpponent==null?"미검증":won(selfAfterOpponent)}</td><td class="autoCell">${won(autoAfterOpponent)}</td></tr>`;
+   else if(accidentType==="mutual"&&route==="jasangFirst") comparisonDetailBody.innerHTML=`<tr><td>선택 처리방식</td><td class="selfCell">대인→자손 비교가정</td><td class="autoCell"><b>자상 선처리</b></td></tr><tr><td>자손 비교가정액</td><td class="selfCell">${selfAfterOpponent==null?"미검증":won(selfAfterOpponent)}</td><td class="autoCell">-</td></tr><tr><td>자상 약관상 손해액</td><td class="selfCell">-</td><td class="autoCell">${won(autoDamage)}</td></tr><tr><td>자상 가입한도</td><td class="selfCell">-</td><td class="autoCell">${won(jasangLimitWon)}</td></tr><tr><td>동일손해 상대 대인 고객 추가수령</td><td class="selfCell">-</td><td class="autoCell">${autoFirstUncovered<=0?"0원":"미보상분 별도 검토"}</td></tr><tr class="totalRow"><td>비교/선지급 참고액</td><td class="selfCell">${selfAfterOpponent==null?"미검증":won(selfAfterOpponent)}</td><td class="autoCell">${won(autoFirstPaid)}</td></tr>`;
+   else comparisonDetailBody.innerHTML=`<tr><td>부상 위자료 (${gr}급)</td><td class="selfCell noPay">보상안함</td><td class="autoCell">${won(comfortWon)}</td></tr><tr><td>휴업손해</td><td class="selfCell noPay">보상안함</td><td class="autoCell">${won(lostWon)}</td></tr><tr><td>통원비</td><td class="selfCell noPay">별도 산정 없음</td><td class="autoCell">${won(outpatientWon)}</td></tr><tr><td>치료관계비</td><td class="selfCell">${won(treatmentWon)}</td><td class="autoCell">${won(treatmentWon)}</td></tr><tr><td>기타 인정손해</td><td class="selfCell noPay">별도 산정 없음</td><td class="autoCell">${won(extraCost)}</td></tr><tr><td>가입가정</td><td class="selfCell">${Number(compareSelfKey).toLocaleString()}만원형</td><td class="autoCell">${formatMan(jasangSelectedMan)}</td></tr><tr><td>부상 보상한도</td><td class="selfCell">${selfLimitLabel} (${gr}급)</td><td class="autoCell">${won(jasangLimitWon)}</td></tr><tr class="totalRow"><td>비교가정액</td><td class="selfCell">${self==null?"미검증":won(self)}</td><td class="autoCell">${won(auto)}</td></tr>`;
  }
-
- if(cmpSelf) cmpSelf.textContent=self==null?"미검증":won(self);
- if(cmpAuto) cmpAuto.textContent=won(auto);
- const gap=self==null?null:auto-self;
- if(cmpGap) cmpGap.textContent=gap==null?"-":(gap>=0?"+":"")+won(gap);
- if(cmpSentence) cmpSentence.innerHTML=self==null?`${co.value} 자손 한도 검증이 필요하여 비교 계산을 완료할 수 없습니다.`:
-   `<b>${accidentLabel}</b> 기준 · 같은 사고에서 자손은 치료비 중심으로 <b>${won(self)}</b>, 자상은 치료비에 위자료 <b>${won(comfortWon)}</b>·휴업손해 등을 반영해 <b>${won(auto)}</b>으로 비교됩니다. `+
-   `예상 차이는 <b>${gap>=0?"+":""}${won(gap)}</b>입니다.`;
-
- memo.innerHTML=`<b>자손·자상 부상보상 비교</b><br>`+
-   `사고유형은 <b>${accidentLabel}</b>, 현재 선택 담보는 <b>${isJasons?"자기신체사고(자손)":"자동차상해(자상)"}</b>입니다. `+
-   `자손 가입 가정과 자상 가입 가정을 같은 사고조건으로 나란히 표시하며, 자상의 위자료·휴업손해 항목을 별도로 보여줍니다.`;
+ if(accidentType==="mutual"){
+   if(route==="opponentFirst"){
+     const gap=(selfAfterOpponent==null)?null:autoAfterOpponent-selfAfterOpponent;
+     if(cmpSelf) cmpSelf.textContent=selfAfterOpponent==null?"미검증":won(selfAfterOpponent);
+     if(cmpAuto) cmpAuto.textContent=won(autoAfterOpponent);
+     if(cmpGap) cmpGap.textContent=gap==null?"-":(gap>=0?"+":"")+won(gap);
+     if(cmpSentence) cmpSentence.innerHTML=`<b>쌍방사고 · 상대방 대인 선처리</b><br>동일한 대인 공제대상 참고액 <b>${won(opponentBodilyAmount)}</b>을 적용했을 때 자손 후처리 참고액은 <b>${selfAfterOpponent==null?"미검증":won(selfAfterOpponent)}</b>, 자상 후처리 참고액은 <b>${won(autoAfterOpponent)}</b>입니다. 두 값은 같은 사고조건에서 담보 차이를 비교하기 위한 참고값입니다.`;
+   }else{
+     const gap=(selfAfterOpponent==null)?null:autoFirstPaid-selfAfterOpponent;
+     if(cmpSelf) cmpSelf.textContent=selfAfterOpponent==null?"미검증":won(selfAfterOpponent);
+     if(cmpAuto) cmpAuto.textContent=won(autoFirstPaid);
+     if(cmpGap) cmpGap.textContent=gap==null?"-":(gap>=0?"+":"")+won(gap);
+     if(cmpSentence) cmpSentence.innerHTML=`<b>쌍방사고 · 자동차상해(자상) 선처리</b><br>내 보험사 자상 선지급 참고액은 <b>${won(autoFirstPaid)}</b>입니다. ${autoFirstUncovered<=0?"현재 입력손해가 자상으로 모두 보상되는 가정에서는 같은 손해에 대한 상대방 대인 고객 추가수령액은 <b>0원</b>이며 이후 상대방 책임분은 보험회사 간 대위·구상 및 정산으로 처리합니다.":`자상 미보상 손해가 <b>${won(autoFirstUncovered)}</b> 남아 그 범위는 별도 검토합니다.`} 왼쪽 자손 금액은 <b>대인 선처리 후 자손 후처리 가정의 비교값</b>입니다.`;
+   }
+ }else{
+   if(cmpSelf) cmpSelf.textContent=self==null?"미검증":won(self);if(cmpAuto) cmpAuto.textContent=won(auto);const gap=self==null?null:auto-self;if(cmpGap) cmpGap.textContent=gap==null?"-":(gap>=0?"+":"")+won(gap);if(cmpSentence) cmpSentence.innerHTML=self==null?`${co.value} 자손 한도 검증이 필요하여 비교 계산을 완료할 수 없습니다.`:`<b>${accidentLabel}</b> · 동일 손해조건의 담보 비교입니다. 자손은 치료비 중심 <b>${won(self)}</b>, 자상은 위자료·휴업손해·통원비·치료비 등을 합산해 <b>${won(auto)}</b>으로 비교됩니다. 예상 차이는 <b>${gap>=0?"+":""}${won(gap)}</b>입니다.`;
+ }
+ memo.innerHTML=(accidentType==="mutual"?(route==="opponentFirst"?`<b>처리경로 해석</b> · <b>상대 대인 선처리</b>: 동일손해의 대인공제 후 자손·자상 후처리액을 각각 비교합니다.`:`<b>처리경로 해석</b> · <b>자상 선처리</b>: 고객 중복수령 없이 보상된 상대방 책임분은 보험사 간 대위·구상·정산, 자손은 대인→자손 가정 비교값입니다.`):`<b>처리경로 해석</b> · 단독사고: 상대 대인 공제 없이 자손·자상 자체담보를 비교합니다.`);
 }
 function source(){
  let d=DATA[co.value];
@@ -1072,14 +1470,47 @@ jasangPlan.onchange=()=>{if(compareAutoPlan && [...compareAutoPlan.options].some
 co.onchange=()=>{loadPlans();autoPlans();populateComparisonPlans();updateOfficialPolicyLink();
 updateCriteriaPolicyButton();};
 plan.onchange=()=>{if(compareSelfPlan && [...compareSelfPlan.options].some(o=>o.value===String(plan.value))) compareSelfPlan.value=String(plan.value);draw();calc()};
-grade.onchange=()=>{draw();calc()};
-if(compareSelfPlan) compareSelfPlan.addEventListener("change",calc);
-if(compareAutoPlan) compareAutoPlan.addEventListener("change",calc);
-["medical","directMedical","inDays","dailyWage","outDays","extraCost"].forEach(id=>{
- const el=document.getElementById(id); if(el){el.addEventListener("input",calc);el.addEventListener("change",calc);}
+grade.onchange=()=>{if(logicGrade) logicGrade.value=grade.value;draw();calc()};
+if(logicGrade) logicGrade.addEventListener("change",()=>{grade.value=logicGrade.value;draw();calc();});
+if(compareSelfPlan) compareSelfPlan.addEventListener("change",requestRecalc);
+if(compareAutoPlan) compareAutoPlan.addEventListener("change",requestRecalc);
+["medical","directMedical","dailyWage","extraCost","opponentBodilyAmount"].forEach(id=>{
+ const el=document.getElementById(id);
+ if(el){
+   el.addEventListener("input",()=>formatMoneyInput(el));
+   el.addEventListener("blur",()=>formatMoneyInput(el));
+   formatMoneyInput(el);
+ }
+});
+let calcFrame=0;
+function requestRecalc(){
+ if(calcFrame) cancelAnimationFrame(calcFrame);
+ calcFrame=requestAnimationFrame(()=>{calcFrame=0;try{calc();}catch(e){console.error("자동 재계산 오류",e);}});
+}
+["medical","directMedical","inDays","dailyWage","outDays","extraCost","faultRate","minorApplicability","treatmentDurationDays","opponentBodilyAmount","policyStartDate","opponentAmountMode"].forEach(id=>{
+ const el=document.getElementById(id); if(el){el.addEventListener("input",requestRecalc);el.addEventListener("change",requestRecalc);}
+});
+// 보상비교 화면의 입력·선택값이 추가되어도 자동재계산이 빠지지 않도록 이벤트 위임
+const comparePage=document.getElementById("p3");
+if(comparePage){
+ ["input","change","keyup"].forEach(evt=>comparePage.addEventListener(evt,(e)=>{
+   const target=e.target;
+   if(!target || !/^(INPUT|SELECT)$/.test(target.tagName)) return;
+   requestRecalc();
+ }));
+}
+const opponentModeEl=document.getElementById("opponentAmountMode");
+if(opponentModeEl) opponentModeEl.addEventListener("change",()=>{
+ const inp=document.getElementById("opponentBodilyAmount");
+ if(inp){
+   inp.readOnly=opponentModeEl.value!=="manual";
+   if(opponentModeEl.value==="manual") inp.focus();
+ }
+ requestRecalc();
 });
 const accDateEl=document.getElementById("accDate");
-if(accDateEl) accDateEl.addEventListener("change",()=>applyDailyWageByAccidentDate(true));
+if(accDateEl) accDateEl.addEventListener("change",()=>{if(logicAccDate) logicAccDate.value=accDateEl.value;applyDailyWageByAccidentDate(true);try{calc();}catch(e){console.error(e);}});
+if(logicAccDate) logicAccDate.addEventListener("change",()=>{if(accDateEl) accDateEl.value=logicAccDate.value;applyDailyWageByAccidentDate(true);try{calc();}catch(e){console.error(e);}});
 const dailyWageEl=document.getElementById("dailyWage");
 if(dailyWageEl) dailyWageEl.addEventListener("input",()=>{
  dailyWageEl.dataset.autoApplied="0";
@@ -1160,6 +1591,10 @@ function setCover(type){
  if(selfQuick) selfQuick.style.display=j?"block":"none";
  if(autoQuick) autoQuick.style.display=j?"none":"block";
 
+ if(document.getElementById("atype")?.value==="mutual"){
+   const currentRoute=(document.getElementById("mutualRoute")?.value||"opponentFirst");
+   if(currentRoute==="jasangFirst" && j){setMutualRoute("opponentFirst");return;}
+ }
  draw();
  calc();
 }
@@ -1240,36 +1675,31 @@ function closeEmbeddedPolicy(){
 }
 
 </script>
-<div style="max-width:1180px;margin:18px auto 28px;padding:14px 18px;border:1px solid #f59e0b;border-radius:14px;background:#fffbeb;color:#92400e;font-size:14px;line-height:1.6;font-weight:700;box-sizing:border-box;">
+<div class="oneLineWarning" style="max-width:1180px;margin:18px auto 28px;padding:12px 16px;border:1px solid #f59e0b;border-radius:14px;background:#fffbeb;color:#92400e;font-weight:700;box-sizing:border-box;">
 ⚠️ 본 비교표는 교육 및 참조용이며, 실제 사고 시 보험금 지급 여부 및 보상금액은 사고 내용과 적용 약관에 따라 달라질 수 있으므로 반드시 해당 보험사의 보상담당자와 확인이 필요합니다.
 </div>
-
-
 <div style="max-width:1180px;margin:10px auto 24px;padding:18px 20px;border:2px solid #dc2626;border-radius:16px;background:#fff1f2;color:#b91c1c;font-size:13px;line-height:1.8;font-weight:800;box-sizing:border-box;">
-<b style="font-size:15px">주의사항 · 지식재산권 보호</b><br>
+<b style="font-size:15px">주의사항 · 지식재산권 보호</b><br/>
 <b>제공해드리는 콘텐츠의 지적재산권은 홍익보험의 정신에 있습니다. 특별한 경우, 예외적 활용도가 있으신 경우 반드시 사전에 협의해 주시기 바랍니다. 그 외 경우로 활용하는 경우, 저작권 이슈가 발생할 수 있음을 양지하시기 바랍니다. 특히 온라인 공간 및 AI 서비스에 저희 자료를 올리시는 것 역시 엄격히 금지되어 있습니다. (사용자에게 전달받은 제3자 공유도 마찬가지입니다.) 모든 자료는 홍익보험의 정신이 자체적으로 제작되어 지식재산으로 보호받고 있습니다.</b>
 </div>
 <div style="text-align:center;margin:8px auto 22px;font-size:13px;font-weight:800;color:#64748b;letter-spacing:.2px;">
-made by 홍익보험의정신(김성호,정진성) · v1.03
+made by 홍익보험의정신(김성호,정진성) · v1.16
 </div>
-
-<div id="policyModal" class="policyModal" aria-hidden="true">
-  <div class="policyModalBox">
-    <div class="policyModalHead">
-      <div>
-        <div class="policyModalEyebrow">프로그램 내장 약관</div>
-        <div id="policyModalTitle" class="policyModalTitle">자동차보험 약관</div>
-      </div>
-      <div class="policyModalBtns">
-<button type="button" id="policyNewWindow" class="policyOpenNew">새 창에서 열기</button>
-<button type="button" class="policyClose" onclick="closeEmbeddedPolicy()">닫기 ×</button>
+<div aria-hidden="true" class="policyModal" id="policyModal">
+<div class="policyModalBox">
+<div class="policyModalHead">
+<div>
+<div class="policyModalEyebrow">프로그램 내장 약관</div>
+<div class="policyModalTitle" id="policyModalTitle">자동차보험 약관</div>
 </div>
-    </div>
-    <iframe id="policyFrame" class="policyFrame" title="자동차보험 약관 PDF"></iframe>
-  </div>
+<div class="policyModalBtns">
+<button class="policyOpenNew" id="policyNewWindow" type="button">새 창에서 열기</button>
+<button class="policyClose" onclick="closeEmbeddedPolicy()" type="button">닫기 ×</button>
 </div>
-
-
+</div>
+<iframe class="policyFrame" id="policyFrame" title="자동차보험 약관 PDF"></iframe>
+</div>
+</div>
 <script id="pwaRegistration">
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   window.addEventListener('load', function(){
