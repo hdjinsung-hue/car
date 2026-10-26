@@ -3487,210 +3487,7 @@ function openEmbeddedPolicy(company){
    return;
  }
  try{
-   win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+company+' 약관 여는 중...</title></head><body style="font-family:sans-serif;padding:24px">약관 PDF를 여는 중입니다...
-<style id="v147_compare_print_fullpage_dashboard">
-/* 보상비교 출력결과: 첨부 시안처럼 결과 6패널을 페이지에 꽉 차게 출력 */
-@page{size:A4 landscape; margin:4mm;}
-@media print{
-  body.compareResultPrintMode #compareResultView{
-    width:100%!important;
-    max-width:none!important;
-    margin:0!important;
-    padding:0!important;
-    zoom:1!important;
-    transform:none!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareDashHeader,
-  body.compareResultPrintMode #compareResultView .compareDashFoot,
-  body.compareResultPrintMode #compareResultView .compareDashHeaderActions{
-    display:none!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareDashMain,
-  body.compareResultPrintMode #compareResultView .compareDashBottom{
-    display:grid!important;
-    width:100%!important;
-    gap:10px!important;
-    margin:0!important;
-    align-items:stretch!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareDashMain{
-    grid-template-columns:minmax(0,1fr) minmax(0,1.32fr) minmax(0,1fr)!important;
-    margin-bottom:10px!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareDashBottom{
-    grid-template-columns:minmax(0,1.03fr) minmax(0,1.20fr) minmax(0,.86fr)!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCoverageCard,
-  body.compareResultPrintMode #compareResultView .compareCenterCard,
-  body.compareResultPrintMode #compareResultView .dashPanel{
-    border-radius:14px!important;
-    box-shadow:none!important;
-    border:1px solid #d6e2ef!important;
-    height:100%!important;
-    min-height:0!important;
-    overflow:hidden!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCoverageHead{
-    padding:12px 14px!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCoverageHead .coverName{
-    font-size:23px!important;
-    line-height:1.05!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCoverageHead .coverName small{
-    font-size:12px!important;
-    font-weight:900!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCoverageHead .coverSub{
-    margin-top:4px!important;
-    font-size:10px!important;
-    line-height:1.35!important;
-    font-weight:800!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCoverageBody{
-    padding:14px!important;
-    min-height:395px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashAmountLabel{
-    font-size:12px!important;
-    font-weight:900!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashAmount{
-    font-size:42px!important;
-    line-height:1!important;
-    margin:8px 0 14px!important;
-    letter-spacing:-.05em!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashRow{
-    padding:8px 0!important;
-    font-size:12px!important;
-    line-height:1.35!important;
-    gap:8px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashLimit{
-    margin-top:14px!important;
-    padding:12px 14px!important;
-    border-radius:10px!important;
-    font-size:11px!important;
-    line-height:1.35!important;
-    font-weight:800!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCenterCard{
-    padding:14px!important;
-    min-height:395px!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCenterTitle{
-    margin-bottom:14px!important;
-    gap:8px!important;
-    font-size:16px!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .compareCenterTitle i{
-    width:34px!important;
-    height:34px!important;
-    border-radius:10px!important;
-    font-size:16px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashSummaryGrid{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:12px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashSummaryItem{
-    padding:12px 14px!important;
-    border-radius:12px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashSummaryItem span{
-    font-size:11px!important;
-    margin-bottom:4px!important;
-    font-weight:800!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashSummaryItem b{
-    font-size:16px!important;
-    line-height:1.25!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashRouteBox{
-    margin-top:16px!important;
-    padding:14px!important;
-    border-radius:14px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashRouteBox span{
-    font-size:11px!important;
-    font-weight:800!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashRouteBox b{
-    margin-top:6px!important;
-    font-size:16px!important;
-    line-height:1.35!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashPanel{
-    padding:14px!important;
-    min-height:275px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashPanelTitle{
-    font-size:18px!important;
-    margin-bottom:12px!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .totalCompareBars{
-    gap:14px!important;
-    margin-top:14px!important;
-  }
-  body.compareResultPrintMode #compareResultView .totalBarRow{
-    grid-template-columns:52px 1fr 94px!important;
-    gap:9px!important;
-  }
-  body.compareResultPrintMode #compareResultView .totalBarLabel,
-  body.compareResultPrintMode #compareResultView .totalBarValue{
-    font-size:14px!important;
-    font-weight:900!important;
-  }
-  body.compareResultPrintMode #compareResultView .totalBarTrack{
-    height:33px!important;
-    border-radius:999px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashPanel .muted{
-    margin-top:14px!important;
-    font-size:11px!important;
-    line-height:1.45!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashCompareTable{
-    width:100%!important;
-    min-width:0!important;
-    font-size:12px!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashCompareTable th,
-  body.compareResultPrintMode #compareResultView .dashCompareTable td{
-    padding:10px 8px!important;
-    line-height:1.3!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashAnalysisBadge{
-    padding:6px 11px!important;
-    font-size:11px!important;
-    font-weight:900!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashAnalysisMain{
-    margin:14px 0 10px!important;
-    font-size:26px!important;
-    line-height:1.32!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashAnalysisGap{
-    font-size:38px!important;
-    line-height:1!important;
-    font-weight:950!important;
-  }
-  body.compareResultPrintMode #compareResultView .dashAnalysisText{
-    margin-top:12px!important;
-    font-size:12px!important;
-    line-height:1.5!important;
-  }
-}
-</style>
-
-</body></html>');
+   win.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+company+' 약관 여는 중...</title></head><body style="font-family:sans-serif;padding:24px">약관 PDF를 여는 중입니다...</body></html>');
    win.document.close();
  }catch(e){}
 
@@ -9007,6 +8804,188 @@ html body #globalVisualNavWrap.isCompact .gvText small{
 </style>
 
 
+
+
+
+
+
+
+<style id="v147-input-touch-stability">
+/* ===== PC + MOBILE INPUT STABILITY LAYER ===== */
+/* Decorative layers must never intercept mouse/touch. */
+#programWorkbench .v147Spotlight::after,
+#programWorkbench .sectionTopHero::before,
+#programWorkbench .homeHero::before,
+#programWorkbench .homeHero::after,
+#programWorkbench .compareRefAccident::after,
+#programWorkbench .entryBox::before,
+#programWorkbench .autoBox::before,
+#programWorkbench .p1Field > span::before,
+#programWorkbench .p1CoverageBtns button::after,
+#programWorkbench .p2AccBtn::before,
+#programWorkbench .p2AccBtn::after,
+#programWorkbench .flowNode::before,
+#programWorkbench .flowNode::after,
+#globalVisualNavWrap .gvCard::before,
+#globalVisualNavWrap .gvCard::after,
+.uiRipple{
+  pointer-events:none!important;
+}
+
+/* Interactive containers stay above visual overlays. */
+#programWorkbench .p1Field,
+#programWorkbench .p1CoverageField,
+#programWorkbench .p1CoverageBtns,
+#programWorkbench .p1PlanCard,
+#programWorkbench .limitCompareControl,
+#programWorkbench .limitCompareControlBar,
+#programWorkbench .logicSelectors,
+#programWorkbench .logicSelectors>label,
+#programWorkbench .p2FlowField,
+#programWorkbench .p2LimitCard,
+#programWorkbench .comparePlanControl,
+#programWorkbench .accidentToggle,
+#programWorkbench .termsField,
+#programWorkbench .termsCompanyGrid,
+#programWorkbench .termsCompanyStrip,
+#programWorkbench .tvCompanyStrip{
+  position:relative!important;
+  z-index:30!important;
+  pointer-events:auto!important;
+}
+
+/* All real controls get a consistent top interaction layer on PC and mobile. */
+#programWorkbench select,
+#programWorkbench input,
+#programWorkbench textarea,
+#programWorkbench button,
+#programWorkbench .btn,
+#globalVisualNavWrap button,
+#appChrome button,
+.appModal button,
+.policyModal button{
+  position:relative!important;
+  z-index:40!important;
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:rgba(37,99,235,.16);
+}
+#programWorkbench select,
+#programWorkbench input,
+#programWorkbench textarea{
+  -webkit-user-select:auto!important;
+  user-select:auto!important;
+}
+
+/* Native selects must remain native and tappable. */
+#programWorkbench select{
+  opacity:1!important;
+  visibility:visible!important;
+  -webkit-appearance:auto!important;
+  appearance:auto!important;
+  cursor:pointer!important;
+}
+#programWorkbench input[type="date"],
+#programWorkbench input[type="number"],
+#programWorkbench input[type="text"]{
+  opacity:1!important;
+  visibility:visible!important;
+}
+
+/* Never allow content cards to create a transparent click shield over fields. */
+#p1 .p1EntryGrid,
+#p1 .p1CompactPanel,
+#p2 .limitContentGrid,
+#p2 .limitCompareControlBar,
+#p3 #compareInputView,
+#p3 #compareInputView .panel,
+#p3 #compareInputView .scenarioLogic,
+#p3 #compareInputView .inputs,
+#p4 .termsMainPanel{
+  pointer-events:auto!important;
+}
+
+/* Keep intentional disabled plan selectors disabled, but do not disable their parent cards. */
+#p1 .p1PlanCard.coverage-inactive{
+  pointer-events:auto!important;
+}
+#p1 .p1PlanCard.coverage-inactive select:disabled{
+  pointer-events:none!important;
+}
+
+@media (max-width:780px){
+  /* Mobile: remove desktop transforms that can create overlapping hit boxes. */
+  #programWorkbench .v147Lift:hover,
+  #programWorkbench button:hover,
+  #globalVisualNavWrap .gvCard:hover,
+  #globalVisualNavWrap .gvCard:hover img,
+  #globalVisualNavWrap .gvCard:hover .gvArrow{
+    transform:none!important;
+  }
+  #programWorkbench select,
+  #programWorkbench input,
+  #programWorkbench textarea,
+  #programWorkbench button,
+  #globalVisualNavWrap button{
+    min-width:0;
+    touch-action:manipulation!important;
+  }
+  /* Make select/date controls comfortably tappable without enlarging layout too much. */
+  #p1 .p1Field select,#p1 .p1Field input,
+  #p1 .p1PlanCard select,
+  #p2 .limitCompareControl select,
+  #p2 .p2FlowField select,#p2 .p2FlowField input,
+  #p2 .p2LimitCard select,
+  #p3 .logicSelectors select,#p3 .logicSelectors input,
+  #p3 .comparePlanSelect,
+  #p4 select{
+    min-height:44px!important;
+    line-height:1.2!important;
+  }
+}
+</style>
+<script id="v147-input-event-stability">
+(function(){
+  'use strict';
+  function fireStable(el){
+    try{ el.dispatchEvent(new Event('input',{bubbles:true})); }catch(e){}
+    try{ el.dispatchEvent(new Event('change',{bubbles:true})); }catch(e){}
+  }
+  function syncGradePeers(source){
+    if(!source || !['grade','logicGrade','p2GradeSync'].includes(source.id)) return;
+    ['grade','logicGrade','p2GradeSync'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el && el!==source && el.value!==source.value) el.value=source.value;
+    });
+  }
+  document.addEventListener('change',function(e){
+    var el=e.target;
+    if(!el || !(el.matches('select,input'))) return;
+    syncGradePeers(el);
+  },true);
+
+  /* Defensive repair: if a dynamic UI rebuild changes pointer-events, restore the controls. */
+  function normalizeInteractive(){
+    document.querySelectorAll('#programWorkbench select,#programWorkbench input,#programWorkbench textarea,#programWorkbench button,#globalVisualNavWrap button,#appChrome button').forEach(function(el){
+      if(el.disabled) return;
+      el.style.pointerEvents='auto';
+    });
+  }
+  var queued=false;
+  var observer=new MutationObserver(function(){
+    if(queued) return;
+    queued=true;
+    requestAnimationFrame(function(){queued=false;normalizeInteractive();});
+  });
+  function init(){
+    normalizeInteractive();
+    var wb=document.getElementById('programWorkbench');
+    if(wb) observer.observe(wb,{subtree:true,childList:true,attributes:true,attributeFilter:['class','style','disabled']});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
+})();
+</script>
+
 <style id="v147_compare_print_fullpage_dashboard">
 /* 보상비교 출력결과: 첨부 시안처럼 결과 6패널을 페이지에 꽉 차게 출력 */
 @page{size:A4 landscape; margin:4mm;}
@@ -9208,5 +9187,148 @@ html body #globalVisualNavWrap.isCompact .gvText small{
   }
 }
 </style>
-
+<style id="v147-mobile-nav-overlap-fix">
+/* 모바일 상단 메뉴 카드 겹침 방지: 아이콘/텍스트 축소 */
+@media (max-width: 780px){
+  html body #globalVisualNavWrap,
+  html body.workbenchMode #globalVisualNavWrap,
+  html body:not(.workbenchMode) #globalVisualNavWrap{
+    margin:8px 8px 10px !important;
+    border-radius:22px !important;
+  }
+  html body #globalVisualNavWrap .globalVisualNav,
+  html body.workbenchMode #globalVisualNavWrap .globalVisualNav,
+  html body:not(.workbenchMode) #globalVisualNavWrap .globalVisualNav{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:8px !important;
+    padding:8px !important;
+  }
+  html body #globalVisualNavWrap .gvCard,
+  html body #globalVisualNavWrap.isCompact .gvCard,
+  html body.workbenchMode #globalVisualNavWrap .gvCard,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvCard,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvCard,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvCard{
+    min-height:92px !important;
+    height:92px !important;
+    max-height:92px !important;
+    padding:10px 36px 10px 74px !important;
+    border-radius:16px !important;
+    overflow:hidden !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+  html body #globalVisualNavWrap .gvCard img,
+  html body #globalVisualNavWrap.isCompact .gvCard img,
+  html body.workbenchMode #globalVisualNavWrap .gvCard img,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvCard img,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvCard img,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvCard img{
+    left:10px !important;
+    width:50px !important;
+    height:50px !important;
+    border-radius:12px !important;
+  }
+  html body #globalVisualNavWrap .gvText,
+  html body #globalVisualNavWrap.isCompact .gvText,
+  html body.workbenchMode #globalVisualNavWrap .gvText,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvText,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvText,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvText{
+    min-width:0 !important;
+    width:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+  }
+  html body #globalVisualNavWrap .gvText b,
+  html body #globalVisualNavWrap.isCompact .gvText b,
+  html body.workbenchMode #globalVisualNavWrap .gvText b,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvText b,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvText b,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvText b{
+    font-size:13px !important;
+    line-height:1.08 !important;
+    margin-bottom:4px !important;
+    letter-spacing:-0.04em !important;
+    white-space:normal !important;
+    word-break:keep-all !important;
+  }
+  html body #globalVisualNavWrap .gvText small,
+  html body #globalVisualNavWrap.isCompact .gvText small,
+  html body.workbenchMode #globalVisualNavWrap .gvText small,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvText small,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvText small,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvText small{
+    display:block !important;
+    font-size:8.5px !important;
+    line-height:1.24 !important;
+    letter-spacing:-0.03em !important;
+    max-height:2.48em !important;
+    overflow:hidden !important;
+    word-break:keep-all !important;
+  }
+  html body #globalVisualNavWrap .gvArrow,
+  html body #globalVisualNavWrap.isCompact .gvArrow,
+  html body.workbenchMode #globalVisualNavWrap .gvArrow,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvArrow,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvArrow,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvArrow{
+    right:8px !important;
+    bottom:50% !important;
+    transform:translateY(50%) !important;
+    width:20px !important;
+    height:20px !important;
+    font-size:12px !important;
+    border-width:1px !important;
+  }
+}
+@media (max-width: 430px){
+  html body #globalVisualNavWrap .globalVisualNav,
+  html body.workbenchMode #globalVisualNavWrap .globalVisualNav,
+  html body:not(.workbenchMode) #globalVisualNavWrap .globalVisualNav{
+    gap:7px !important;
+    padding:7px !important;
+  }
+  html body #globalVisualNavWrap .gvCard,
+  html body #globalVisualNavWrap.isCompact .gvCard,
+  html body.workbenchMode #globalVisualNavWrap .gvCard,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvCard,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvCard,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvCard{
+    min-height:84px !important;
+    height:84px !important;
+    max-height:84px !important;
+    padding:8px 30px 8px 68px !important;
+  }
+  html body #globalVisualNavWrap .gvCard img,
+  html body #globalVisualNavWrap.isCompact .gvCard img,
+  html body.workbenchMode #globalVisualNavWrap .gvCard img,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvCard img,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvCard img,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvCard img{
+    width:46px !important;
+    height:46px !important;
+    left:9px !important;
+  }
+  html body #globalVisualNavWrap .gvText b,
+  html body #globalVisualNavWrap.isCompact .gvText b,
+  html body.workbenchMode #globalVisualNavWrap .gvText b,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvText b,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvText b,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvText b{
+    font-size:12px !important;
+    margin-bottom:3px !important;
+  }
+  html body #globalVisualNavWrap .gvText small,
+  html body #globalVisualNavWrap.isCompact .gvText small,
+  html body.workbenchMode #globalVisualNavWrap .gvText small,
+  html body.workbenchMode #globalVisualNavWrap.isCompact .gvText small,
+  html body:not(.workbenchMode) #globalVisualNavWrap .gvText small,
+  html body:not(.workbenchMode) #globalVisualNavWrap.isCompact .gvText small{
+    font-size:8px !important;
+    line-height:1.2 !important;
+  }
+}
+</style>
 </body></html>
