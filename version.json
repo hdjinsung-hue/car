@@ -1,5 +1,1 @@
-{
-  "version": "1.51",
-  "updated": "2026-10-27",
-  "autoUpdateInstalledApp": true
-}
+{"version":"1.54","updated":"2026-10-27","notes":"JavaScript syntax repair, mobile input/select recovery, unified version display"}

@@ -1,33 +1,13 @@
-const SW_VERSION = "1.51";
-const CACHE_NAME = `hongik-auto-${SW_VERSION}`;
-
-self.addEventListener("install", event => {
-  event.waitUntil(self.skipWaiting());
-});
-
-self.addEventListener("activate", event => {
-  event.waitUntil((async () => {
-    const keys = await caches.keys();
-    await Promise.all(keys.filter(k => k.startsWith("hongik-auto-") && k !== CACHE_NAME).map(k => caches.delete(k)));
-    await self.clients.claim();
-  })());
-});
-
-self.addEventListener("fetch", event => {
-  const req = event.request;
-  if (req.method !== "GET") return;
-  const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
-
-  // 실행 화면과 버전 파일은 항상 네트워크를 먼저 확인해 설치형 앱도 최신판을 받게 합니다.
-  if (req.mode === "navigate" || url.pathname.endsWith("/version.json") || url.pathname.endsWith("/index.html") || url.pathname.endsWith("/")) {
-    event.respondWith((async () => {
-      try {
-        return await fetch(req, { cache: "no-store" });
-      } catch (e) {
-        const cached = await caches.match(req);
-        return cached || Response.error();
-      }
-    })());
-  }
+const CACHE_NAME='hongik-auto-v1.54';
+const CORE=['./','./index.html','./version.json'];
+self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(CORE)).catch(()=>{}));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
+self.addEventListener('fetch',event=>{
+ const u=new URL(event.request.url);
+ if(event.request.method!=='GET'||u.origin!==location.origin) return;
+ if(event.request.mode==='navigate'||u.pathname.endsWith('/index.html')||u.pathname.endsWith('/version.json')){
+   event.respondWith(fetch(event.request,{cache:'no-store'}).then(r=>{const copy=r.clone();caches.open(CACHE_NAME).then(c=>c.put(event.request,copy));return r;}).catch(()=>caches.match(event.request).then(r=>r||caches.match('./index.html'))));
+   return;
+ }
+ event.respondWith(caches.match(event.request).then(r=>r||fetch(event.request)));
 });
