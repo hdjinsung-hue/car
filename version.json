@@ -1,5 +1,5 @@
 {
-  "version": "1.50",
-  "released": "2026-10-27",
-  "message": "모바일 최신버전 확인 및 입력 안정화"
+  "version": "1.51",
+  "updated": "2026-10-27",
+  "autoUpdateInstalledApp": true
 }
