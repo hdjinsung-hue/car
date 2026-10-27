@@ -1,4 +1,4 @@
-const SW_VERSION = "1.75";
+const SW_VERSION = "1.87";
 const CACHE_NAME = `hongik-auto-${SW_VERSION}`;
 
 self.addEventListener("install", event => {
