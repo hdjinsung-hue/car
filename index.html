@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>자동차보험 자손·자상 보상분석 v1.54 | 홍익보험의 정신</title>
+<title>자동차보험 자손·자상 보상분석 v1.65 | 홍익보험의 정신</title>
 <style>
 :root{--nav:#102a43;--blue:#2563eb;--green:#059669;--purple:#7c3aed;--orange:#f59e0b;--bg:#eef3f8;--card:#fff;--line:#d7e0ea;--ink:#172033;--muted:#667085}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:"Malgun Gothic",Arial,sans-serif;color:var(--ink)}
@@ -54,7 +54,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 .inputLegend{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 13px;padding:11px 13px;border-radius:13px;background:#fff;border:1px solid #d7e0ea;font-size:13px;font-weight:900}
 .legendDot{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:5px;vertical-align:-2px}
 
-/* v1.54 사고유형 선택 */
+/* v1.65 사고유형 선택 */
 .accidentChooser{margin:12px 0 14px;padding:13px;border:1px solid #d9e2ec;border-radius:16px;background:linear-gradient(135deg,#f8fbff,#f4f7fb)}
 .accidentChooserTitle{font-weight:900;color:#102a43;margin-bottom:9px;font-size:15px}
 .accidentToggle{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -62,14 +62,14 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 .accidentBtn:hover{transform:translateY(-1px);border-color:#94a3b8}
 .accidentBtn.active.single{background:linear-gradient(135deg,#0f4c75,#2563eb);border-color:#2563eb;color:#fff;box-shadow:0 6px 15px #2563eb2b}
 .accidentBtn.active.mutual{background:linear-gradient(135deg,#7c3aed,#c026d3);border-color:#7c3aed;color:#fff;box-shadow:0 6px 15px #7c3aed2b}
-#accidentTypeNote{margin-top:9px;font-size:13px;line-height:1.55;color:#475569}
+#accidentTypeNote{margin-top:9px;font-size:13px;line-height:1.61;color:#475569}
 @media(max-width:640px){.accidentToggle{grid-template-columns:1fr}.accidentBtn{padding:12px 10px}}
 
-.wageAutoRow{display:flex;gap:10px;align-items:center}.wageAutoRow input{flex:1}.wageBadge{display:inline-flex;align-items:center;justify-content:center;min-width:86px;padding:9px 12px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-weight:900;font-size:12px;border:1px solid #bae6fd;white-space:nowrap}.wageBadge.manual{background:#fff7ed;color:#c2410c;border-color:#fed7aa}.wageTableToggle{margin-top:9px;border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:10px;padding:8px 11px;font-weight:800;cursor:pointer}.wageTableToggle:hover{background:#f8fafc}.wageTableWrap{margin-top:10px;overflow:auto;border:1px solid #dbe4ee;border-radius:12px;background:#fff}.wageTable{width:100%;border-collapse:collapse;min-width:720px;font-size:12px}.wageTable th,.wageTable td{padding:9px 10px;border-bottom:1px solid #e5e7eb;text-align:right;white-space:nowrap}.wageTable th:first-child,.wageTable td:first-child{text-align:left}.wageTable thead th{background:#f1f5f9;color:#334155;font-weight:900}.wageTable tbody tr:last-child td{border-bottom:0}.wageFoot{padding:9px 10px;background:#f8fafc;color:#64748b;font-size:11px;line-height:1.55;border-top:1px solid #e5e7eb}@media(max-width:640px){.wageAutoRow{align-items:stretch}.wageBadge{min-width:74px;padding:8px}.wageTableToggle{width:100%}}
+.wageAutoRow{display:flex;gap:10px;align-items:center}.wageAutoRow input{flex:1}.wageBadge{display:inline-flex;align-items:center;justify-content:center;min-width:86px;padding:9px 12px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-weight:900;font-size:12px;border:1px solid #bae6fd;white-space:nowrap}.wageBadge.manual{background:#fff7ed;color:#c2410c;border-color:#fed7aa}.wageTableToggle{margin-top:9px;border:1px solid #cbd5e1;background:#fff;color:#334155;border-radius:10px;padding:8px 11px;font-weight:800;cursor:pointer}.wageTableToggle:hover{background:#f8fafc}.wageTableWrap{margin-top:10px;overflow:auto;border:1px solid #dbe4ee;border-radius:12px;background:#fff}.wageTable{width:100%;border-collapse:collapse;min-width:720px;font-size:12px}.wageTable th,.wageTable td{padding:9px 10px;border-bottom:1px solid #e5e7eb;text-align:right;white-space:nowrap}.wageTable th:first-child,.wageTable td:first-child{text-align:left}.wageTable thead th{background:#f1f5f9;color:#334155;font-weight:900}.wageTable tbody tr:last-child td{border-bottom:0}.wageFoot{padding:9px 10px;background:#f8fafc;color:#64748b;font-size:11px;line-height:1.61;border-top:1px solid #e5e7eb}@media(max-width:640px){.wageAutoRow{align-items:stretch}.wageBadge{min-width:74px;padding:8px}.wageTableToggle{width:100%}}
 
 .futureRuleBox{margin-top:10px;padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;background:#f8fafc;line-height:1.65;font-size:13px}.futureRuleBox b{color:#0f172a}.futureRuleBox.practice{background:#fff7ed;border-color:#fdba74;color:#9a3412}.futureRuleBox.formal{background:#fef2f2;border-color:#fca5a5;color:#991b1b}.futureRuleBox.legacy{background:#eff6ff;border-color:#93c5fd;color:#1e40af}.futureRuleBox.error{background:#fff1f2;border-color:#fb7185;color:#9f1239}.futureRuleTag{display:inline-block;margin-right:6px;padding:3px 7px;border-radius:999px;background:#102a43;color:#fff;font-size:11px;font-weight:900}.futureRuleSub{margin-top:5px;font-size:12px;color:inherit}.responsibilityHint{margin-top:5px;font-size:11px;color:#64748b;line-height:1.5}
 
-.calcInputHeader{margin-top:14px;padding:14px 16px;border:1px solid #cbd5e1;border-radius:16px;background:linear-gradient(135deg,#f8fbff,#f1f5ff);box-shadow:0 6px 18px #102a4310}.calcInputTitle{font-size:19px;font-weight:900;color:#102a43}.calcInputDesc{margin-top:5px;color:#526277;font-size:13px;line-height:1.55}.calcInputHeader + .inputs{margin-top:10px}
+.calcInputHeader{margin-top:14px;padding:14px 16px;border:1px solid #cbd5e1;border-radius:16px;background:linear-gradient(135deg,#f8fbff,#f1f5ff);box-shadow:0 6px 18px #102a4310}.calcInputTitle{font-size:19px;font-weight:900;color:#102a43}.calcInputDesc{margin-top:5px;color:#526277;font-size:13px;line-height:1.61}.calcInputHeader + .inputs{margin-top:10px}
 
 .opponentExplainGrid{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(320px,1fr);gap:16px;align-items:stretch}
 .opponentExplainGrid #opponentBreakdown{display:flex;flex-direction:column;justify-content:flex-start;min-height:100%;padding:20px 22px;border:1px solid #cbd5e1;border-radius:16px;background:#fff;font-size:17px;line-height:1.85;color:#102a43;box-shadow:0 1px 2px rgba(15,23,42,.04)}
@@ -82,12 +82,12 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 @media(max-width:1080px){.opponentExplainGrid{grid-template-columns:minmax(0,1.45fr) minmax(280px,1fr)}.opponentExplainGrid #opponentBreakdown{font-size:16px}.opponentExplainGrid #opponentBreakdown .breakdownTitle{font-size:20px}.opponentExplainGrid #opponentBreakdown .breakdownTotal{font-size:24px}}
 @media(max-width:820px){.opponentExplainGrid{grid-template-columns:1fr}.opponentExplainGrid #opponentBreakdown{padding:16px}.opponentExplainGrid #opponentBreakdown .breakdownTitle{font-size:18px}.opponentExplainGrid #opponentBreakdown .breakdownTotal{font-size:22px}.opponentExplainGrid .routeDetail{padding:16px;font-size:14px}}
 
-/* v1.54 안내문 한줄 표시 최적화 */
+/* v1.65 안내문 한줄 표시 최적화 */
 .oneLineNotice{white-space:nowrap;overflow:visible;font-size:clamp(9px,.78vw,12px)!important;line-height:1.35!important;letter-spacing:-.02em}
 .oneLineWarning{white-space:nowrap;overflow:visible;font-size:clamp(10px,.86vw,13px)!important;line-height:1.4!important;letter-spacing:-.02em}
-@media (max-width:900px){.oneLineNotice,.oneLineWarning{white-space:normal;font-size:12px!important;line-height:1.55!important}}
+@media (max-width:900px){.oneLineNotice,.oneLineWarning{white-space:normal;font-size:12px!important;line-height:1.61!important}}
 
-/* v1.54 hero image embedded action hotspots */
+/* v1.65 hero image embedded action hotspots */
 .v132HeroActions{position:absolute;z-index:15;left:4.8%;top:61.1%;display:flex;gap:1.2%;width:33%;height:9.3%;pointer-events:none}
 .v132HeroActions button{pointer-events:auto;border:0;background:transparent;color:transparent;font-size:0;cursor:pointer;border-radius:14px;outline:none}
 .v132HeroActions .compare{width:53%}.v132HeroActions .logic{width:47%}
@@ -100,7 +100,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
   .v132MobileActions .primary{background:linear-gradient(135deg,#0869e8,#2589ff);border-color:#69adff}
 }
 
-/* v1.54 기본정보 입력화면: 좌측 입력 / 우측 요약·흐름 */
+/* v1.65 기본정보 입력화면: 좌측 입력 / 우측 요약·흐름 */
 .p1DualShell{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
 .p1DualLayout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(420px,.82fr);gap:18px;align-items:stretch}
 .p1EntryPanel,.p1OverviewPanel{min-width:0;border:1px solid #d8e5f2;border-radius:24px;background:linear-gradient(145deg,#fff 0%,#f7fbff 100%);box-shadow:0 14px 34px rgba(30,79,126,.10);padding:20px}
@@ -119,7 +119,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 @media(max-width:900px){.p1OverviewSummary{grid-template-columns:repeat(3,minmax(0,1fr))!important}.p1OverviewFlow .p1FlowSteps{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:680px){.p1EntryPanel,.p1OverviewPanel{padding:14px;border-radius:18px}.p1EntryGrid,.p1EntryPlans,.p1OverviewSummary,.p1OverviewFlow .p1FlowSteps{grid-template-columns:1fr!important}.p1EntryHead{align-items:flex-start}.p1EntryHead b{font-size:22px!important}.p1OverviewHead{flex-wrap:wrap}.p1OverviewHead button{margin-left:0!important}.p1OverviewCheck li{grid-template-columns:1fr!important;gap:2px!important}}
 
-/* ===== v1.54 section hero banners ===== */
+/* ===== v1.65 section hero banners ===== */
 .sectionTopHero{position:relative;display:grid;grid-template-columns:minmax(180px,280px) minmax(0,1fr) minmax(300px,520px);gap:18px;align-items:center;min-height:228px;margin:0 0 14px;padding:22px 24px;border-radius:26px;overflow:hidden;border:1px solid #bcd7ef;box-shadow:0 14px 36px rgba(19,64,106,.12);background:linear-gradient(135deg,#eef7ff 0%,#f8fbff 46%,#eaf5ff 100%)}
 .sectionTopHero:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 24%,rgba(255,198,96,.28),transparent 18%),radial-gradient(circle at 78% 18%,rgba(58,153,255,.18),transparent 22%),linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.3));pointer-events:none}
 .sectionTopHero>*{position:relative;z-index:1}
@@ -152,19 +152,19 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 @media(max-width:760px){.sectionTopHero{grid-template-columns:1fr;grid-template-areas:'copy' 'visual' 'features';padding:18px 16px;border-radius:18px;min-height:0}.sectionTopHero .sthBadge{height:36px;padding:0 14px;font-size:20px}.sectionTopHero .sthCopy h2{font-size:26px}.sectionTopHero .sthCopy p{font-size:13px}.sectionTopHero .sthVisual{min-height:138px}.sectionTopHero .sthCar{font-size:80px}.sectionTopHero .sthFeatures{grid-template-columns:1fr}.sectionTopHero .sthFeature{min-height:0;padding:15px 14px;border-right:0;border-top:1px solid #dce8f3}.sectionTopHero .sthFeature:first-child{border-top:0}#p4 .termsDashboard{grid-template-columns:1fr!important}}
 
 
-/* ===== v1.54 reference-based top banners ===== */
+/* ===== v1.65 reference-based top banners ===== */
 .sectionImageHero{margin:0 0 14px;border-radius:24px;overflow:hidden;border:1px solid #c5d8ea;box-shadow:0 12px 30px rgba(18,63,106,.12);background:#eef6ff}
 .sectionImageHero img{display:block;width:100%;height:auto}
 @media(max-width:760px){.sectionImageHero{border-radius:16px}}
 
 
-/* v1.54 기본정보 중복 요약 제거 + 보상 처리 흐름 정리 */
+/* v1.65 기본정보 중복 요약 제거 + 보상 처리 흐름 정리 */
 #p1 .p1OverviewPanel{padding-top:18px!important}
 #p1 .p1OverviewBottom{margin-top:0!important}
 #p1 .p1OverviewFlow .p1SectionTitle{letter-spacing:-.02em!important}
 
 
-/* ===== v1.54 typography / balance refinement ===== */
+/* ===== v1.65 typography / balance refinement ===== */
 #p2 .limitCompareControl label{font-size:28px!important;font-weight:950!important;color:#dc2626!important;margin-bottom:10px!important;line-height:1.2!important;letter-spacing:-0.2px!important}
 #p2 .limitCompareControl select{min-height:58px!important;padding:10px 16px!important;font-size:20px!important;border-radius:16px!important}
 #p2 .limitApplied{margin-top:9px!important;padding:10px 14px!important;border-radius:12px!important;font-size:17px!important;line-height:1.5!important}
@@ -220,7 +220,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 #p3 .compareRenewHeader{display:none!important}
 
 
-/* ===== v1.54d compare flow title and step layout refinement ===== */
+/* ===== v1.65d compare flow title and step layout refinement ===== */
 #p3 #compareInputView .logicTitle b{font-size:31px!important}
 #p3 #compareInputView .logicTitle small{white-space:normal!important}
 #p3 #compareInputView .flowChart{grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr) 32px minmax(0,1fr) 32px minmax(0,1fr)!important;gap:10px!important}
@@ -291,6 +291,19 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
   #p3 #compareInputView .flowNode{min-height:unset!important}
 }
 
+
+/* v1.65 자동차약관상 일용근로자 임금 입력부 균형 */
+.wagePolicyRow{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr) auto;gap:12px;align-items:center}
+.wagePolicyRow #dailyWage{width:100%;min-width:0}
+.wagePolicyExplain{font-size:13px;line-height:1.45;color:#334155;font-weight:800;min-width:0}
+.wagePolicyExplain b{color:#0f5ed7}
+.wagePolicyExplain .sub{display:block;margin-top:2px;font-size:11px;color:#64748b;font-weight:700}
+@media(max-width:760px){.wagePolicyRow{grid-template-columns:minmax(120px,165px) 1fr}.wagePolicyRow .wageBadge{grid-column:1/-1;justify-self:start}.wagePolicyExplain{font-size:12px}}
+
+/* v1.65: 약관상 휴업손해 1일 적용액을 최종금액으로 직접 표시 */
+#policyDailyBenefitDisplay{max-width:220px!important;min-width:180px!important;font-weight:900!important;font-size:20px!important;color:#0f3f72!important;background:#fff!important}
+.wagePolicyExplain{flex:1;min-width:0;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:680px){#policyDailyBenefitDisplay{max-width:100%!important;width:100%!important}.wagePolicyRow{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}}
 </style><style>
 .conditionLayout{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(420px,1.28fr);gap:26px;align-items:start;margin-top:12px}
 .conditionLeft{display:grid;grid-template-columns:1fr;gap:18px}
@@ -373,7 +386,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-wi
 }
 </style>
 <style>
-/* v1.54 responsive stability */
+/* v1.65 responsive stability */
 *{box-sizing:border-box}
 html,body{max-width:100%;overflow-x:hidden}
 .panel{width:100%;max-width:100%}
@@ -405,7 +418,7 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 .conditionLeft .hongikMain{
  margin:0 0 7px!important;
- font-size:clamp(18px,1.55vw,24px)!important;
+ font-size:clamp(18px,1.61vw,24px)!important;
  line-height:1.32!important;
  font-weight:900!important;
  white-space:normal!important;
@@ -447,7 +460,7 @@ select,input,button{max-width:100%}
  .conditionLeft .hongikMini{padding:14px 15px!important;border-radius:14px!important}
  .conditionLeft .hongikTitle{font-size:12px!important}
  .conditionLeft .hongikMain{font-size:18px!important;line-height:1.35!important}
- .conditionLeft .hongikSub{font-size:11px!important;line-height:1.55!important}
+ .conditionLeft .hongikSub{font-size:11px!important;line-height:1.61!important}
  #chooseJasons,#chooseJasang{font-size:14px!important;white-space:normal!important;word-break:keep-all!important}
  .statusCard .big{font-size:clamp(22px,7vw,30px)!important}
 }
@@ -566,7 +579,7 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 .hero:after{content:'';position:absolute;right:-90px;top:-120px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(211,170,73,.13) 0%,rgba(211,170,73,0) 68%);pointer-events:none}
 </style>
 <style>
-/* v1.54 쌍방사고 처리경로 분리 */
+/* v1.65 쌍방사고 처리경로 분리 */
 .mutualRouteBox{margin-top:12px;padding:14px;border:1px solid #cbd5e1;border-radius:14px;background:#fff}
 .mutualRouteTitle{font-size:14px;font-weight:900;color:#102a43;margin-bottom:9px}
 .mutualRouteToggle{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
@@ -589,13 +602,13 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 @media(max-width:760px){.mutualRouteToggle,.routeInputGrid,.routeMetrics{grid-template-columns:1fr}}
 </style>
 <style>
-/* v1.54 compact one-line guidance */
+/* v1.65 compact one-line guidance */
 .compactOneLine,#memo{font-size:clamp(10px,.82vw,12px)!important;line-height:1.35!important;padding:11px 16px!important;white-space:nowrap!important;word-break:keep-all!important;overflow:hidden!important;text-overflow:clip!important;letter-spacing:-.025em!important}
 #compareBasis b,#memo b{font-weight:900!important}
 @media(max-width:1100px){.compactOneLine,#memo{font-size:9px!important;padding:10px 12px!important}}
-@media(max-width:820px){.compactOneLine,#memo{font-size:12px!important;line-height:1.55!important;white-space:normal!important;overflow:visible!important;padding:12px 14px!important}}
+@media(max-width:820px){.compactOneLine,#memo{font-size:12px!important;line-height:1.61!important;white-space:normal!important;overflow:visible!important;padding:12px 14px!important}}
 
-/* v1.54 기본정보 상단 정리: 이미지 제거 + 실제 입력영역 우선 배치 */
+/* v1.65 기본정보 상단 정리: 이미지 제거 + 실제 입력영역 우선 배치 */
 #p1>.sectorJumpNav{margin-top:0!important;margin-bottom:12px!important}
 #p1 .p1CompactPanel{margin-top:0!important}
 #p1 .p1EntryPanel{scroll-margin-top:92px}
@@ -610,7 +623,7 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <style>
-/* v1.54 사고유형·경상환자 사고일별 로직 */
+/* v1.65 사고유형·경상환자 사고일별 로직 */
 .scenarioLogic{margin:12px 0 14px;padding:16px 17px;border-radius:16px;border:1px solid #cdd9e8;background:linear-gradient(135deg,#f8fbff,#eef6ff)}
 .scenarioLogic .logicTitle{font-size:16px;font-weight:900;color:#102a43;margin-bottom:7px}.scenarioLogic .logicBody{font-size:14px;line-height:1.65;color:#334155}.scenarioLogic .logicTag{display:inline-block;padding:5px 9px;border-radius:999px;background:#102a43;color:#fff;font-size:12px;font-weight:900;margin-right:6px}
 #mutualDetailBox{display:none;margin:10px 0 14px;padding:14px;border:1px solid #f1c977;border-radius:14px;background:#fffbeb}.mutualGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mutualGrid label{font-weight:900;color:#713f12}.mutualGrid input,.mutualGrid select{width:100%;margin-top:6px;padding:11px;border:1px solid #d6b665;border-radius:10px;background:#fff;font-weight:800}
@@ -620,7 +633,7 @@ table{border-color:#dfe6ee}th{background:#102f4c}tbody tr:nth-child(even){backgr
 @media(max-width:760px){.mutualGrid,.treatmentDurationBox,.logicSelectors{grid-template-columns:1fr}.minorCalcGrid{grid-template-columns:1fr 1fr}.flowChart{display:grid;grid-template-columns:1fr}.flowArrow{transform:rotate(90deg);min-height:18px}.flowNode{min-width:0}}
 </style>
 <style id="v120-premium-shell">
-/* v1.54 premium home + login shell */
+/* v1.65 premium home + login shell */
 :root{--appNavy:#082f63;--appBlue:#0b67d8;--appSky:#0ea5e9;--appViolet:#7c3aed;--appGreen:#059669;--appOrange:#f59e0b;--appInk:#0f2744}
 body{background:#eef4fb}
 #cloudReadyBanner{z-index:9996!important}
@@ -637,7 +650,7 @@ body{background:#eef4fb}
 .authShowcase>*{position:relative;z-index:1}.authMiniBrand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:900}.authMiniBrand img{width:38px;height:38px;border-radius:10px;box-shadow:0 6px 18px #0004}.authShowcaseTitle{max-width:560px;margin-top:30px}.authShowcaseTitle .kicker{font-size:13px;font-weight:900;color:#93c5fd;letter-spacing:.03em}.authShowcaseTitle h1{margin:8px 0 12px;font-size:clamp(32px,4vw,54px);line-height:1.06;letter-spacing:-.055em}.authShowcaseTitle p{margin:0;max-width:520px;font-size:15px;line-height:1.75;color:#dbeafe}
 .authCarCrop{height:250px;margin:18px -18px 0;position:relative;overflow:hidden;border-radius:22px;border:1px solid rgba(255,255,255,.17);background:linear-gradient(135deg,#0b2448,#0a3d78)}
 .authCarCrop img{position:absolute;width:430px;max-width:none;right:-10px;top:-68px;filter:saturate(.9) contrast(1.05);border-radius:28px;box-shadow:0 25px 60px rgba(0,0,0,.32)}
-.authCarOverlay{position:absolute;left:24px;bottom:22px;max-width:300px}.authCarOverlay b{display:block;font-size:24px;letter-spacing:-.04em}.authCarOverlay span{display:block;margin-top:7px;color:#dbeafe;font-size:13px;line-height:1.55}
+.authCarOverlay{position:absolute;left:24px;bottom:22px;max-width:300px}.authCarOverlay b{display:block;font-size:24px;letter-spacing:-.04em}.authCarOverlay span{display:block;margin-top:7px;color:#dbeafe;font-size:13px;line-height:1.61}
 .authMiniTiles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.authMiniTile{padding:12px 8px;border-radius:12px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.14);text-align:center;font-size:11px;font-weight:900;color:#eaf4ff}.authMiniTile i{display:block;font-style:normal;font-size:22px;margin-bottom:5px}
 .authRight{display:flex;align-items:center;justify-content:center;padding:34px;background:linear-gradient(180deg,#fff,#f8fbff)}
 .authCard{width:min(430px,100%)!important;background:transparent!important;border-radius:0!important;padding:0!important;box-shadow:none!important}.authBrand{display:flex;align-items:center;gap:9px;color:#0b5cb7!important}.authBrand:before{content:"🚘";font-size:26px}.authCard h2{font-size:30px!important;letter-spacing:-.04em;color:#102a43}.authCard p{font-size:13px!important}.authTabs{margin:20px 0 14px!important;background:#eef4fb;padding:5px;border-radius:13px;gap:5px!important}.authTabs button{border:0!important;background:transparent!important;border-radius:10px!important;padding:11px!important;color:#64748b}.authTabs button.active{background:#fff!important;color:#0b5cb7!important;box-shadow:0 3px 10px #0f274414}
@@ -647,7 +660,7 @@ body{background:#eef4fb}
 /* GLOBAL APP CHROME */
 #appChrome{display:block;max-width:1280px;margin:14px auto 0;padding:0 14px}.appTopbar{height:64px;border-radius:18px 18px 0 0;background:linear-gradient(135deg,#062e61,#0b4e98);display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 14px;box-shadow:0 12px 30px rgba(6,46,97,.18);position:relative;z-index:20}.appTopBrand{display:flex;align-items:center;gap:11px;color:#fff;font-weight:900;font-size:17px}.appTopBrand img{width:40px;height:40px;border-radius:11px}.appTopBrand small{font-size:11px;color:#bfdbfe;margin-left:6px}.appTopMenu{display:flex;gap:7px;align-items:center}.appTopMenu button{border:0;color:#e8f2ff;background:transparent;padding:9px 12px;border-radius:10px;font-weight:900;font-size:12px;cursor:pointer}.appTopMenu button:hover{background:rgba(255,255,255,.10)}.appTopMenu .danger{background:#ef4444;color:#fff;box-shadow:0 5px 14px rgba(239,68,68,.28)}
 #programHome{max-width:1280px;margin:0 auto 20px;padding:0 14px}.homeFrame{background:#fff;border-radius:0 0 24px 24px;border:1px solid #d7e3f1;border-top:0;overflow:hidden;box-shadow:0 18px 44px rgba(15,39,68,.12)}.homeHero{position:relative;min-height:350px;padding:54px 48px;overflow:hidden;background:linear-gradient(110deg,#eff8ff 0%,#fff 48%,#dbeeff 100%)}.homeHero:after{content:"";position:absolute;inset:auto -110px -160px auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.25),transparent 67%)}.homeHeroText{position:relative;z-index:3;max-width:590px}.homeHeroBadge{display:inline-flex;padding:7px 12px;border-radius:999px;background:#e0efff;color:#0755a5;font-size:11px;font-weight:900;letter-spacing:.08em}.homeHero h1{margin:15px 0 13px;color:#082f63;font-size:clamp(36px,4.5vw,62px);line-height:1.02;letter-spacing:-.06em}.homeHero p{margin:0;color:#35516e;font-size:16px;line-height:1.75;max-width:520px}.homeCarVisual{position:absolute;z-index:2;right:28px;top:24px;width:470px;height:305px;overflow:hidden;border-radius:30px;filter:drop-shadow(0 22px 28px rgba(17,55,92,.20))}.homeCarVisual img{position:absolute;width:470px;max-width:none;right:0;top:-55px;border-radius:28px}.homeVersion{display:inline-block;margin-top:20px;padding:7px 10px;border-radius:9px;background:#082f63;color:#fff;font-weight:900;font-size:11px}
-.homeTiles{position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:-34px 26px 0}.homeTile{min-height:132px;border:0;border-radius:18px;color:#fff;padding:22px 18px;text-align:left;cursor:pointer;box-shadow:0 15px 30px rgba(15,39,68,.20);transition:.18s}.homeTile:hover{transform:translateY(-4px);filter:brightness(1.05)}.homeTile .tileIcon{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.18);font-size:24px;margin-bottom:10px}.homeTile b{display:block;font-size:20px}.homeTile span{display:block;margin-top:5px;font-size:12px;line-height:1.55;opacity:.9}.homeTile.t1{background:linear-gradient(135deg,#0879e9,#0b5cb7)}.homeTile.t2{background:linear-gradient(135deg,#7c3aed,#d946ef)}.homeTile.t3{background:linear-gradient(135deg,#059669,#10b981)}.homeTile.t4{background:linear-gradient(135deg,#f59e0b,#f97316)}
+.homeTiles{position:relative;z-index:5;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:-34px 26px 0}.homeTile{min-height:132px;border:0;border-radius:18px;color:#fff;padding:22px 18px;text-align:left;cursor:pointer;box-shadow:0 15px 30px rgba(15,39,68,.20);transition:.18s}.homeTile:hover{transform:translateY(-4px);filter:brightness(1.05)}.homeTile .tileIcon{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.18);font-size:24px;margin-bottom:10px}.homeTile b{display:block;font-size:20px}.homeTile span{display:block;margin-top:5px;font-size:12px;line-height:1.61;opacity:.9}.homeTile.t1{background:linear-gradient(135deg,#0879e9,#0b5cb7)}.homeTile.t2{background:linear-gradient(135deg,#7c3aed,#d946ef)}.homeTile.t3{background:linear-gradient(135deg,#059669,#10b981)}.homeTile.t4{background:linear-gradient(135deg,#f59e0b,#f97316)}
 .homeBenefits{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:24px 26px 26px;border:1px solid #dbe5f0;border-radius:16px;background:#f8fbff;overflow:hidden}.homeBenefit{padding:18px 16px;display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;border-right:1px solid #dbe5f0}.homeBenefit:last-child{border-right:0}.homeBenefit i{font-style:normal;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:#e6f1ff;font-size:21px}.homeBenefit b{display:block;color:#102a43;font-size:13px}.homeBenefit span{display:block;margin-top:3px;color:#64748b;font-size:10px;line-height:1.5}
 #programWorkbench{display:none}.wrap>.hero{display:none!important}.wrap{max-width:1280px!important;padding-top:10px!important}.nav{margin-top:0!important}
 .workbenchTitle{display:flex;align-items:center;justify-content:space-between;margin:0 0 10px;padding:10px 14px;border-radius:14px;background:#fff;border:1px solid #dbe5f0}.workbenchTitle b{color:#102a43}.workbenchTitle button{border:0;background:#eaf3ff;color:#0b5cb7;border-radius:9px;padding:8px 11px;font-weight:900;cursor:pointer}
@@ -687,12 +700,12 @@ body{background:#edf4fb!important}
 .homeTile{min-height:196px!important;padding:27px 25px!important;border-radius:16px!important;border:2px solid rgba(255,255,255,.92)!important;box-shadow:0 13px 28px rgba(15,39,68,.26)!important}
 .homeTile .tileIcon{width:58px!important;height:58px!important;border-radius:14px!important;font-size:32px!important;margin-bottom:15px!important}
 .homeTile b{font-size:31px!important;line-height:1.15!important;letter-spacing:-.04em!important}
-.homeTile span{margin-top:11px!important;font-size:16px!important;line-height:1.55!important;font-weight:700!important;opacity:.96!important}
+.homeTile span{margin-top:11px!important;font-size:16px!important;line-height:1.61!important;font-weight:700!important;opacity:.96!important}
 .homeBenefits{margin:24px 18px 18px!important;border-radius:15px!important;background:#fff!important;box-shadow:0 5px 16px rgba(15,55,95,.08)!important}
 .homeBenefit{min-height:124px!important;padding:22px 24px!important;grid-template-columns:62px 1fr!important;gap:17px!important}
 .homeBenefit i{width:58px!important;height:58px!important;border-radius:50%!important;font-size:30px!important;background:#e7f2ff!important;color:#0966d8!important}
 .homeBenefit b{font-size:20px!important;line-height:1.2!important;letter-spacing:-.025em!important}
-.homeBenefit span{margin-top:7px!important;font-size:14px!important;line-height:1.55!important;color:#40536d!important}
+.homeBenefit span{margin-top:7px!important;font-size:14px!important;line-height:1.61!important;color:#40536d!important}
 /* login: same visual language */
 .authStage{width:min(1280px,100%)!important}
 .authShowcaseTitle h1{font-size:clamp(38px,4.2vw,58px)!important}
@@ -707,14 +720,14 @@ body{background:#edf4fb!important}
 }
 @media(max-width:820px){
  #appChrome,#programHome{padding-left:6px!important;padding-right:6px!important}.appTopbar{align-items:center!important;padding:9px 10px!important}.appTopBrand{font-size:16px!important;gap:8px!important}.appTopBrand .inlineCarMark{width:40px;height:40px}.appTopBrand .appBrandText{display:block!important;white-space:normal!important}.appTopBrand small{display:block!important;font-size:9px!important;margin-top:3px!important}.appTopMenu button{font-size:0!important;padding:8px!important}.appTopMenu button:before{font-size:16px}.appTopMenu button:nth-child(1):before{content:"⌂"}.appTopMenu button:nth-child(2):before{content:"▣"}.appTopMenu button:nth-child(3):before{content:"⚙"}.appTopMenu .danger:before{content:"⇥"}.appTopMenu .danger{padding:9px 10px!important}
- .homeHero{min-height:370px!important;padding:34px 24px 88px!important}.homeHero:before{background:linear-gradient(90deg,rgba(248,252,255,.98) 0%,rgba(248,252,255,.93) 58%,rgba(248,252,255,.3) 80%,transparent 100%)!important}.homeHeroText{max-width:72%!important}.homeHero h1{font-size:38px!important}.homeHero p{font-size:14px!important;line-height:1.55!important}.homeCarVisual{width:74%!important;opacity:.72!important}
+ .homeHero{min-height:370px!important;padding:34px 24px 88px!important}.homeHero:before{background:linear-gradient(90deg,rgba(248,252,255,.98) 0%,rgba(248,252,255,.93) 58%,rgba(248,252,255,.3) 80%,transparent 100%)!important}.homeHeroText{max-width:72%!important}.homeHero h1{font-size:38px!important}.homeHero p{font-size:14px!important;line-height:1.61!important}.homeCarVisual{width:74%!important;opacity:.72!important}
  .homeTiles{grid-template-columns:repeat(2,minmax(0,1fr))!important;margin:-58px 12px 0!important;gap:9px!important}.homeTile{min-height:152px!important;padding:18px!important}.homeTile .tileIcon{width:44px!important;height:44px!important;font-size:24px!important;margin-bottom:8px!important}.homeTile b{font-size:22px!important}.homeTile span{font-size:12px!important;margin-top:7px!important}
  .homeBenefits{grid-template-columns:1fr!important;margin:16px 12px!important}.homeBenefit{border-right:0!important;border-bottom:1px solid #dbe5f0!important;min-height:94px!important}.homeBenefit:last-child{border-bottom:0!important}.homeBenefit i{width:48px!important;height:48px!important;font-size:23px!important}.homeBenefit b{font-size:16px!important}.homeBenefit span{font-size:12px!important}
 }
 @media(max-width:520px){.homeHeroText{max-width:88%!important}.homeHero h1{font-size:32px!important}.homeCarVisual{opacity:.42!important}.homeTiles{grid-template-columns:1fr!important;margin:-45px 10px 0!important}.homeTile{min-height:132px!important}.homeTile b{font-size:23px!important}}
 </style>
 <style id="v122-visual-refresh">
-/* v1.54 sector visual refresh */
+/* v1.65 sector visual refresh */
 #programWorkbench{max-width:1660px!important;padding:0 10px 28px!important}
 #programWorkbench>.workbenchTitle,#programWorkbench>.hero,#programWorkbench>.nav{display:none!important}
 #programWorkbench .page{padding-top:10px!important}
@@ -787,7 +800,7 @@ body{background:#edf4fb!important}
 .termsQuickCard:nth-child(4){background:linear-gradient(135deg,#fff5e9,#fff)}
 .termsQuickCard .tqIcon{font-size:34px;float:left;margin-right:12px}
 .termsQuickCard b{display:block;font-size:20px;color:#0c3568;margin-bottom:7px}
-.termsQuickCard span{font-size:13px;line-height:1.55;color:#4b6178}
+.termsQuickCard span{font-size:13px;line-height:1.61;color:#4b6178}
 #p4 .policyTopAction{border-radius:18px!important;background:linear-gradient(90deg,#eff7ff,#f8f5ff)!important;border:1px solid #cfe1f2!important;padding:18px!important}
 #p4 .callout{border-radius:16px!important;box-shadow:0 4px 12px rgba(15,55,100,.04)}
 
@@ -795,7 +808,7 @@ body{background:#edf4fb!important}
 @media(max-width:680px){.sectorHero{border-radius:13px}.sectorHero img{min-height:125px;object-fit:cover;object-position:center}#p3 .sectorHero img{min-height:110px}.limitVisualDeck,.termsQuickGrid{grid-template-columns:1fr}#p1 .stepHint{width:100%!important;margin-right:0!important}#p3 .amount{font-size:36px!important}}
 </style>
 <style>
-/* v1.54 섹터 이동바 */
+/* v1.65 섹터 이동바 */
 .sectorJumpNav{display:grid;grid-template-columns:repeat(4,minmax(150px,1fr));gap:10px;margin:14px 0 16px;padding:10px;border:1px solid #d9e3f0;border-radius:16px;background:linear-gradient(135deg,#f8fbff,#eef5ff);box-shadow:0 6px 18px rgba(15,76,117,.07)}
 .sectorJumpBtn{border:1px solid #cbd8e7;background:#fff;color:#17324d;border-radius:13px;padding:12px 10px;font-size:14px;font-weight:900;cursor:pointer;transition:.16s;display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
 .sectorJumpBtn:hover{transform:translateY(-1px);border-color:#60a5fa;box-shadow:0 5px 12px rgba(37,99,235,.10)}
@@ -803,18 +816,18 @@ body{background:#edf4fb!important}
 .sectorJumpBtn .sjIcon{font-size:17px}
 @media(max-width:760px){.sectorJumpNav{grid-template-columns:repeat(2,1fr);gap:8px}.sectorJumpBtn{font-size:13px;padding:10px 7px}}
 
-/* v1.54 부상한도 독립 비교 컨트롤 */
+/* v1.65 부상한도 독립 비교 컨트롤 */
 .limitCompareControlBar{display:grid;grid-template-columns:minmax(210px,.75fr) minmax(210px,.75fr) minmax(300px,1.5fr);gap:12px;align-items:stretch;margin:0 0 14px;padding:14px;border:1px solid #cbd8e7;border-radius:17px;background:linear-gradient(135deg,#ffffff,#f6f9ff);box-shadow:0 6px 18px rgba(15,76,117,.06)}
 .limitCompareControl{padding:12px 14px;border-radius:14px;border:1px solid #dce5f0;background:#fff}
 .limitCompareControl.self{border-left:5px solid #2563eb}.limitCompareControl.auto{border-left:5px solid #7c3aed}
 .limitCompareControl label{display:block;margin-bottom:7px;font-size:20px;font-weight:950;color:#dc2626;line-height:1.2;letter-spacing:-0.2px}
 .limitCompareControl select{width:100%;min-height:44px;border:1px solid #bdcbe0;border-radius:10px;background:#fff;padding:8px 10px;font-size:15px;font-weight:900;color:#102a43}.limitCompareControl select{position:relative;z-index:3;pointer-events:auto;touch-action:manipulation;cursor:pointer}.limitCompareControl select:focus{outline:3px solid rgba(37,99,235,.18);border-color:#2563eb}.limitApplied{margin-top:7px;padding:7px 9px;border-radius:9px;background:#f8fafc;font-size:11px;font-weight:800;color:#475569}.limitApplied b{font-size:12px;color:#0f172a}.limitSelectionLive{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:10px 13px;border:1px solid #dbe7f3;border-radius:12px;background:linear-gradient(90deg,#f8fbff,#f5f3ff);font-size:12px;color:#52657c}.limitSelectionLive strong{font-size:14px;color:#0a315f}.limitSelectionLive .liveBadge{padding:5px 9px;border-radius:999px;background:#0f766e;color:#fff;font-size:10px;font-weight:900;white-space:nowrap}@media(max-width:680px){.limitSelectionLive{align-items:flex-start;flex-direction:column}.limitSelectionLive .liveBadge{align-self:flex-start}}
-.limitComparePrinciple{display:flex;flex-direction:column;justify-content:center;padding:12px 16px;border-radius:14px;background:#edf6ff;border:1px solid #bfdbfe;color:#1e3a5f;font-size:13px;line-height:1.55}
+.limitComparePrinciple{display:flex;flex-direction:column;justify-content:center;padding:12px 16px;border-radius:14px;background:#edf6ff;border:1px solid #bfdbfe;color:#1e3a5f;font-size:13px;line-height:1.61}
 .limitComparePrinciple b{font-size:15px;color:#0f4c75;margin-bottom:4px}
 @media(max-width:900px){.limitCompareControlBar{grid-template-columns:1fr 1fr}.limitComparePrinciple{grid-column:1/-1}}
 @media(max-width:600px){.limitCompareControlBar{grid-template-columns:1fr}.limitComparePrinciple{grid-column:auto}}
 
-/* v1.54 부상한도 카드: 자손·자상 동시 표시 */
+/* v1.65 부상한도 카드: 자손·자상 동시 표시 */
 .limitVisualCard .limitMain{display:flex!important;flex-direction:column!important;gap:5px!important;align-items:flex-start!important}
 .dualLimitSelf,.dualLimitAuto{display:block;white-space:nowrap}
 .dualLimitSelf{font-size:22px;font-weight:900}.dualLimitAuto{font-size:16px;font-weight:900;opacity:.92}
@@ -823,7 +836,7 @@ body{background:#edf4fb!important}
 .limitBarValue b{display:block;color:#2563eb}.limitBarValue span{display:block;color:#7c3aed;font-weight:900}
 </style>
 <style>
-/* v1.54 보상비교 입력/결과 2단계 대시보드 */
+/* v1.65 보상비교 입력/결과 2단계 대시보드 */
 .compareActionBar{display:flex;justify-content:center;align-items:center;margin:18px 0 2px;padding-top:16px;border-top:1px dashed #cbd5e1}
 .compareActionBtn{min-width:320px;border:0;border-radius:16px;padding:17px 30px;background:linear-gradient(135deg,#1267e8,#275cf3 52%,#7c3aed);color:#fff;font-size:20px;font-weight:950;letter-spacing:-.03em;cursor:pointer;box-shadow:0 10px 24px rgba(37,99,235,.25);transition:.18s transform,.18s box-shadow}
 .compareActionBtn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(37,99,235,.3)}
@@ -852,7 +865,7 @@ body{background:#edf4fb!important}
 @media print{#compareInputView,.sectorJumpNav,.compareDashHeaderActions,.compareDashFoot{display:none!important}#compareResultView{display:block!important}.compareDashMain,.compareDashBottom{box-shadow:none}}
 </style>
 <style id="v125-ui">
-/* v1.54 compact basic input + limit dashboard */
+/* v1.65 compact basic input + limit dashboard */
 #p1 .p1CompactPanel{background:#fff;border:1px solid #dbe6f2;border-radius:20px;padding:18px 20px;box-shadow:0 10px 28px rgba(15,76,117,.08)}
 .p1CompactHead{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:14px}.p1CompactHead>div{display:flex;align-items:center;gap:10px;min-width:0}.p1CompactHead b{font-size:24px;color:#102a43}.p1CompactHead span:not(.p1HeadIcon){font-size:13px;color:#64748b}.p1CompactHead em{font-style:normal;font-size:12px;font-weight:900;color:#ef4444}.p1HeadIcon{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:9px;background:#1677ff;color:#fff;font-size:20px}
 .p1CompactGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.p1Field,.p1GuideCard{min-height:92px;border:1px solid #dbe5f0;border-radius:14px;background:linear-gradient(145deg,#f9fbfe,#f2f7fd);padding:13px 14px}.p1Field>span{display:block;font-size:13px;font-weight:900;color:#102a43;margin-bottom:8px}.p1Field i{font-style:normal;color:#ef4444}.p1Field select,.p1Field input{width:100%;height:44px;border:1px solid #c8d7e8;border-radius:9px;background:#fff;font-size:15px;font-weight:800;color:#243b53;padding:0 12px}.p1CoverageField{grid-column:auto}.p1CoverageBtns{display:grid;grid-template-columns:1fr 1fr;gap:7px}.p1CoverageBtns button{min-height:44px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:12px;font-weight:900;cursor:pointer}.p1CoverageField #coverageSelectedText{margin-top:6px;font-size:10px;text-align:center;color:#64748b;font-weight:800}.p1PercentInput{display:flex}.p1PercentInput input{border-radius:9px 0 0 9px}.p1PercentInput b{width:44px;display:flex;align-items:center;justify-content:center;border:1px solid #c8d7e8;border-left:0;border-radius:0 9px 9px 0;background:#edf4fb;color:#334155}.p1GuideCard{grid-column:span 2;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#eff8ff,#eaf5ff)}.p1InfoIcon{display:flex;flex:0 0 44px;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;background:#198cff;color:#fff;font-size:24px;font-weight:900}.p1GuideCard b{font-size:14px;color:#102a43}.p1GuideCard p{margin:5px 0 0;font-size:11px;line-height:1.65;color:#63788f}
@@ -861,7 +874,7 @@ body{background:#edf4fb!important}
 .p1SummaryGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px}.p1SummaryCard{min-height:76px;border-radius:12px;padding:11px 12px;border:1px solid #e3eaf2;background:#f8fbff}.p1SummaryCard small{display:block;font-size:10px;font-weight:800;color:#64748b}.p1SummaryCard b{display:block;margin-top:5px;font-size:14px;color:#102a43}.p1SummaryCard.blue{background:#eef7ff}.p1SummaryCard.purple{background:#f7efff}.p1SummaryCard.red{background:#fff0f3}.p1SummaryCard.green{background:#eefbf5}.p1SummaryCard.orange{background:#fff5e9}.p1SummaryCard.sky{background:#edf8ff}
 .p1BottomGrid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(280px,1fr);gap:12px;margin-top:14px}.p1FlowCard,.p1CheckCard{border:1px solid #dbe5f0;border-radius:14px;background:#fff;padding:12px 14px}.p1SectionTitle{font-size:15px;font-weight:900;color:#102a43;margin-bottom:10px}.p1SectionTitle span{font-size:10px;color:#7b8da1;font-weight:700;margin-left:8px}.p1FlowSteps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.p1FlowSteps button{position:relative;min-height:72px;border:1px solid #d6e2ef;border-radius:11px;background:#f8fbff;padding:10px 8px 8px 34px;text-align:left;cursor:pointer}.p1FlowSteps i{position:absolute;left:9px;top:9px;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#2166d8;color:#fff;font-style:normal;font-size:10px}.p1FlowSteps b{display:block;font-size:12px;color:#183b65}.p1FlowSteps span{font-size:9px;color:#71869d}.p1CheckCard{background:linear-gradient(135deg,#f2fff8,#eefaf4)}.p1CheckCard ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}.p1CheckCard li{display:grid;grid-template-columns:130px 1fr;gap:8px;font-size:10px;color:#668077}.p1CheckCard li b{color:#166534}
 .limitIntroCards{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:12px;margin-bottom:13px}.limitIntro{display:flex;align-items:center;gap:14px;min-height:92px;padding:14px 18px;border:1px solid #d7e3ef;border-radius:15px;background:#fff}.limitIntro .liIcon{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}.limitIntro b{display:block;font-size:18px;color:#102a43}.limitIntro small{display:block;margin-top:5px;font-size:11px;line-height:1.5;color:#63788f}.limitIntro.self{background:linear-gradient(135deg,#eef7ff,#f7fbff)}.limitIntro.self .liIcon{background:#1677ff;color:#fff}.limitIntro.auto{background:linear-gradient(135deg,#f7f9ff,#fbfdff)}.limitIntro.auto .liIcon{background:#e9eef6;color:#405a7a}.limitIntro.info{background:linear-gradient(135deg,#faf7ff,#fff)}.limitIntro.info .liIcon{background:#7c3aed;color:#fff}
-#p2 .limitCompareControlBar{margin-bottom:13px}.limitContentGrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(330px,1fr);gap:14px;align-items:start}.limitTablePanel .tablebox{margin:0}.limitRightStack{display:grid;gap:12px}.limitNotice{border:1px solid #f3c36a;border-radius:14px;background:#fffaf0;padding:13px 15px}.limitNotice>b{color:#ea580c;font-size:14px}.limitNotice ul{margin:8px 0 0;padding-left:18px;color:#53677d;font-size:10px;line-height:1.65}.limitMiniPanel.compact #limitVisualSummary{font-size:12px!important;line-height:1.65!important}.limitVisualDeck .limitVisualCard .limitMain{font-size:16px!important;line-height:1.45!important}.limitVisualDeck .limitVisualCard .dualLimitSelf,.limitVisualDeck .limitVisualCard .dualLimitAuto{display:block}.limitVisualDeck .limitVisualCard .dualLimitAuto{font-size:13px;opacity:.92;margin-top:2px}
+#p2 .limitCompareControlBar{margin-bottom:13px}.limitContentGrid{display:grid;grid-template-columns:minmax(0,1.61fr) minmax(330px,1fr);gap:14px;align-items:start}.limitTablePanel .tablebox{margin:0}.limitRightStack{display:grid;gap:12px}.limitNotice{border:1px solid #f3c36a;border-radius:14px;background:#fffaf0;padding:13px 15px}.limitNotice>b{color:#ea580c;font-size:14px}.limitNotice ul{margin:8px 0 0;padding-left:18px;color:#53677d;font-size:10px;line-height:1.65}.limitMiniPanel.compact #limitVisualSummary{font-size:12px!important;line-height:1.65!important}.limitVisualDeck .limitVisualCard .limitMain{font-size:16px!important;line-height:1.45!important}.limitVisualDeck .limitVisualCard .dualLimitSelf,.limitVisualDeck .limitVisualCard .dualLimitAuto{display:block}.limitVisualDeck .limitVisualCard .dualLimitAuto{font-size:13px;opacity:.92;margin-top:2px}
 @media(max-width:1050px){.p1CompactGrid{grid-template-columns:repeat(2,1fr)}.p1GuideCard{grid-column:span 2}.p1SummaryGrid{grid-template-columns:repeat(3,1fr)}.p1BottomGrid,.limitContentGrid{grid-template-columns:1fr}.limitIntroCards{grid-template-columns:1fr 1fr}.limitIntro.info{grid-column:1/-1}}
 @media(max-width:680px){.p1CompactHead{align-items:flex-start;flex-direction:column}.p1CompactGrid,.p1PlanGrid,.p1SummaryGrid,.p1FlowSteps,.limitIntroCards{grid-template-columns:1fr}.p1GuideCard,.limitIntro.info{grid-column:auto}.p1BottomGrid{grid-template-columns:1fr}.p1CompactPanel{padding:13px}.p1SummaryHead{flex-wrap:wrap}.p1SummaryHead button{margin-left:0}.limitContentGrid{grid-template-columns:1fr}}
 </style>
@@ -871,14 +884,14 @@ body{background:#edf4fb!important}
 #p2 .limitIntro.self:after,#p2 .limitIntro.auto:after,#p2 .limitIntro.info:after{content:'눌러서 보기';position:absolute;right:14px;bottom:10px;font-size:9px;font-weight:900;color:#64748b}
 .limitCoverageDetail{display:none;margin:-2px 0 13px;padding:14px 18px;border-radius:14px;border:1px solid #cfe0f1;background:linear-gradient(135deg,#f8fbff,#f4f7ff);font-size:12px;line-height:1.7;color:#40566d}.limitCoverageDetail.show{display:block}.limitCoverageDetail b{font-size:15px;color:#0b356c}.limitCoverageDetail .tag{display:inline-block;margin-right:6px;padding:4px 8px;border-radius:999px;background:#e8f1ff;color:#1d4ed8;font-weight:900;font-size:10px}
 .limitContentGrid{grid-template-columns:minmax(0,1.85fr) minmax(360px,.78fr)!important;gap:14px!important}.limitRightStack{display:block!important}.limitRightStack>.limitMiniPanel{height:100%}
-.limitBottomInfoRow{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(0,1.55fr);gap:12px;margin-top:12px;align-items:stretch}.limitBottomInfoRow .limitMiniPanel,.limitBottomInfoRow .limitNotice{height:100%;margin:0}
+.limitBottomInfoRow{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(0,1.61fr);gap:12px;margin-top:12px;align-items:stretch}.limitBottomInfoRow .limitMiniPanel,.limitBottomInfoRow .limitNotice{height:100%;margin:0}
 #p2 .limitTablePanel .tablebox{min-height:560px}#p2 #tbl th,#p2 #tbl td{padding:9px 8px!important}#p2 #tbl td:nth-child(1){font-weight:950;text-align:center;width:70px}#p2 #tbl td:nth-child(2),#p2 #tbl td:nth-child(3){font-weight:900;text-align:right}#p2 #tbl td:nth-child(4){font-size:11px;color:#64748b}
-.limitPairRow{display:grid;grid-template-columns:68px minmax(0,1fr);gap:10px;margin:13px 0 17px;align-items:start}.limitPairLabel{font-size:13px;font-weight:950;color:#0f2745;padding-top:4px}.limitPairBars{display:grid;gap:7px}.limitPairLine{display:grid;grid-template-columns:38px minmax(0,1fr) 96px;gap:8px;align-items:center}.limitPairLine>span{font-size:10px;font-weight:950}.limitPairLine.self>span{color:#1d4ed8}.limitPairLine.auto>span{color:#7c3aed}.limitPairTrack{height:16px;border-radius:99px;background:#edf2f7;overflow:hidden}.limitPairFill{height:100%;border-radius:99px;min-width:3px}.limitPairLine.self .limitPairFill{background:linear-gradient(90deg,#1677ff,#45a0ff)}.limitPairLine.auto .limitPairFill{background:linear-gradient(90deg,#6d28d9,#a855f7)}.limitPairValue{text-align:right;font-size:11px;font-weight:950;color:#243b53;white-space:nowrap}.limitScaleNote{font-size:10px;line-height:1.55;color:#64748b;margin-top:8px;padding-top:8px;border-top:1px dashed #d7e2ed}
-.injuryGradeModal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(3,20,42,.68);backdrop-filter:blur(4px);padding:24px;overflow:auto}.injuryGradeModal.show{display:block}.injuryGradeCard{max-width:1120px;margin:20px auto;background:#fff;border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}.injuryGradeHead{display:flex;align-items:center;gap:12px;padding:18px 22px;background:linear-gradient(90deg,#0b4fa7,#5330cb);color:#fff}.injuryGradeHead h3{margin:0;font-size:22px}.injuryGradeHead button{margin-left:auto;border:0;border-radius:10px;background:#fff;color:#183b65;padding:8px 13px;font-weight:900;cursor:pointer}.injuryGradeTools{padding:14px 18px;background:#f8fbff;border-bottom:1px solid #dbe5ef}.injuryGradeTools input{width:100%;height:42px;border:1px solid #cbd8e6;border-radius:10px;padding:0 12px;font-size:14px}.injuryGradeBody{padding:16px 18px}.injuryGradeTable{width:100%;border-collapse:collapse;font-size:12px}.injuryGradeTable th{background:#eef4fb;color:#173b66;padding:10px;border:1px solid #d9e4ef}.injuryGradeTable td{padding:10px;border:1px solid #e0e8f0;vertical-align:top;line-height:1.55}.injuryGradeTable td:nth-child(1){width:60px;text-align:center;font-weight:950}.injuryGradeTable td:nth-child(2){width:90px;text-align:right;font-weight:950;color:#1d4ed8}.injuryGradeFoot{font-size:10px;line-height:1.6;color:#64748b;margin-top:10px}
+.limitPairRow{display:grid;grid-template-columns:68px minmax(0,1fr);gap:10px;margin:13px 0 17px;align-items:start}.limitPairLabel{font-size:13px;font-weight:950;color:#0f2745;padding-top:4px}.limitPairBars{display:grid;gap:7px}.limitPairLine{display:grid;grid-template-columns:38px minmax(0,1fr) 96px;gap:8px;align-items:center}.limitPairLine>span{font-size:10px;font-weight:950}.limitPairLine.self>span{color:#1d4ed8}.limitPairLine.auto>span{color:#7c3aed}.limitPairTrack{height:16px;border-radius:99px;background:#edf2f7;overflow:hidden}.limitPairFill{height:100%;border-radius:99px;min-width:3px}.limitPairLine.self .limitPairFill{background:linear-gradient(90deg,#1677ff,#45a0ff)}.limitPairLine.auto .limitPairFill{background:linear-gradient(90deg,#6d28d9,#a855f7)}.limitPairValue{text-align:right;font-size:11px;font-weight:950;color:#243b53;white-space:nowrap}.limitScaleNote{font-size:10px;line-height:1.61;color:#64748b;margin-top:8px;padding-top:8px;border-top:1px dashed #d7e2ed}
+.injuryGradeModal{display:none;position:fixed;inset:0;z-index:99999;background:rgba(3,20,42,.68);backdrop-filter:blur(4px);padding:24px;overflow:auto}.injuryGradeModal.show{display:block}.injuryGradeCard{max-width:1120px;margin:20px auto;background:#fff;border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.28);overflow:hidden}.injuryGradeHead{display:flex;align-items:center;gap:12px;padding:18px 22px;background:linear-gradient(90deg,#0b4fa7,#5330cb);color:#fff}.injuryGradeHead h3{margin:0;font-size:22px}.injuryGradeHead button{margin-left:auto;border:0;border-radius:10px;background:#fff;color:#183b65;padding:8px 13px;font-weight:900;cursor:pointer}.injuryGradeTools{padding:14px 18px;background:#f8fbff;border-bottom:1px solid #dbe5ef}.injuryGradeTools input{width:100%;height:42px;border:1px solid #cbd8e6;border-radius:10px;padding:0 12px;font-size:14px}.injuryGradeBody{padding:16px 18px}.injuryGradeTable{width:100%;border-collapse:collapse;font-size:12px}.injuryGradeTable th{background:#eef4fb;color:#173b66;padding:10px;border:1px solid #d9e4ef}.injuryGradeTable td{padding:10px;border:1px solid #e0e8f0;vertical-align:top;line-height:1.61}.injuryGradeTable td:nth-child(1){width:60px;text-align:center;font-weight:950}.injuryGradeTable td:nth-child(2){width:90px;text-align:right;font-weight:950;color:#1d4ed8}.injuryGradeFoot{font-size:10px;line-height:1.6;color:#64748b;margin-top:10px}
 @media(max-width:900px){.limitContentGrid,.limitBottomInfoRow{grid-template-columns:1fr!important}.injuryGradeModal{padding:8px}.injuryGradeCard{margin:8px auto}.injuryGradeTable{font-size:10px}}
 </style>
 <style>
-/* v1.54: 부상급수 1~14급 개별 비교 + 약관·산정기준 대시보드 */
+/* v1.65: 부상급수 1~14급 개별 비교 + 약관·산정기준 대시보드 */
 #p2 .limitGradeDeck{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:9px;margin:14px 0}
 #p2 .limitGradeCard{border:0;border-radius:14px;padding:12px 10px;text-align:left;color:#fff;cursor:pointer;min-height:112px;box-shadow:0 6px 15px rgba(15,55,100,.10);transition:.15s transform,.15s box-shadow;overflow:hidden}
 #p2 .limitGradeCard:hover,#p2 .limitGradeCard.active{transform:translateY(-2px);box-shadow:0 10px 22px rgba(15,55,100,.20);outline:3px solid rgba(255,255,255,.75);outline-offset:-5px}
@@ -888,8 +901,8 @@ body{background:#edf4fb!important}
 #p2 #tbl{font-size:12px}#p2 #tbl th{font-size:12px;padding:10px 7px}#p2 #tbl td{padding:8px 7px;vertical-align:middle}#p2 #tbl .limitDiff{color:#dc2626;white-space:nowrap}
 #p2 .limitRightStack>.limitMiniPanel{padding:16px!important;display:flex!important;flex-direction:column!important;overflow:hidden}#p2 .limitRightStack h3{font-size:18px!important;margin:0 0 10px!important}#p2 #limitBars{display:grid;gap:4px;align-content:start;flex:1}#p2 .limitPairRow{display:grid;grid-template-columns:36px minmax(0,1fr);gap:6px;padding:4px 5px;border-radius:8px}#p2 .limitPairRow.active{background:#eff6ff;box-shadow:inset 0 0 0 1px #93c5fd}#p2 .limitPairLabel{font-size:11px;font-weight:1000;display:flex;align-items:center}#p2 .limitPairBars{display:grid;gap:2px;min-width:0}#p2 .limitPairLine{display:grid;grid-template-columns:28px minmax(0,1fr) 68px;gap:4px;align-items:center;font-size:9px;line-height:1.1}#p2 .limitPairTrack{height:8px;border-radius:999px;background:#e8eef5;overflow:hidden}#p2 .limitPairLine.self .limitPairFill{height:100%;background:linear-gradient(90deg,#0b7cff,#6d38e8);border-radius:999px}#p2 .limitPairLine.auto .limitPairFill{height:100%;background:linear-gradient(90deg,#e11d48,#fb7185);border-radius:999px}#p2 .limitPairValue{font-size:9px;font-weight:900;text-align:right;white-space:nowrap}#p2 .limitRatio{font-size:8px;color:#64748b;text-align:right;margin-top:1px}
 #p2 .limitScaleNote{font-size:9px!important;line-height:1.45!important;margin-top:8px!important;color:#64748b}
-#p2 .limitBottomInfoRow{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)!important;gap:14px!important;align-items:stretch!important;margin-top:14px!important}#p2 .limitBottomInfoRow .limitMiniPanel,#p2 .limitBottomInfoRow .limitNotice{min-height:135px!important;padding:16px 18px!important}#p2 .limitBottomInfoRow h3{font-size:18px!important;margin:0 0 8px!important}#p2 #limitVisualSummary{font-size:12px!important;line-height:1.45!important}#p2 .selectionLine{display:flex;justify-content:space-between;gap:12px;padding:2px 0}#p2 .selectionLine span{color:#64748b}#p2 .selectionLine b{color:#0f172a}#p2 .selectionFoot{margin-top:5px;color:#0f766e;font-size:10px}#p2 .limitNotice>b{font-size:16px!important}#p2 .limitNotice ul{font-size:11px!important;line-height:1.55!important;margin-top:6px!important}
-@media(max-width:1300px){#p2 .limitGradeDeck{grid-template-columns:repeat(5,1fr)}#p2 .limitContentGrid{grid-template-columns:minmax(0,1.55fr) minmax(330px,.85fr)!important}}
+#p2 .limitBottomInfoRow{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)!important;gap:14px!important;align-items:stretch!important;margin-top:14px!important}#p2 .limitBottomInfoRow .limitMiniPanel,#p2 .limitBottomInfoRow .limitNotice{min-height:135px!important;padding:16px 18px!important}#p2 .limitBottomInfoRow h3{font-size:18px!important;margin:0 0 8px!important}#p2 #limitVisualSummary{font-size:12px!important;line-height:1.45!important}#p2 .selectionLine{display:flex;justify-content:space-between;gap:12px;padding:2px 0}#p2 .selectionLine span{color:#64748b}#p2 .selectionLine b{color:#0f172a}#p2 .selectionFoot{margin-top:5px;color:#0f766e;font-size:10px}#p2 .limitNotice>b{font-size:16px!important}#p2 .limitNotice ul{font-size:11px!important;line-height:1.61!important;margin-top:6px!important}
+@media(max-width:1300px){#p2 .limitGradeDeck{grid-template-columns:repeat(5,1fr)}#p2 .limitContentGrid{grid-template-columns:minmax(0,1.61fr) minmax(330px,.85fr)!important}}
 @media(max-width:1000px){#p2 .limitGradeDeck{grid-template-columns:repeat(4,1fr)}#p2 .limitContentGrid{grid-template-columns:1fr!important}#p2 .limitBottomInfoRow{grid-template-columns:1fr 1fr!important}}
 @media(max-width:680px){#p2 .limitGradeDeck{grid-template-columns:repeat(2,1fr)}#p2 .limitBottomInfoRow{grid-template-columns:1fr!important}}
 
@@ -963,7 +976,7 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.v128Home.anime-ready .v128Anime[data-v128-reveal]{opacity:1!important;transform:none!important}.v128SlideMedia img{transform:none!important}}
 </style>
 <style id="v129-visual-renewal">
-/* v1.54 image-first renewal: logic untouched, visual composition only */
+/* v1.65 image-first renewal: logic untouched, visual composition only */
 body{background:#edf4fb}
 #appChrome{max-width:1460px;margin:0 auto;padding:0 14px}
 .appTopbar{height:76px;border-radius:0;background:rgba(255,255,255,.96);border:1px solid #dbe6f2;border-top:0;box-shadow:0 8px 28px rgba(15,39,68,.09);padding:0 24px;backdrop-filter:blur(14px)}
@@ -993,7 +1006,7 @@ body{background:#edf4fb}
 .v129Quick:hover{transform:translateY(-4px);border-color:#a9c7ea;box-shadow:0 16px 34px rgba(15,39,68,.12)}
 .v129Quick i{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:12px;background:#edf5ff;color:#0b67d8;font-style:normal;font-size:23px}
 .v129Quick b{display:block;margin-top:12px;color:#0b315f;font-size:20px;letter-spacing:-.035em}
-.v129Quick span{display:block;margin-top:6px;color:#617892;font-size:11px;line-height:1.55}
+.v129Quick span{display:block;margin-top:6px;color:#617892;font-size:11px;line-height:1.61}
 .v129Section{padding:46px 30px}
 .v129Section.alt{background:linear-gradient(180deg,#f3f8fe,#edf5fd)}
 .v129Head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
@@ -1026,7 +1039,7 @@ body{background:#edf4fb}
 .v129FlowStep{padding:18px;border:1px solid #d7e3ef;border-radius:16px;background:#fff}
 .v129FlowStep i{display:flex;width:32px;height:32px;border-radius:50%;align-items:center;justify-content:center;background:#0b67d8;color:#fff;font-style:normal;font-weight:950}
 .v129FlowStep b{display:block;margin-top:12px;color:#0b315f;font-size:15px}
-.v129FlowStep span{display:block;margin-top:5px;color:#64748b;font-size:10px;line-height:1.55}
+.v129FlowStep span{display:block;margin-top:5px;color:#64748b;font-size:10px;line-height:1.61}
 .v129Footer{padding:24px 30px;background:#071b38;color:#dbeafe;font-size:11px;line-height:1.7}
 .v129Footer b{color:#fff}
 /* visual uplift only for existing calculation workbench */
@@ -1042,7 +1055,7 @@ body{background:#edf4fb}
 @media(prefers-reduced-motion:reduce){.v129Showcase,.v129Quick,.v129ShowcaseMedia img{transition:none!important}}
 </style>
 <style id="v130-ux-balance">
-/* v1.54 UX balance pass — visual/placement only, calculation logic untouched */
+/* v1.65 UX balance pass — visual/placement only, calculation logic untouched */
 :root{--v130-navy:#072a55;--v130-navy2:#0a3d78;--v130-blue:#1677ea;--v130-line:#d7e4f2;--v130-soft:#f3f7fc;--v130-text:#10233f;--v130-muted:#60748d}
 body{background:#edf3f9!important;color:var(--v130-text)}
 #appChrome{position:sticky!important;top:0!important;z-index:1200!important;max-width:none!important;margin:0!important;padding:0!important}
@@ -1082,7 +1095,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:480px){.appTopBrand{font-size:14px!important}.appTopBrand .inlineCarMark,.appTopBrand .inlineCarMark svg{width:38px!important;height:38px!important}.v129QuickNav{grid-template-columns:1fr!important}.v129Quick{min-height:108px!important}.v129Head h2,.v129InsightCopy h2{font-size:26px!important}}
 </style>
 <style id="v131-hero-balance">
-/* v1.54 hero balance: preserve generated artwork and integrate primary navigation */
+/* v1.65 hero balance: preserve generated artwork and integrate primary navigation */
 #programHome .v129Hero{position:relative;isolation:isolate;background:#061a34;border-radius:0 0 28px 28px;overflow:hidden}
 #programHome .v129Slides{aspect-ratio:16/9!important;min-height:520px!important;max-height:820px!important;background:#061a34}
 #programHome .v129Slide img{object-fit:cover!important;object-position:center top!important;transform:none}
@@ -1143,7 +1156,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 }
 </style>
 <style id="v134-global-visual-nav">
-/* v1.54 common visual navigation inspired by the supplied 3D menu artwork */
+/* v1.65 common visual navigation inspired by the supplied 3D menu artwork */
 #appChrome{position:sticky!important;top:0!important;z-index:2200!important}
 #globalVisualNavWrap{position:sticky;top:82px;z-index:2100;background:linear-gradient(180deg,#071b36 0%,#06162d 100%);border-bottom:1px solid rgba(130,186,255,.22);box-shadow:0 10px 28px rgba(5,26,55,.18);transition:.25s ease}
 .globalVisualNav{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:12px 14px}
@@ -1174,7 +1187,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:470px){.globalVisualNav{grid-template-columns:1fr 1fr}.gvText small{display:none}.gvCard{min-height:78px;padding-left:62px}.gvCard img{width:44px;height:44px}.gvText b{font-size:14px}}
 </style>
 <style id="v135-footer-legal">
-/* v1.54: legal notice moved to the bottom of every section */
+/* v1.65: legal notice moved to the bottom of every section */
 .pageLegalNotice{position:relative;max-width:1500px!important;margin:30px auto 10px!important;padding:22px 24px!important;grid-template-columns:70px minmax(0,1fr)!important;gap:18px!important;border:1px solid #f6a6ad!important;border-left:8px solid #dc2626!important;border-radius:22px!important;background:linear-gradient(135deg,#fff7f7 0%,#fff 45%,#fff1f2 100%)!important;box-shadow:0 14px 30px rgba(127,29,29,.12),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -3px 0 rgba(254,202,202,.35)!important;overflow:hidden}
 .pageLegalNotice:before{content:"";position:absolute;inset:0 auto 0 0;width:7px;background:linear-gradient(180deg,#ef4444,#991b1b);box-shadow:4px 0 16px rgba(220,38,38,.25)}
 .pageLegalNotice .legalIcon{width:64px!important;height:64px!important;border-radius:18px!important;font-size:31px!important;background:linear-gradient(145deg,#fff,#fee2e2)!important;border:1px solid #fecaca!important;box-shadow:0 10px 18px rgba(185,28,28,.12),inset 0 1px 0 #fff!important}
@@ -1187,7 +1200,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:780px){.pageLegalNotice{grid-template-columns:50px minmax(0,1fr)!important;padding:16px!important;gap:12px!important;margin:20px 8px 8px!important}.pageLegalNotice .legalIcon{width:48px!important;height:48px!important;font-size:23px!important}.pageLegalNotice .legalHead>b{font-size:17px!important}.pageLegalNotice .legalBadge{font-size:9px!important;padding:4px 7px!important}.pageLegalNotice .legalBody p{font-size:12px!important;line-height:1.65!important}}
 </style>
 <style id="v138-basicinfo-image-layout">
-/* v1.54 기본정보 입력 화면 - 첨부 시안형 대시보드 레이아웃
+/* v1.65 기본정보 입력 화면 - 첨부 시안형 대시보드 레이아웃
    계산/이벤트용 기존 ID와 JS는 변경하지 않고 시각 배치만 재구성 */
 #p1 .p1DualShell{margin-top:18px!important}
 #p1 .p1DualLayout{display:grid!important;grid-template-columns:1fr!important;gap:20px!important;align-items:start!important}
@@ -1302,7 +1315,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 }
 </style>
 <style id="v141-sidebar-typography-alignment">
-/* v1.54 작업화면: 홈 제외 글로벌 패널 좌측 세로 배치 */
+/* v1.65 작업화면: 홈 제외 글로벌 패널 좌측 세로 배치 */
 @media (min-width:981px){
   body.workbenchMode #globalVisualNavWrap{
     position:fixed!important;left:12px!important;top:88px!important;bottom:14px!important;width:268px!important;
@@ -1403,7 +1416,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 }
 </style>
 <style id="v141-renew-limit-compare">
-/* ===== v1.54 renewal: 부상한도 + 보상비교 ===== */
+/* ===== v1.65 renewal: 부상한도 + 보상비교 ===== */
 #p2>.sectorHero,#p3>.sectorHero{display:none!important}
 
 /* ---------- 부상한도 ---------- */
@@ -1469,7 +1482,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 #p3 .compareRenewTitle h2{margin:0;font-size:27px;color:#0a2d59;letter-spacing:-.045em}.compareRenewTitle p{margin:4px 0 0;color:#60758c;font-size:12px;font-weight:700}
 #p3 .compareRenewLegend{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.compareRenewLegend span{padding:8px 10px;border:1px solid #d9e5f0;border-radius:999px;background:#fff;font-size:10px;font-weight:900;color:#536980}
 #p3 .compareRenewLegend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
-#p3 .compareUnifiedGrid{display:grid;grid-template-columns:minmax(245px,.82fr) minmax(500px,1.55fr) minmax(245px,.82fr);gap:12px;align-items:start}
+#p3 .compareUnifiedGrid{display:grid;grid-template-columns:minmax(245px,.82fr) minmax(500px,1.61fr) minmax(245px,.82fr);gap:12px;align-items:start}
 #p3 #compareInputView{grid-column:2;grid-row:1;margin:0!important;min-width:0}
 #p3 #compareInputView>.panel{padding:14px!important;border-radius:18px!important;box-shadow:0 9px 25px rgba(20,56,93,.065)!important}
 #p3 #compareInputView .title{font-size:18px!important;margin-bottom:9px!important}
@@ -1514,7 +1527,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:680px){#p2 .p2RenewHeader,#p3 .compareRenewHeader{align-items:flex-start;flex-direction:column}#p2 .p2AccidentBtns,#p2 .p2FlowSelectors,#p2 .p2FlowSteps,#p2 .p2LimitGrid{grid-template-columns:1fr}#p3 .compareUnifiedGrid{grid-template-columns:1fr}#p3 #compareInputView,#p3 #selfResultCard,#p3 #autoResultCard{grid-column:1;grid-row:auto;position:static}#p3 #compareInputView .inputs{grid-template-columns:1fr!important}#p3 .compareRenewTitle h2,#p2 .p2RenewHeader h2{font-size:22px}}
 </style>
 <style id="v142-compare-two-stage">
-/* v1.54 보상비교: 1단계 입력 → 2단계 결과 */
+/* v1.65 보상비교: 1단계 입력 → 2단계 결과 */
 #p3 .compareRenewHeader{margin-bottom:14px!important}
 #p3 #compareInputView{display:block!important;width:100%!important;max-width:none!important;margin:0!important;grid-column:auto!important;grid-row:auto!important}
 #p3 #compareInputView.v142-hidden{display:none!important}
@@ -1556,7 +1569,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:700px){#p3 #compareInputView .inputs{grid-template-columns:1fr!important}#p3 .compareActionBtn{min-width:0;width:100%;font-size:17px}#p3 #compareResultView .compareDashMain{grid-template-columns:1fr!important}#p3 #compareResultView .compareCenterCard{grid-column:auto;grid-row:auto}}
 </style>
 <style id="v143-compare-input-renewal">
-/* v1.54 보상비교 입력화면 리뉴얼: 첨부 시안 기준 */
+/* v1.65 보상비교 입력화면 리뉴얼: 첨부 시안 기준 */
 #p3>.sectorHero{display:none!important}
 #p3 .compareRenewHeader{padding:18px 22px!important;margin:0 0 14px!important;border:1px solid #d8e7f5!important;border-radius:22px!important;background:linear-gradient(135deg,#f7fbff 0%,#eaf5ff 58%,#f8fbff 100%)!important;box-shadow:0 9px 28px rgba(35,84,132,.08)!important}
 #p3 .compareRenewTitle i{width:54px!important;height:54px!important;border-radius:15px!important;font-size:27px!important;background:linear-gradient(145deg,#1478f5,#245be0)!important;box-shadow:0 8px 18px rgba(37,99,235,.22)!important}
@@ -1646,7 +1659,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 }
 </style>
 <style id="v144-terms-limit-cleanup">
-/* v1.54 — injury-limit cleanup + terms/criteria renewal */
+/* v1.65 — injury-limit cleanup + terms/criteria renewal */
 #p2 .p2RenewHeader,#p2 .p2AccidentBox,#p2 .p2FlowBox,#p2 .p2LimitInputBox,#p2 .p2GradeBox{display:none!important}
 #p2>.limitIntroCards{margin-top:0!important}
 
@@ -1717,7 +1730,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 </style>
 
 <style id="v148-basic-text-fix">
-/* ===== v1.54 basic-info text overflow fix ===== */
+/* ===== v1.65 basic-info text overflow fix ===== */
 /* 가입담보: 선택배지가 본문 글자를 덮지 않도록 상태표시를 버튼 하단 텍스트로 일원화 */
 #p1 .p1CoverageBtns button{
   padding:9px 6px!important;
@@ -1839,7 +1852,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:1120px){#p3 #compareInputView .accidentToggle{grid-template-columns:1fr!important}#p3 #compareInputView .logicHead{align-items:flex-start;flex-direction:column}#p3 #compareInputView .logicTitle{flex-wrap:wrap}#p3 #compareInputView .logicTitle small{white-space:normal!important}#p3 #compareInputView .logicSelectors{grid-template-columns:1fr!important}#p3 #compareInputView .flowChart{grid-template-columns:1fr!important}#p3 #compareInputView .flowArrow{transform:rotate(90deg);min-height:26px!important}#p3 #compareInputView .flowNode{grid-template-columns:135px minmax(0,1fr)!important}}
 @media(max-width:680px){#p3 #compareInputView .compareRefAccident,#p3 #compareInputView .compareRefLogic{padding:15px!important;border-radius:18px!important}#p3 #compareInputView .accChooserHead{align-items:flex-start;flex-direction:column;gap:6px;margin:0 2px 12px}#p3 #compareInputView .accidentChooserTitle{font-size:24px!important}#p3 #compareInputView .accChooserDesc{font-size:13px}#p3 #compareInputView .accidentBtn{grid-template-columns:28px 90px minmax(0,1fr)!important;gap:8px!important;padding:12px!important;min-height:112px!important}#p3 #compareInputView .accRefImg{width:88px!important;height:75px!important}#p3 #compareInputView .accArrow{display:none!important}#p3 #compareInputView .accMain{font-size:16px!important}#p3 #compareInputView .accText small{font-size:11px!important}#p3 #compareInputView .logicTitle b{font-size:21px!important}#p3 #compareInputView .logicSync{font-size:12px;padding:8px 12px}#p3 #compareInputView .logicSelectorCard{grid-template-columns:72px minmax(0,1fr)!important;min-height:100px!important;padding:10px 12px!important}#p3 #compareInputView .logicSelectorCard img{width:68px!important;height:68px!important}#p3 #compareInputView .logicField>b{font-size:16px!important}#p3 #compareInputView .logicSelectorCard select,#p3 #compareInputView .logicSelectorCard input,#p3 #compareInputView .logicCoverDisplay{min-height:48px!important;font-size:16px!important}#p3 #compareInputView .flowNode{grid-template-columns:92px minmax(0,1fr)!important;min-height:116px!important;padding:10px!important}#p3 #compareInputView .flowNodeIcon{height:90px!important}#p3 #compareInputView .flowNodeIcon img{width:88px!important;height:86px!important}#p3 #compareInputView .flowNode b{font-size:16px!important}#p3 #compareInputView .flowNode small{font-size:11px!important}#p3 #compareInputView .flowNode .flowStep{font-size:11px!important;padding:5px 9px!important}}
 </style><style id="v152b-fix">
-/* v1.54b selector/flow specificity fix */
+/* v1.65b selector/flow specificity fix */
 #p3 #compareInputView .logicSelectors>label.logicSelectorCard{display:grid!important;grid-template-columns:120px minmax(0,1fr)!important;align-items:center!important;gap:18px!important;padding:14px 18px!important}
 #p3 #compareInputView .logicSelectors>label.logicSelectorCard:before{content:none!important;display:none!important}
 #p3 #compareInputView .flowChart .flowNode .flowStep{min-height:0!important;height:auto!important;width:auto!important;position:static!important;display:inline-flex!important;padding:6px 13px!important;border-radius:999px!important}
@@ -1847,7 +1860,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 @media(max-width:1500px){#p3 #compareInputView .logicSelectors>label.logicSelectorCard{grid-template-columns:96px minmax(0,1fr)!important}#p3 #compareInputView .flowNodeCopy b{white-space:normal!important}}
 @media(max-width:680px){#p3 #compareInputView .logicSelectors>label.logicSelectorCard{grid-template-columns:72px minmax(0,1fr)!important}}
 </style><style id="v152c-final">
-/* v1.54c final flow label balance */
+/* v1.65c final flow label balance */
 #p3 #compareInputView .flowNodeCopy b{white-space:normal!important;font-size:20px!important;word-break:keep-all!important;overflow-wrap:normal!important}
 #p3 #compareInputView .flowNode.result .flowNodeCopy b{font-size:19px!important}
 </style>
@@ -1859,8 +1872,55 @@ body{background:#edf3f9!important;color:var(--v130-text)}
   #programHome .v129Slide img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important;}
 }
 </style>
+
+<style id="v155-income-mode-balance">
+#p3 #compareInputView .incomeModeBox{min-height:106px!important;padding-left:18px!important}
+#p3 #compareInputView .incomeModeBox label{padding-right:0!important}
+#p3 #compareInputView .incomeModeToggle{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+#p3 #compareInputView .incomeModeBtn{min-height:44px;border:1px solid #d6b66c;border-radius:11px;background:#fff;color:#76520b;font-weight:900;font-size:13px;padding:8px 10px;white-space:normal;line-height:1.25;cursor:pointer}
+#p3 #compareInputView .incomeModeBtn.active{background:#f59e0b;color:#fff;border-color:#f59e0b;box-shadow:0 5px 12px rgba(245,158,11,.18)}
+#p3 #compareInputView .lostAutoBox{grid-column:span 2!important;min-width:0!important;padding-left:18px!important}
+#p3 #compareInputView .lostAutoBox label{padding-right:72px!important;white-space:normal!important;overflow-wrap:anywhere}
+#p3 #compareInputView .lostAutoBox .muted{white-space:normal!important;overflow-wrap:anywhere;word-break:keep-all}
+#p3 #compareInputView #laborIncomeBox,#p3 #compareInputView #proofIncomeBox{min-width:0!important}
+@media(max-width:1050px){#p3 #compareInputView .lostAutoBox{grid-column:1/-1!important}}
+@media(max-width:700px){#p3 #compareInputView .incomeModeToggle{grid-template-columns:1fr 1fr}#p3 #compareInputView .incomeModeBtn{font-size:12px;padding:7px 6px}#p3 #compareInputView .lostAutoBox{grid-column:auto!important}#p3 #compareInputView .entryBox,#p3 #compareInputView .autoBox{padding-left:14px!important;padding-right:14px!important}#p3 #compareInputView .entryBox label,#p3 #compareInputView .autoBox label{padding-right:68px!important;word-break:keep-all;overflow-wrap:anywhere}}
+</style>
+
+<style id="v157-one-row-cost-fix">
+/* v1.65: 핵심 4개 비용 패널을 PC에서 한 줄로 고정 */
+@media (min-width:1051px){
+  #p3 #compareInputView .inputs{grid-template-columns:repeat(4,minmax(0,1fr))!important;}
+  #p3 #compareInputView .finalCostRow{grid-column:auto!important;min-width:0!important;}
+  #p3 #compareInputView .finalCostRow label{white-space:normal!important;word-break:keep-all!important;overflow-wrap:anywhere!important;}
+  #p3 #compareInputView .lostAutoBox{min-height:170px!important;}
+}
+@media (max-width:1050px) and (min-width:701px){
+  #p3 #compareInputView .finalCostRow{grid-column:auto!important;}
+}
+#p3 #compareInputView #lostFormula,#p3 #compareInputView #lostBasisNote{white-space:normal!important;word-break:keep-all!important;overflow-wrap:anywhere!important;line-height:1.35!important;}
+</style>
+<style id="v158-label-polish">
+#p3 #compareInputView .lostTitle{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+#p3 #compareInputView .lostTitle .lostSub{font-size:11px;font-weight:800;color:#64748b;white-space:nowrap}
+#p3 #compareInputView #dailyWageBasis{font-size:11px;line-height:1.35;color:#64748b;word-break:keep-all;overflow-wrap:break-word}
+@media(max-width:700px){#p3 #compareInputView .lostTitle .lostSub{font-size:10px}#p3 #compareInputView #dailyWageBasis{font-size:10px}}
+</style>
+
+<style id="v163-formula-right-fix">
+/* v1.65: 임금표를 도시일용임금 / 약관상 도시일용임금으로 분리 */
+.termsWageTable th small,.tvTable th small{font-size:.72em;font-weight:700;opacity:.78;line-height:1.2}
+/* v1.65: 1일 적용액 우측에 산식을 명확하게 배치 */
+#laborIncomeBox .wagePolicyRow{display:grid!important;grid-template-columns:180px minmax(420px,1fr) 110px!important;gap:18px!important;align-items:center!important;width:100%!important}
+#policyDailyBenefitDisplay{width:180px!important;min-width:180px!important;max-width:180px!important}
+#dailyWageBasis{display:block!important;margin:0!important;padding:12px 16px!important;border:1px solid #bfdbfe!important;border-radius:14px!important;background:#f8fbff!important;font-size:15px!important;line-height:1.45!important;color:#174a7e!important;white-space:normal!important;overflow:visible!important}
+#dailyWageBasis b{font-size:16px!important;color:#0f5ed7!important}
+#dailyWageBasis .sub{display:block!important;margin-top:4px!important;font-size:11px!important;color:#64748b!important}
+@media(max-width:760px){#laborIncomeBox .wagePolicyRow{grid-template-columns:150px minmax(0,1fr)!important;gap:10px!important}#policyDailyBenefitDisplay{width:150px!important;min-width:150px!important;max-width:150px!important}#dailyWageBasis{font-size:12px!important;padding:9px 10px!important}#dailyWageBasis b{font-size:13px!important}.wageBadge{grid-column:1/-1!important;justify-self:start!important}}
+@media(max-width:520px){#laborIncomeBox .wagePolicyRow{grid-template-columns:1fr!important}#policyDailyBenefitDisplay{width:100%!important;min-width:0!important;max-width:100%!important}}
+</style>
 </head><body>
-<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v1.54 · 자동차보상</div>
+<div id="cloudReadyBanner" style="position:fixed;left:12px;bottom:12px;z-index:9998;background:#0f172a;color:#fff;padding:9px 12px;border-radius:999px;font-size:11px;font-weight:800;box-shadow:0 8px 24px #0003">v1.65 · 자동차보상</div>
 <style>
 #authGate{position:fixed;inset:0;z-index:200000;background:linear-gradient(135deg,#07182b,#0f3b62 55%,#312e81);display:flex;align-items:center;justify-content:center;padding:18px}.authCard{width:min(500px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 80px #0007}.authBrand{font-size:13px;font-weight:900;color:#1d4ed8}.authCard h2{margin:6px 0 8px;font-size:26px}.authCard p{color:#64748b;font-size:13px;line-height:1.6}.authCard input{margin:6px 0}.authBtn{width:100%;border:0;border-radius:12px;padding:13px;background:#0f4c75;color:#fff;font-weight:900;cursor:pointer;margin-top:8px}.authSub{background:#eef2ff;color:#3730a3}.authMsg{margin-top:12px;font-size:12px;font-weight:800;line-height:1.5}.authTabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}.authTabs button{padding:10px;border:1px solid #cbd5e1;border-radius:10px;background:#f8fafc;font-weight:900;cursor:pointer}.adminPanel{position:fixed;inset:0;z-index:210000;background:#eef3f8;display:none;overflow:auto;padding:20px}.adminBox{max-width:1120px;margin:auto;background:#fff;border-radius:20px;padding:22px}.adminRow{display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:8px;align-items:center;padding:12px;border-bottom:1px solid #e5e7eb}.adminRow button{border:0;border-radius:9px;padding:8px 10px;font-weight:900;cursor:pointer}.topAdminBtn{position:fixed;right:14px;bottom:14px;z-index:10000;border:0;border-radius:999px;background:#0f4c75;color:#fff;padding:11px 15px;font-weight:900;box-shadow:0 8px 24px #0003;display:none}@media(max-width:650px){.adminRow{grid-template-columns:1fr}.authCard{padding:21px}}
 
@@ -1890,7 +1950,7 @@ body{background:#edf3f9!important;color:var(--v130-text)}
 <section class="authRight">
 <div class="authCard">
 <div class="authBrand">Firebase Secure Access</div>
-<h2 id="authTitle">자동차보상 로그인 <span style="font-size:13px;color:#64748b;font-weight:800">v1.54</span></h2>
+<h2 id="authTitle">자동차보상 로그인 <span style="font-size:13px;color:#64748b;font-weight:800">v1.65</span></h2>
 <p id="authIntro">승인된 사용자만 이용할 수 있습니다. 계정당 휴대폰 1대와 PC 1대만 등록하여 사용할 수 있습니다.</p>
 <div class="authTabs"><button class="active" id="tabLogin" type="button">로그인</button><button id="tabRequest" type="button">가입 신청</button></div>
 <div id="loginPane"><input id="loginId" placeholder="아이디를 입력하세요"/><input id="loginPw" placeholder="비밀번호를 입력하세요" type="password"/><button class="authBtn" id="loginBtn" type="button">로그인</button><div style="font-size:11px;color:#64748b;margin-top:8px">관리자는 admin1 또는 admin2로 로그인합니다.</div></div>
@@ -2101,11 +2161,11 @@ onAuthStateChanged(auth,async u=>{
   }catch{gate.style.display='flex'}
 });
 
-window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v1.54 · 자동차보상';badge.style.background='#065f46';}});
+window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner');if(badge){badge.textContent='v1.65 · 자동차보상';badge.style.background='#065f46';}});
 </script>
 <div id="appChrome">
 <div class="appTopbar">
-<div class="appTopBrand"><span aria-hidden="true" class="inlineCarMark"><svg viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect fill="#0b63ce" height="58" rx="15" width="58" x="3" y="3"></rect><path d="M16 38h32l-3.2-10.2c-.8-2.5-3.1-4.2-5.8-4.2H25c-2.7 0-5 1.7-5.8 4.2L16 38Z" fill="white"></path><path d="M13 38.5c0-3 2.4-5.5 5.5-5.5h27c3 0 5.5 2.4 5.5 5.5V45H13v-6.5Z" fill="white"></path><circle cx="20" cy="45" fill="#083b7a" r="4"></circle><circle cx="44" cy="45" fill="#083b7a" r="4"></circle><rect fill="#7fc4ff" height="7" rx="2" width="20" x="22" y="27"></rect></svg></span><span class="appBrandText">자동차보험 자손·자상 보상분석 <small>홍익보험의 정신 · v1.54</small></span></div>
+<div class="appTopBrand"><span aria-hidden="true" class="inlineCarMark"><svg viewbox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><rect fill="#0b63ce" height="58" rx="15" width="58" x="3" y="3"></rect><path d="M16 38h32l-3.2-10.2c-.8-2.5-3.1-4.2-5.8-4.2H25c-2.7 0-5 1.7-5.8 4.2L16 38Z" fill="white"></path><path d="M13 38.5c0-3 2.4-5.5 5.5-5.5h27c3 0 5.5 2.4 5.5 5.5V45H13v-6.5Z" fill="white"></path><circle cx="20" cy="45" fill="#083b7a" r="4"></circle><circle cx="44" cy="45" fill="#083b7a" r="4"></circle><rect fill="#7fc4ff" height="7" rx="2" width="20" x="22" y="27"></rect></svg></span><span class="appBrandText">자동차보험 자손·자상 보상분석 <small>홍익보험의 정신 · v1.65</small></span></div>
 <div class="appTopMenu"><button onclick="goProgramHome()" type="button">⌂ 홈</button><button onclick="openAppModal('help')" type="button">▣ 사용안내</button><button onclick="openAppModal('settings')" type="button">⚙ 환경설정</button><button class="danger" onclick="appLogout()" type="button">⇥ 로그아웃</button></div>
 </div>
 </div>
@@ -2142,7 +2202,7 @@ window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner'
 <button class="v129Quick v129Reveal" onclick="openProgramPage(4)" type="button"><i>▣</i><b>약관·산정기준</b><span>보험사 약관과 임금·산정기준을 확인합니다.</span></button>
 </nav>
 </section>
-<footer class="v129Footer"><b>홍익보험의 정신(김성호,정진성)</b> · 자동차보험 자손·자상 보상분석 v1.54<br/>본 프로그램은 상담·교육용 시뮬레이션이며 실제 보험금은 사고내용·적용약관·보험사의 최종 산정에 따라 달라질 수 있습니다.</footer>
+<footer class="v129Footer"><b>홍익보험의 정신(김성호,정진성)</b> · 자동차보험 자손·자상 보상분석 v1.65<br/>본 프로그램은 상담·교육용 시뮬레이션이며 실제 보험금은 사고내용·적용약관·보험사의 최종 산정에 따라 달라질 수 있습니다.</footer>
 <section aria-label="주의사항 및 지식재산권 보호" class="pageLegalNotice globalLegalNotice">
 <div aria-hidden="true" class="legalIcon">🛡️</div>
 <div class="legalBody">
@@ -2153,7 +2213,7 @@ window.addEventListener('DOMContentLoaded',()=>{const badge=$('cloudReadyBanner'
 </main>
 </div>
 <div class="appModal" id="helpModal"><div class="appModalCard"><button class="appModalClose" onclick="closeAppModal('help')">닫기</button><h3>사용안내</h3><p>① 기본정보에서 보험사·사고일·부상급수와 가입담보를 선택합니다.<br/>② 부상한도에서 가입금액별 급수 한도를 확인합니다.<br/>③ 보상비교에서 사고유형과 손해액을 입력해 자손·자상 결과를 비교합니다.<br/>④ 약관·산정기준에서 보험사 약관과 계산근거를 확인합니다.</p></div></div>
-<div class="appModal" id="settingsModal"><div class="appModalCard"><button class="appModalClose" onclick="closeAppModal('settings')">닫기</button><h3>환경설정</h3><p><b>버전:</b> v1.54<br/><b>접속정책:</b> 승인회원당 휴대폰 1대 + PC 1대<br/><b>기기변경:</b> 관리자 승인센터에서 해당 기기 슬롯을 초기화한 뒤 새 기기로 로그인합니다.</p></div></div>
+<div class="appModal" id="settingsModal"><div class="appModalCard"><button class="appModalClose" onclick="closeAppModal('settings')">닫기</button><h3>환경설정</h3><p><b>버전:</b> v1.65<br/><b>접속정책:</b> 승인회원당 휴대폰 1대 + PC 1대<br/><b>기기변경:</b> 관리자 승인센터에서 해당 기기 슬롯을 초기화한 뒤 새 기기로 로그인합니다.</p></div></div>
 <script>
 function openProgramPage(n){document.body.classList.add('workbenchMode');const h=document.getElementById('programHome'),w=document.getElementById('programWorkbench');if(h)h.style.display='none';if(w)w.style.display='block';if(typeof showPage==='function')showPage(n);window.scrollTo({top:0,behavior:'smooth'});}
 function openProgramLogic(){openProgramPage(3);setTimeout(()=>{const el=document.getElementById('scenarioLogic');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},260);}
@@ -2163,7 +2223,7 @@ function closeAppModal(type){document.getElementById(type==='help'?'helpModal':'
 </script>
 <div class="wrap" id="programWorkbench">
 <div class="workbenchTitle"><b>자동차보상 분석 작업화면</b><button onclick="goProgramHome()" type="button">⌂ 프로그램 홈</button></div>
-<section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS · v1.54</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의정신(김성호,정진성) · 상담/교육용 시뮬레이션</div></section>
+<section class="hero"><div class="heroBadge">SMART COVERAGE ANALYSIS · v1.65</div><h1>자동차보험 자손 · 자상 보상분석</h1><p>내 가입조건과 사고상황을 입력하면 자기신체사고와 자동차상해의 예상 보상 차이를 한눈에 비교합니다.</p><div class="heroTrust">홍익보험의정신(김성호,정진성) · 상담/교육용 시뮬레이션</div></section>
 <nav class="nav">
 <button class="active" id="n1" onclick="showPage(1)">기본정보</button>
 <button id="n2" onclick="showPage(2)">부상한도</button>
@@ -2270,34 +2330,27 @@ function closeAppModal(type){document.getElementById(type==='help'?'helpModal':'
 
 <div class="logicSummary" id="scenarioLogicBody">사고유형·가입담보·부상급수·사고일을 선택하면 처리 흐름을 안내합니다.</div>
 </div><div class="calcInputHeader"><div class="calcInputTitle">손해액 입력 · 자동계산</div><div class="calcInputDesc">위 비교계산 흐름을 확인한 뒤 실제 손해항목을 입력하면 자손·자상 및 대인 선처리 참고금액이 자동으로 다시 계산됩니다.</div></div><div class="inputs">
-<div class="entryBox" style="order:7"><label>치료관계비 (원)</label><input autocomplete="off" id="medical" inputmode="decimal" placeholder="예: 1,500,000" type="text"/><div class="muted" style="margin-top:5px">사고로 발생한 치료비를 입력합니다.</div></div>
-<div class="entryBox" style="order:8"><label>직불치료비 (원)</label><input autocomplete="off" id="directMedical" inputmode="decimal" placeholder="예: 300,000" type="text"/><div class="muted" style="margin-top:5px">사고와 관련해 본인이 직접 지출한 치료비. 위 치료관계비와 중복 입력하지 마세요.</div></div>
+<div class="entryBox finalCostRow" style="order:8"><label>치료관계비 (원)</label><input autocomplete="off" id="medical" inputmode="decimal" placeholder="예: 1,500,000" type="text"/><div class="muted" style="margin-top:5px">사고로 발생한 치료비를 입력합니다.</div></div>
+<div class="entryBox finalCostRow" style="order:9"><label>직불치료비 (원)</label><input autocomplete="off" id="directMedical" inputmode="decimal" placeholder="예: 300,000" type="text"/><div class="muted" style="margin-top:5px">사고와 관련해 본인이 직접 지출한 치료비. 위 치료관계비와 중복 입력하지 마세요.</div></div>
 <div class="autoBox" style="order:1"><label>부상 위자료 (급수 자동)</label><input id="comfort" readonly="" type="text"/></div>
 <div class="entryBox" style="order:2"><label>입원 일수</label><input id="inDays" min="0" placeholder="입원 일수" type="number"/></div>
-<div class="entryBox" style="order:3"><label>휴업 인정일수</label><input id="lostDays" min="0" placeholder="약관상 인정 휴업일수" type="number"/><div class="muted" style="margin-top:5px">상해정도를 감안하여 치료기간 범위에서 인정되는 휴업일수. 입원일수와 반드시 같지 않습니다.</div></div>
-<div class="entryBox wageBox" style="grid-column:1/-1;order:5"><label>자동차보험 일용근로자 1일 임금 <span id="dailyWagePeriodLabel" style="color:#2563eb">사고일 기준 자동적용</span></label>
-<div class="wageAutoRow">
-<input aria-label="자동차보험 일용근로자 1일 임금" autocomplete="off" id="dailyWage" inputmode="decimal" type="text" value="134,232.5"/>
+
+<div class="entryBox incomeModeBox" style="grid-column:1/-1;order:5"><label>휴업손해 소득 산정기준</label><div class="incomeModeToggle"><button class="incomeModeBtn active" id="incomeModeLabor" type="button" data-mode="labor">도시일용 임금</button><button class="incomeModeBtn" id="incomeModeProof" type="button" data-mode="proof">급여·사업소득 등 증빙 가능</button></div><input id="incomeMode" type="hidden" value="labor"/><div class="muted incomeModeHelp" id="incomeModeHelp">일용근로자 임금을 월 25일 기준으로 환산해 약관상 1일 휴업손해액을 표시하고 입원일수에 적용합니다.</div></div>
+<div class="entryBox wageBox" id="laborIncomeBox" style="grid-column:1/-1;order:6"><label>자동차약관상 휴업손해 1일 적용액 <span id="dailyWagePeriodLabel" style="color:#2563eb">사고일 기준 자동적용</span></label>
+<div class="wagePolicyRow">
+<input id="policyDailyBenefitDisplay" aria-label="자동차약관상 휴업손해 1일 적용액" type="text" value="95,081원" readonly/>
+<input id="dailyWage" type="hidden" value="134,232.5"/>
+<div class="wagePolicyExplain" id="dailyWageBasis">2026년 하반기 기준 <b>134,232.5원 × 25일 ÷ 30일 × 85% = 95,081원</b><span class="sub">기초 일용근로자 임금 134,232.5원 = (공사부문 보통인부 172,698원 + 제조부문 단순노무 95,767원) ÷ 2</span></div>
 <span class="wageBadge" id="dailyWageAutoBadge">사고일 자동</span>
 </div>
-<div class="muted" id="dailyWageBasis" style="margin-top:6px">사고일을 기준으로 최근 2년 자동차보험 일용근로자 임금을 자동 적용합니다. 필요하면 금액을 직접 수정할 수 있습니다.</div>
-<button class="wageTableToggle" id="wageTableToggle" type="button">최근 2년 일용근로자 임금 기준표 보기</button>
-<div class="wageTableWrap" id="wageTableWrap" style="display:none">
-<table class="wageTable"><thead><tr><th>적용기간</th><th>공사 보통인부</th><th>제조 단순노무</th><th>자동차보험 1일 임금</th><th>휴업손해 1일액<br>(×25÷30×85%)</th></tr></thead><tbody>
-<tr><td>2026.09.01~현재*</td><td>172,698원</td><td>95,767원</td><td><b>134,232.5원</b></td><td>95,081.4원</td></tr>
-<tr><td>2026.07.01~08.31</td><td>172,068원</td><td>95,767원</td><td><b>133,917.5원</b></td><td>94,858.2원</td></tr>
-<tr><td>2026.01.01~06.30</td><td>172,068원</td><td>90,694원</td><td><b>131,381원</b></td><td>93,061.5원</td></tr>
-<tr><td>2025.09.01~12.31</td><td>171,037원</td><td>90,830원</td><td><b>130,933.5원</b></td><td>92,744.6원</td></tr>
-<tr><td>2025.07.01~08.31</td><td>169,804원</td><td>90,830원</td><td><b>130,317원</b></td><td>92,307.9원</td></tr>
-<tr><td>2025.01.01~06.30</td><td>169,804원</td><td>90,085원</td><td><b>129,944.5원</b></td><td>92,044.0원</td></tr>
-<tr><td>2024.10.01~12.31</td><td>167,081원</td><td>90,085원</td><td><b>128,583원</b></td><td>91,079.6원</td></tr>
-</tbody></table>
-<div class="wageFoot">* 현재 확인된 2026년 10월 기준. 자동차보험 약관상 일용근로자 임금은 공사부문 보통인부와 제조부문 단순노무종사원 임금의 평균값으로 계산하며, 실제 적용 시 사고일과 적용 약관을 확인합니다. 월 임금은 25일 기준으로 산정하고, 휴업손해의 1일 수입감소액은 월 현실소득액을 30일로 나누어 적용합니다.</div>
-</div></div>
-<div class="autoBox" style="order:4"><label>휴업손해 (약관기준 자동계산)</label><input id="lost" readonly="" type="text"/><div id="lostFormula" class="muted" style="margin-top:5px;font-weight:700;color:#166534">계산식: 1일임금 × 25일 ÷ 30일 × 휴업 인정일수 × 85%</div><div class="muted" style="margin-top:4px">약관기준: 1일 수입감소액 × 휴업일수 × 85% · 일용근로자 임금 적용 시 월 25일 기준으로 환산</div></div>
-<div class="entryBox" style="order:4"><label>통원일수</label><input id="outDays" min="0" placeholder="실제 통원일수" type="number"/></div>
-<div class="autoBox" style="order:6"><label>통원비 (자동계산)</label><input id="other" readonly="" type="text"/></div>
-<div class="entryBox" style="order:9"><label>기타 인정비용 (원)</label><input autocomplete="off" id="extraCost" inputmode="decimal" placeholder="예: 100,000" type="text"/><div class="muted" style="margin-top:5px">약관상 인정 여부 및 증빙 확인이 필요한 비용</div></div>
+<div id="policyLaborDailyAmount" style="margin-top:10px;padding:10px 12px;border-radius:12px;background:#ecfdf5;border:1px solid #a7f3d0;font-weight:900;color:#065f46">약관상 휴업손해 1일액: 95,081원</div>
+<button class="wageTableToggle" id="wageTableToggle" type="button">최근 2년 자동차약관상 일용근로자 임금 기준표 보기 →</button>
+</div>
+<div class="entryBox" id="proofIncomeBox" style="grid-column:1/-1;order:6;display:none"><label>증빙 가능한 실제 수입감소액 총액 (원)</label><input autocomplete="off" id="provedDailyLoss" inputmode="decimal" placeholder="예: 1,500,000" type="text"/><div class="muted" style="margin-top:5px">급여·사업소득 등 관계서류로 증명 가능한 실제 수입감소액 총액을 입력합니다. 입력액의 85%를 휴업손해로 산정합니다.</div></div>
+<div class="autoBox lostAutoBox finalCostRow" style="order:7"><label class="lostTitle">휴업손해 <span class="lostSub">(약관기준자동계산)</span></label><input id="lost" readonly="" type="text"/><div id="lostFormula" class="muted" style="margin-top:5px;font-weight:700;color:#166534">약관상 1일액: 일용근로자 임금 × 25일 ÷ 30일 × 85%</div><div class="muted" id="lostBasisNote" style="margin-top:4px">약관기준: 1일 수입감소액 × 휴업일수 × 85%</div></div>
+<div class="entryBox" style="order:3"><label>통원일수</label><input id="outDays" min="0" placeholder="실제 통원일수" type="number"/></div>
+<div class="autoBox" style="order:4"><label>통원비 (자동계산)</label><input id="other" readonly="" type="text"/></div>
+<div class="entryBox finalCostRow" style="order:10"><label>기타 인정비용 (원)</label><input autocomplete="off" id="extraCost" inputmode="decimal" placeholder="예: 100,000" type="text"/><div class="muted" style="margin-top:5px">약관상 인정 여부 및 증빙 확인이 필요한 비용</div></div>
 <input id="autoLimit" type="hidden" value="0"/>
 </div>
 <div id="mutualDetailBox">
@@ -2482,17 +2535,17 @@ function closeAppModal(type){document.getElementById(type==='help'?'helpModal':'
 </div>
 <div class="termsCoreGrid">
 <section class="termsPanel" id="termsWageSection">
-<div class="termsPanelHead"><h3>📊 최근 2년 일용근로자 임금 기준표</h3><span>단위: 원</span></div>
-<div class="termsTableWrap"><table class="termsWageTable"><thead><tr><th>적용기간</th><th>공사 보통인부</th><th>제조 단순노무</th><th>자동차보험 1일 임금</th><th>휴업손해 1일액<br>(×25÷30×85%)</th></tr></thead><tbody>
-<tr><td>2026.09.01~현재</td><td>172,698</td><td>95,767</td><td><b>134,232.5</b></td><td>95,081.4</td></tr>
-<tr><td>2026.07.01~08.31</td><td>172,068</td><td>95,767</td><td><b>133,917.5</b></td><td>94,858.2</td></tr>
-<tr><td>2026.01.01~06.30</td><td>172,068</td><td>90,694</td><td><b>131,381</b></td><td>93,061.5</td></tr>
-<tr><td>2025.09.01~12.31</td><td>171,037</td><td>90,830</td><td><b>130,933.5</b></td><td>92,744.6</td></tr>
-<tr><td>2025.07.01~08.31</td><td>169,804</td><td>90,830</td><td><b>130,317</b></td><td>92,307.9</td></tr>
-<tr><td>2025.01.01~06.30</td><td>169,804</td><td>90,085</td><td><b>129,944.5</b></td><td>92,044.0</td></tr>
-<tr><td>2024.10.01~12.31</td><td>167,081</td><td>90,085</td><td><b>128,583</b></td><td>91,079.6</td></tr>
+<div class="termsPanelHead"><h3>📊 최근 2년 자동차약관상 일용근로자 임금 기준표</h3><span>단위: 원</span></div>
+<div class="termsTableWrap"><table class="termsWageTable"><thead><tr><th>적용기간</th><th>공사 보통인부임금</th><th>제조 단순노무임금</th><th>도시일용임금<br><small>(공사+제조) ÷ 2</small></th><th>자동차약관상 도시일용임금<br><small>×25÷30×85% · 원 미만 절사</small></th></tr></thead><tbody>
+<tr><td>2026.09.01~현재</td><td>172,698</td><td>95,767</td><td><b>134,232.5</b></td><td>95,081</td></tr>
+<tr><td>2026.07.01~08.31</td><td>172,068</td><td>95,767</td><td><b>133,917.5</b></td><td>94,858</td></tr>
+<tr><td>2026.01.01~06.30</td><td>172,068</td><td>90,694</td><td><b>131,381</b></td><td>93,061</td></tr>
+<tr><td>2025.09.01~12.31</td><td>171,037</td><td>90,830</td><td><b>130,933.5</b></td><td>92,744</td></tr>
+<tr><td>2025.07.01~08.31</td><td>169,804</td><td>90,830</td><td><b>130,317</b></td><td>92,307</td></tr>
+<tr><td>2025.01.01~06.30</td><td>169,804</td><td>90,085</td><td><b>129,944.5</b></td><td>92,044</td></tr>
+<tr><td>2024.10.01~12.31</td><td>167,081</td><td>90,085</td><td><b>128,583</b></td><td>91,079</td></tr>
 </tbody></table></div>
-<div class="termsSourceNote">휴업손해는 실제 수입감소가 증명되는 경우 약관상 인정일수와 85% 기준을 적용합니다. 사고일에 해당하는 임금구간을 사용하세요.</div>
+<div class="termsSourceNote"><b>표시 구분:</b> <b>도시일용임금</b>은 이 화면에서 (공사부문 보통인부임금 + 제조부문 단순노무종사원임금) ÷ 2로 표시하고, <b>자동차약관상 도시일용임금</b>은 휴업손해 1일 적용액인 도시일용임금 × 25일 ÷ 30일 × 85%를 계산한 뒤 원 미만을 절사하여 표시합니다.<br><b>약관 공식 용어:</b> (공사 보통인부 + 제조 단순노무) ÷ 2 값은 ‘일용근로자 임금’이며 월 임금 산출 시 25일 기준을 적용합니다.</div>
 </section>
 <section class="termsPanel" id="termsKeySection">
 <div class="termsPanelHead"><h3>📖 주요 약관·산정기준 요약</h3></div>
@@ -2756,7 +2809,7 @@ function buildCompareDashboard(){
  const autoPlan=document.getElementById('compareAutoPlan')?.selectedOptions?.[0]?.textContent||'-';
  const route=document.getElementById('mutualRoute')?.value||'opponentFirst';
  set('dashCompany',company); set('dashDate',date); set('dashAccidentType',at==='mutual'?'쌍방사고':'단독사고'); set('dashGrade',gradeVal+'급');
- set('dashFault',at==='mutual'?fault+'%':'해당 없음'); set('dashMedical',medical.toLocaleString('ko-KR')+'원'); const lostD=document.getElementById('lostDays')?.value||0; set('dashDays',`입원 ${inD}일 / 휴업인정 ${lostD}일 / 통원 ${outD}일`); set('dashPlans',`자손 ${selfPlan} · 자상 ${autoPlan}`);
+ set('dashFault',at==='mutual'?fault+'%':'해당 없음'); set('dashMedical',medical.toLocaleString('ko-KR')+'원'); const lostD=document.getElementById('inDays')?.value||0; set('dashDays',`입원 ${inD}일 / 휴업인정 ${lostD}일 / 통원 ${outD}일`); set('dashPlans',`자손 ${selfPlan} · 자상 ${autoPlan}`);
  set('dashRoute',at!=='mutual'?'단독사고 · 자기담보 비교':(route==='jasangFirst'?'자동차상해(자상) 선처리 → 보험사 간 구상·정산':'상대방 대인 선처리 → 자손·자상 후처리 비교'));
  const selfLimitRow=[...document.querySelectorAll('#selfRows .row')].find(r=>(r.querySelector('span')?.textContent||'').includes('부상한도'));
  const autoLimitRow=[...document.querySelectorAll('#autoRows .row')].find(r=>(r.querySelector('span')?.textContent||'').includes('가입한도'));
@@ -2817,17 +2870,24 @@ function applyDailyWageByAccidentDate(recalc=true){
  const label=document.getElementById("dailyWagePeriodLabel");
  const basis=document.getElementById("dailyWageBasis");
  const badge=document.getElementById("dailyWageAutoBadge");
+ const benefitDisplay=document.getElementById("policyDailyBenefitDisplay");
  if(!dateEl||!wageEl) return;
  const p=getAutoDailyWagePeriod(dateEl.value);
  if(p){
    wageEl.value=formatCommaNumber(p.wage);
    wageEl.dataset.autoApplied="1";
+   const policyDaily=Math.round(p.wage*25/30*0.85);
+   if(benefitDisplay) benefitDisplay.value=policyDaily.toLocaleString("ko-KR")+"원";
    if(label) label.textContent=`(${formatPeriodDate(p.from)}~${p.to==="2026-12-31"?"현재 확인기준":formatPeriodDate(p.to)} · 자동)`;
-   if(basis) basis.innerHTML=`사고일 <b>${dateEl.value}</b> 기준 자동 적용 · 공사부문 보통인부 <b>${p.construction.toLocaleString()}원</b> + 제조부문 단순노무종사원 <b>${p.manufacturing.toLocaleString()}원</b> ÷ 2 = <b>${p.wage.toLocaleString(undefined,{minimumFractionDigits:p.wage%1?1:0,maximumFractionDigits:1})}원</b>`;
+   if(basis){
+     const periodText=(p.from.startsWith("2026-")?"2026년 "+(p.from<"2026-07-01"?"상반기":"하반기"):formatPeriodDate(p.from)+" 기준");
+     basis.innerHTML=`${periodText} 기준 <b>${p.wage.toLocaleString(undefined,{minimumFractionDigits:p.wage%1?1:0,maximumFractionDigits:1})}원 × 25일 ÷ 30일 × 85% = ${policyDaily.toLocaleString("ko-KR")}원</b><span class="sub">기초 일용근로자 임금 ${p.wage.toLocaleString(undefined,{maximumFractionDigits:1})}원 = (공사 보통인부 ${p.construction.toLocaleString()}원 + 제조 단순노무 ${p.manufacturing.toLocaleString()}원) ÷ 2</span>`;
+   }
    if(badge){badge.textContent="사고일 자동";badge.classList.remove("manual");}
  }else{
    wageEl.value="";
    wageEl.dataset.autoApplied="0";
+   if(benefitDisplay) benefitDisplay.value="기준 확인 필요";
    if(label) label.textContent="(등록된 최근 2년 범위 밖 · 직접 확인)";
    if(basis) basis.textContent="등록된 자동 기준은 2024.10.01~2026.12.31입니다. 범위 밖 사고는 해당 시점 약관·노임자료를 확인해 직접 입력해 주세요.";
    if(badge){badge.textContent="직접 확인";badge.classList.add("manual");}
@@ -3067,15 +3127,37 @@ function calc(){
  const insurerMedical=num("medical");
  const directMedical=num("directMedical");
  const treatmentWon=insurerMedical+directMedical;
- const extraCost=num("extraCost"), inDays=num("inDays"), lostDays=num("lostDays"), outDays=num("outDays");
+ const extraCost=num("extraCost"), inDays=num("inDays"), outDays=num("outDays");
  const comfortWon=COMFORT[gr-1]*10000;
  const appliedDailyWage=num("dailyWage");
- // 자동차보험 약관: 일용근로자 임금은 월 임금 산출 시 25일 기준. 휴업손해=1일 수입감소액×휴업일수×85%
+ const incomeMode=(document.getElementById("incomeMode")?.value||"labor");
+ const provedDailyLoss=num("provedDailyLoss");
+ // 자동차보험 약관: 휴업손해 = 1일 수입감소액 × 인정 휴업일수 × 85%.
+ // 일용근로자 임금 기준은 월 25일 환산 후 30일로 나누어 1일 수입감소액을 산정한다.
  const monthlyDailyLaborIncome=appliedDailyWage*25;
- const dailyIncomeLoss=monthlyDailyLaborIncome/30;
- const lostWon=dailyIncomeLoss*lostDays*0.85;
+ const laborDailyIncomeLoss=monthlyDailyLaborIncome/30;
+ const policyLaborDailyBenefit=laborDailyIncomeLoss*0.85;
+ // 도시일용: 약관상 1일액(일용임금×25÷30×85%) × 입원일수(화면 적용일수).
+ // 증빙소득: 사용자가 입력한 실제 수입감소액 총액 × 85% (입원일수를 다시 곱하지 않음).
+ const lostWon=incomeMode==="proof" ? provedDailyLoss*0.85 : policyLaborDailyBenefit*inDays;
  const outpatientWon=OUTPATIENT_PER_DAY*outDays;
- if(comfort) comfort.value=won(comfortWon); if(lost) lost.value=won(lostWon); const lostFormula=document.getElementById("lostFormula"); if(lostFormula){ const wageText=appliedDailyWage.toLocaleString("ko-KR",{maximumFractionDigits:1}); const dailyText=dailyIncomeLoss.toLocaleString("ko-KR",{maximumFractionDigits:1}); const resultText=Math.round(lostWon).toLocaleString("ko-KR"); lostFormula.textContent=`계산식: ${wageText}원 × 25일 ÷ 30일 (= ${dailyText}원) × ${lostDays}일 × 85% = ${resultText}원`; } if(other) other.value=won(outpatientWon);
+ if(comfort) comfort.value=won(comfortWon); if(lost) lost.value=won(lostWon);
+ const lostFormula=document.getElementById("lostFormula");
+ const lostBasisNote=document.getElementById("lostBasisNote");
+ if(lostFormula){
+   const resultText=Math.round(lostWon).toLocaleString("ko-KR");
+   if(incomeMode==="proof"){
+     const proofText=provedDailyLoss.toLocaleString("ko-KR",{maximumFractionDigits:1});
+     lostFormula.textContent=`계산식: 증빙 실제 수입감소액 총액 ${proofText}원 × 85% = ${resultText}원`;
+     if(lostBasisNote) lostBasisNote.textContent="급여·사업소득 등 관계서류로 증명되는 실제 수입감소액을 기준으로 산정";
+   }else{
+     const wageText=appliedDailyWage.toLocaleString("ko-KR",{maximumFractionDigits:1});
+     const dailyText=laborDailyIncomeLoss.toLocaleString("ko-KR",{maximumFractionDigits:1});
+     lostFormula.textContent=`약관상 1일 휴업손해액: ${wageText}원 × 25일 ÷ 30일 × 85% = ${Math.round(policyLaborDailyBenefit).toLocaleString("ko-KR")}원 · 입원 ${inDays}일 적용 총액 = ${resultText}원`;
+     if(lostBasisNote) lostBasisNote.textContent="도시일용 적용: 약관상 일용근로자 임금의 월 25일 환산액을 30일로 나눈 뒤 85% 적용. 이 화면은 입원일수를 적용일수로 사용합니다."; const pda=document.getElementById("policyLaborDailyAmount"); if(pda) pda.textContent=`약관상 휴업손해 1일액: ${Math.round(policyLaborDailyBenefit).toLocaleString("ko-KR")}원`;
+   }
+ }
+ if(other) other.value=won(outpatientWon);
 
  // 4가지 사고유형 안내 및 흐름도
  syncLogicControlsFromMain();
@@ -3292,7 +3374,7 @@ function calc(){
    autoRows.innerHTML=row("선택 처리경로","자상 선처리 → 보험사 간 대위·구상 및 정산")+row("자상 가입가정",formatMan(jasangSelectedMan))+row("부상 위자료 ("+gr+"급)",won(comfortWon))+row("휴업손해",won(lostWon))+row("통원비",won(outpatientWon))+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("자상 산정 손해액",won(autoDamage))+row("자상 선지급 참고액",won(autoFirstPaid))+row("자상 미보상 손해",won(autoFirstUncovered))+row("동일손해 상대 대인 고객 추가수령",autoFirstUncovered<=0?"0원":"미보상분 범위 내 별도 검토")+row("후속처리","보험회사 간 대위·구상 및 정산");
  }else{
    selfRows.innerHTML=row("사고유형",accidentLabel)+row("자손 가입가정",Number(compareSelfKey).toLocaleString()+"만원형")+row("부상 위자료","보상안함")+row("휴업손해","보상안함")+row("통원비","별도 산정 없음")+row("치료관계비 합계",won(treatmentWon))+row("선택 부상급수",gr+"급")+row("자손 급수별 부상한도",selfLimitWon==null?"미검증":won(selfLimitWon))+row("자손 비교가정액",self==null?"미검증":won(self));
-   autoRows.innerHTML=row("사고유형",accidentLabel)+row("자상 가입가정",formatMan(jasangSelectedMan))+row("부상 위자료 ("+gr+"급)",won(comfortWon))+row("휴업손해",won(lostWon)+" · "+lostDays+"일 × ("+won(appliedDailyWage)+" × 25 ÷ 30) × 85%")+row("통원비",won(outpatientWon)+" · "+outDays+"일 × 8,000원")+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("자상 산정 손해액",won(autoDamage))+row("자상 부상 가입한도",won(jasangLimitWon))+row("자상 비교가정액",won(auto));
+   autoRows.innerHTML=row("사고유형",accidentLabel)+row("자상 가입가정",formatMan(jasangSelectedMan))+row("부상 위자료 ("+gr+"급)",won(comfortWon))+row("휴업손해",won(lostWon)+" · "+(incomeMode==="proof"?"증빙 실제 수입감소액 × 85%":inDays+"일 × 약관상 일용근로자 1일 휴업손해액"))+row("통원비",won(outpatientWon)+" · "+outDays+"일 × 8,000원")+row("치료관계비 합계",won(treatmentWon))+row("기타 인정손해",won(extraCost))+row("자상 산정 손해액",won(autoDamage))+row("자상 부상 가입한도",won(jasangLimitWon))+row("자상 비교가정액",won(auto));
  }
  if(comparisonDetailBody){
    const selfLimitLabel=selfLimitWon==null?"미검증":won(selfLimitWon);
@@ -3355,7 +3437,7 @@ function requestRecalc(){
  if(calcFrame) cancelAnimationFrame(calcFrame);
  calcFrame=requestAnimationFrame(()=>{calcFrame=0;try{calc();}catch(e){console.error("자동 재계산 오류",e);}});
 }
-["medical","directMedical","inDays","lostDays","dailyWage","outDays","extraCost","faultRate","minorApplicability","treatmentDurationDays","opponentBodilyAmount","policyStartDate","opponentAmountMode"].forEach(id=>{
+["medical","directMedical","inDays","dailyWage","provedDailyLoss","outDays","extraCost","faultRate","minorApplicability","treatmentDurationDays","opponentBodilyAmount","policyStartDate","opponentAmountMode"].forEach(id=>{
  const el=document.getElementById(id); if(el){el.addEventListener("input",requestRecalc);el.addEventListener("change",requestRecalc);}
 });
 // 보상비교 화면의 입력·선택값이 추가되어도 자동재계산이 빠지지 않도록 이벤트 위임
@@ -3379,19 +3461,37 @@ if(opponentModeEl) opponentModeEl.addEventListener("change",()=>{
 const accDateEl=document.getElementById("accDate");
 if(accDateEl) accDateEl.addEventListener("change",()=>{if(logicAccDate) logicAccDate.value=accDateEl.value;applyDailyWageByAccidentDate(true);try{calc();}catch(e){console.error(e);}});
 if(logicAccDate) logicAccDate.addEventListener("change",()=>{if(accDateEl) accDateEl.value=logicAccDate.value;applyDailyWageByAccidentDate(true);try{calc();}catch(e){console.error(e);}});
+const incomeModeEl=document.getElementById("incomeMode");
+const laborIncomeBox=document.getElementById("laborIncomeBox");
+const proofIncomeBox=document.getElementById("proofIncomeBox");
+const incomeModeHelp=document.getElementById("incomeModeHelp");
+function setIncomeMode(mode){
+ if(!incomeModeEl) return;
+ incomeModeEl.value=mode;
+ document.querySelectorAll(".incomeModeBtn").forEach(b=>b.classList.toggle("active",b.dataset.mode===mode));
+ if(laborIncomeBox) laborIncomeBox.style.display=mode==="labor"?"block":"none";
+ if(proofIncomeBox) proofIncomeBox.style.display=mode==="proof"?"block":"none";
+ if(incomeModeHelp) incomeModeHelp.textContent=mode==="proof"?"관계서류로 증명 가능한 실제 수입감소액 총액의 85%로 계산합니다.":"일용근로자 임금을 월 25일 기준으로 환산해 약관상 1일 휴업손해액을 표시하고 입원일수에 적용합니다.";
+ requestRecalc();
+}
+document.querySelectorAll(".incomeModeBtn").forEach(b=>b.addEventListener("click",()=>setIncomeMode(b.dataset.mode)));
+const provedDailyLossEl=document.getElementById("provedDailyLoss");
+if(provedDailyLossEl) provedDailyLossEl.addEventListener("input",requestRecalc);
+setIncomeMode(incomeModeEl?.value||"labor");
+
 const dailyWageEl=document.getElementById("dailyWage");
 if(dailyWageEl) dailyWageEl.addEventListener("input",()=>{
  dailyWageEl.dataset.autoApplied="0";
  const badge=document.getElementById("dailyWageAutoBadge");
+ const benefitDisplay=document.getElementById("policyDailyBenefitDisplay");
  const label=document.getElementById("dailyWagePeriodLabel");
  if(badge){badge.textContent="수동 수정";badge.classList.add("manual");}
  if(label) label.textContent="(사용자 직접 수정값)";
 });
-const wageToggle=document.getElementById("wageTableToggle"), wageWrap=document.getElementById("wageTableWrap");
-if(wageToggle&&wageWrap) wageToggle.addEventListener("click",()=>{
- const open=wageWrap.style.display!=="none";
- wageWrap.style.display=open?"none":"block";
- wageToggle.textContent=open?"최근 2년 일용근로자 임금 기준표 보기":"최근 2년 일용근로자 임금 기준표 닫기";
+const wageToggle=document.getElementById("wageTableToggle");
+if(wageToggle) wageToggle.addEventListener("click",()=>{
+ showPage(4);
+ setTimeout(()=>{const target=document.getElementById("termsWageSection")||document.getElementById("tv-wage");if(target)target.scrollIntoView({behavior:"smooth",block:"start"});},220);
 });
 applyDailyWageByAccidentDate(false);
 loadPlans();
@@ -3919,14 +4019,14 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
     const grid=view.querySelector('.inputs');
     if(grid){
       const spec=[
-        ['comfort','💰'],['inDays','🛏️'],['lostDays','📆'],['lost','🧮'],['outDays','📅'],
-        ['dailyWage','👷'],['other','🩺'],['medical','📄'],['directMedical','💳'],['extraCost','📋']
+        ['comfort','💰'],['inDays','🛏️'],['outDays','📅'],['other','🩺'],['lost','🧮'],
+        ['dailyWage','👷'],['medical','📄'],['directMedical','💳'],['extraCost','📋']
       ];
       spec.forEach(([id,icon])=>{const c=closestCard(id);if(c){addIcon(c,icon);grid.appendChild(c)}});
       const hidden=document.getElementById('autoLimit');if(hidden)grid.appendChild(hidden);
     }
     const wage=closestCard('dailyWage');if(wage)wage.classList.add('wageBox');
-    const banner=document.getElementById('cloudReadyBanner');if(banner&&/v1\.47/.test(banner.textContent))banner.textContent='v1.54 · 자동차보상';
+    const banner=document.getElementById('cloudReadyBanner');if(banner&&/v1\.47/.test(banner.textContent))banner.textContent='v1.65 · 자동차보상';
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(renewCompareInput,0));else setTimeout(renewCompareInput,0);
 })();
@@ -3949,7 +4049,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 })();
 </script>
 <style id="v155-final-verified-style">
-/* v1.54 - fixed global visual navigation */
+/* v1.65 - fixed global visual navigation */
 #globalVisualNavWrap .globalVisualNav{display:grid!important;grid-template-columns:1fr!important;gap:12px!important;padding:12px!important}
 #globalVisualNavWrap .gvCard,#globalVisualNavWrap.isCompact .gvCard{height:102px!important;min-height:102px!important;max-height:102px!important;padding:12px 48px 12px 112px!important;border-radius:22px!important;display:flex!important;align-items:center!important;overflow:hidden!important;box-sizing:border-box!important}
 #globalVisualNavWrap .gvCard img,#globalVisualNavWrap.isCompact .gvCard img{left:14px!important;top:50%!important;width:82px!important;height:82px!important;transform:translateY(-50%)!important;border-radius:18px!important;object-fit:cover!important}
@@ -3959,7 +4059,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #globalVisualNavWrap .gvArrow,#globalVisualNavWrap.isCompact .gvArrow{right:14px!important;bottom:50%!important;transform:translateY(50%)!important;width:34px!important;height:34px!important;font-size:18px!important}
 #globalVisualNavWrap .gvCard.active,#globalVisualNavWrap.isCompact .gvCard.active{outline:3px solid rgba(255,255,255,.96)!important;outline-offset:-4px!important;box-shadow:0 0 0 3px rgba(65,181,255,.7),0 14px 30px rgba(0,0,0,.22)!important}
 
-/* v1.54 - compare flow STEP 01~04 exact equal cards */
+/* v1.65 - compare flow STEP 01~04 exact equal cards */
 #p3 #compareInputView .flowChart{display:grid!important;grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr) 32px minmax(0,1fr) 32px minmax(0,1fr)!important;gap:12px!important;align-items:stretch!important;margin:0!important;padding:0!important;overflow:visible!important}
 #p3 #compareInputView .flowNode{height:286px!important;min-height:286px!important;max-height:286px!important;padding:18px 16px!important;border-radius:24px!important;box-sizing:border-box!important;display:grid!important;grid-template-rows:38px 120px minmax(0,1fr)!important;justify-items:center!important;align-items:start!important;text-align:center!important;gap:8px!important;overflow:hidden!important}
 #p3 #compareInputView .flowNode .flowStep{position:static!important;grid-row:1!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:98px!important;height:38px!important;padding:0 16px!important;border-radius:999px!important;font-size:14px!important;line-height:1!important;font-weight:1000!important;margin:0!important;align-self:start!important;box-sizing:border-box!important}
@@ -3973,7 +4073,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p3 #compareInputView .logicSelectorCard:last-child .logicField>b{font-size:20px!important;word-break:keep-all!important;white-space:nowrap!important}
 #p3 #compareInputView .logicSelectorCard:last-child .logicCoverDisplay{font-size:17px!important;line-height:1.3!important;word-break:keep-all!important;white-space:normal!important}
 
-/* v1.54 - refined terms dashboard, balanced to supplied reference */
+/* v1.65 - refined terms dashboard, balanced to supplied reference */
 #p4 .termsDashboard{display:none!important}
 #p4 .termsV155{display:grid;gap:18px;margin-top:16px}
 #p4 .tvGrid{display:grid;grid-template-columns:302px minmax(0,1fr);gap:18px;align-items:start}
@@ -3996,7 +4096,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .tvNavBtn.active{background:linear-gradient(135deg,#eef6ff,#dcecff);color:#0e5ac4;box-shadow:inset 4px 0 0 #1d76ff}
 #p4 .tvNavBtn.active .i{background:#2b7fff;color:#fff}
 #p4 .tvSideArt{height:150px;margin:0 12px 12px;border-radius:20px;background:linear-gradient(135deg,#eef5ff,#c9e1ff);padding:16px;display:flex;align-items:flex-end;justify-content:space-between;overflow:hidden}
-#p4 .tvSideArt b{max-width:132px;font-size:14px;line-height:1.55;color:#1e4b7a;font-weight:1000}
+#p4 .tvSideArt b{max-width:132px;font-size:14px;line-height:1.61;color:#1e4b7a;font-weight:1000}
 #p4 .tvSideArt .car{font-size:66px;line-height:1}
 #p4 .tvMain{display:grid;gap:18px}
 #p4 .tvFeatureRow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
@@ -4091,7 +4191,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .tvLawItem{border:1px solid #d7e5f4;border-radius:19px;background:#fff;padding:16px;min-height:168px}
 #p4 .tvLawItem .art{font-size:32px;margin-bottom:8px}
 #p4 .tvLawItem b{display:block;font-size:18px;color:#173b66;margin-bottom:8px;letter-spacing:-.02em}
-#p4 .tvLawItem span{display:block;font-size:13.5px;line-height:1.58;color:#5c7590;font-weight:800}
+#p4 .tvLawItem span{display:block;font-size:13.5px;line-height:1.61;color:#5c7590;font-weight:800}
 @media(max-width:1450px){#p4 .tvGrid{grid-template-columns:270px minmax(0,1fr)}#p4 .tvFeatureRow{grid-template-columns:repeat(2,minmax(0,1fr))}#p4 .tvSplit{grid-template-columns:1fr}#p4 .tvPolicyTop{grid-template-columns:1fr}#p4 .tvMiniGrid{grid-template-columns:repeat(2,minmax(0,1fr))}#p4 .tvCompanyStrip{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:980px){#globalVisualNavWrap .gvCard,#globalVisualNavWrap.isCompact .gvCard{height:90px!important;min-height:90px!important;max-height:90px!important;padding-left:82px!important}#globalVisualNavWrap .gvCard img,#globalVisualNavWrap.isCompact .gvCard img{width:60px!important;height:60px!important;left:11px!important}#p3 #compareInputView .flowChart{grid-template-columns:1fr!important}#p3 #compareInputView .flowArrow{transform:rotate(90deg)!important;min-height:22px!important}#p4 .tvGrid{grid-template-columns:1fr}#p4 .tvSide{position:relative;top:auto}#p4 .tvFeatureRow,#p4 .tvMiniGrid,#p4 .tvCompanyStrip,#p4 .tvLawGrid{grid-template-columns:1fr}#p4 .tvPolicyTitle,#p4 .tvPolicyTop,#p4 .tvSummary{grid-template-columns:1fr}#p4 .tvActions{display:grid;grid-template-columns:1fr 1fr}#p4 .tvCompany{grid-template-columns:1fr}#p4 .tvHead{grid-template-columns:58px 1fr}#p4 .tvHead em{grid-column:1/-1}#p4 .tvFeature{grid-template-columns:64px 1fr 28px;min-height:auto}#p4 .tvFeature .art{width:64px;height:64px;font-size:30px}}
 </style>
@@ -4194,12 +4294,12 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
           <section id="tv-overview"><div class="tvFeatureRow">
             <button class="tvFeature tf1" data-target="tv-policy" data-key="policy" type="button"><div class="art">📄</div><div><b>보험사별 약관</b><span>현재 선택 보험사의 자손·자상 약관을 한눈에 확인합니다.</span></div><em>→</em></button>
             <button class="tvFeature tf2" data-target="tv-policy" data-key="policy" type="button"><div class="art">⚖️</div><div><b>산정기준 비교</b><span>부상한도·공제·손해액 산정구조를 확인합니다.</span></div><em>→</em></button>
-            <button class="tvFeature tf3" data-target="tv-wage" data-key="wage" type="button"><div class="art">🧮</div><div><b>최신 임금기준</b><span>휴업손해 계산에 쓰는 일용근로자 임금 기준을 확인합니다.</span></div><em>→</em></button>
+            <button class="tvFeature tf3" data-target="tv-wage" data-key="wage" type="button"><div class="art">🧮</div><div><b>최신 임금기준</b><span>도시일용임금과 자동차약관상 도시일용임금을 구분해 확인합니다.</span></div><em>→</em></button>
             <button class="tvFeature tf4" data-target="tv-key" data-key="key" type="button"><div class="art">📈</div><div><b>실무 해설</b><span>경상환자·향후치료비 등 주요 유의사항을 확인합니다.</span></div><em>→</em></button>
           </div></section>
           <div class="tvSplit">
-            <section class="tvCard tvPanel" id="tv-wage"><div class="tvHead"><div class="art">📊</div><div><b>최근 2년 일용근로자 임금 기준표</b><span>보험사 약관에 적용되는 일용근로자 임금 기준을 확인하세요.</span></div><em>단위: 원</em></div>
-              <table class="tvTable"><thead><tr><th>적용기간</th><th>공사 보통인부</th><th>제조 단순노무</th><th>자동차보험 1일 임금</th><th></th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.from.replaceAll('-','.')+' ~ '+(r.to==='2026-12-31'?'현재':r.to.replaceAll('-','.'))}</td><td>${fmt(r.construction)}</td><td>${fmt(r.manufacturing)}</td><td class="wage">${fmt(r.wage)}</td><td>📶</td></tr>`).join('')}</tbody></table>
+            <section class="tvCard tvPanel" id="tv-wage"><div class="tvHead"><div class="art">📊</div><div><b>최근 2년 일용근로자 임금 기준표</b><span>도시일용임금과 자동차약관상 도시일용임금을 구분해 확인하세요.</span></div><em>단위: 원</em></div>
+              <table class="tvTable"><thead><tr><th>적용기간</th><th>공사 보통인부임금</th><th>제조 단순노무임금</th><th>도시일용임금<br><small>(공사+제조) ÷ 2</small></th><th>자동차약관상 도시일용임금<br><small>×25÷30×85% · 원 미만 절사</small></th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.from.replaceAll('-','.')+' ~ '+(r.to==='2026-12-31'?'현재':r.to.replaceAll('-','.'))}</td><td>${fmt(r.construction)}</td><td>${fmt(r.manufacturing)}</td><td class="wage">${fmt(r.wage)}</td><td class="wage">${fmt(Math.floor(r.wage*25/30*0.85))}</td></tr>`).join('')}</tbody></table>
               <div class="tvInfo"><div class="i">i</div><div><b>휴업손해는 실제 수입감소가 증명되는 경우 약관상 인정일수와 85% 기준을 적용합니다.</b><span>사고일에 해당하는 임금구간을 사용하세요.</span></div><div class="art">🪙🧾</div></div>
             </section>
             <section class="tvCard tvPanel" id="tv-key"><div class="tvHead"><div class="art">📖</div><div><b>주요 약관·산정기준 요약</b><span>선택한 보험사의 약관과 산정기준을 한눈에 확인하세요.</span></div></div>
@@ -4235,7 +4335,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </script>
 
 <style id="v156-home-left-nav-cleanup">
-/* v1.54 홈 화면: 4개 메인 메뉴를 좌측 세로 패널로 고정 */
+/* v1.65 홈 화면: 4개 메인 메뉴를 좌측 세로 패널로 고정 */
 @media (min-width:981px){
   body:not(.workbenchMode) #globalVisualNavWrap{
     position:fixed!important;
@@ -4377,7 +4477,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 
 <style id="v160-home-nav-balanced-height">
-/* v1.54: 홈 좌측 메뉴를 상단까지 올리고 우측 홈 콘텐츠 높이에 맞춰 연장 */
+/* v1.65: 홈 좌측 메뉴를 상단까지 올리고 우측 홈 콘텐츠 높이에 맞춰 연장 */
 @media (min-width:981px){
   body:not(.workbenchMode) #appChrome{display:none!important;}
   body:not(.workbenchMode) #globalVisualNavWrap{
@@ -4510,7 +4610,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 
 <style id="v160c-compare-visual-renewal">
-/* ===== v1.54c 보상비교 이미지라이즈 리뉴얼 ===== */
+/* ===== v1.65c 보상비교 이미지라이즈 리뉴얼 ===== */
 #p3>.sectionImageHero,#p3>.sectorJumpNav{display:none!important}
 #p3{padding-top:0!important}
 #p3 #compareInputView{display:grid;gap:16px}
@@ -4679,7 +4779,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </style>
 
 <style id="v160d-compare-rebalanced">
-/* ===== v1.54d compare page rebalance ===== */
+/* ===== v1.65d compare page rebalance ===== */
 #p3 #compareInputView>.panel{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
 #p3 #compareInputView .compareVisualTitle{display:grid!important;grid-template-columns:64px minmax(0,1fr) auto!important;gap:16px!important;align-items:center!important;margin:0 0 16px!important;padding:20px 22px!important;border:1px solid #d9e6f2!important;border-radius:24px!important;background:linear-gradient(135deg,#f7fbff 0%,#eef6ff 65%,#f9fbff 100%)!important;box-shadow:0 10px 24px rgba(20,64,108,.06)!important}
 #p3 #compareInputView .cvIcon{width:64px!important;height:64px!important;border-radius:18px!important;display:grid!important;place-items:center!important;font-size:30px!important;color:#fff!important;background:linear-gradient(135deg,#1e7cff,#1650d9)!important;box-shadow:0 12px 24px rgba(21,88,220,.22)!important}
@@ -4745,7 +4845,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 #p3 #compareInputView .calcInputHeader{margin-top:18px!important;padding:18px 20px!important;border:1px solid #dce8f4!important;border-radius:22px 22px 0 0!important;background:linear-gradient(135deg,#f8fbff,#f1f6ff)!important;box-shadow:none!important}
 #p3 #compareInputView .calcInputTitle{font-size:30px!important;color:#0c315d!important;font-weight:1000!important;letter-spacing:-.03em!important}
-#p3 #compareInputView .calcInputDesc{margin-top:6px!important;font-size:15px!important;line-height:1.55!important;color:#7087a1!important;font-weight:800!important}
+#p3 #compareInputView .calcInputDesc{margin-top:6px!important;font-size:15px!important;line-height:1.61!important;color:#7087a1!important;font-weight:800!important}
 
 #p3 .inputs{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important}
 #p3 .inputs>.autoBox,#p3 .inputs>.entryBox{min-height:116px!important;padding:14px 14px 12px 62px!important;border-radius:18px!important}
@@ -4817,7 +4917,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </script>
 
 <style id="v161-terms-chapter-rebuilt">
-/* ===== v1.54 terms chapter rebuilt ===== */
+/* ===== v1.65 terms chapter rebuilt ===== */
 #p4{padding:18px!important}
 #p4 .sectionImageHero{margin:0 0 16px!important;border-radius:26px!important;overflow:hidden!important;box-shadow:0 18px 36px rgba(17,54,99,.14)!important}
 #p4 .sectionImageHero img{display:block!important;width:100%!important;height:auto!important;min-height:138px!important;max-height:210px!important;object-fit:cover!important}
@@ -4914,7 +5014,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .termsTopicCard:nth-child(4) .icon{background:linear-gradient(135deg,#fff0f1,#fff7f7)!important;color:#ef4444!important}
 #p4 .termsTopicCard:nth-child(5) .icon{background:linear-gradient(135deg,#fff7e8,#fffaf1)!important;color:#f59e0b!important}
 #p4 .termsTopicCard b{font-size:18px!important;line-height:1.28!important;color:#173b66!important;font-weight:1000!important;word-break:keep-all!important}
-#p4 .termsTopicCard p{margin:0!important;font-size:13px!important;line-height:1.55!important;color:#607995!important;font-weight:800!important;word-break:keep-all!important}
+#p4 .termsTopicCard p{margin:0!important;font-size:13px!important;line-height:1.61!important;color:#607995!important;font-weight:800!important;word-break:keep-all!important}
 #p4 .termsBottomGrid{display:grid!important;grid-template-columns:1fr .95fr!important;gap:14px!important;margin-top:0!important}
 #p4 .termsCheckpoint,#p4 .termsReferences{border:1px solid #d9e6f2!important;border-radius:24px!important;background:#fff!important;padding:18px 20px!important;box-shadow:0 12px 24px rgba(17,66,118,.04)!important}
 #p4 .termsCheckpoint{background:linear-gradient(135deg,#fff7f8,#fffdfd)!important;border-color:#f3c7cf!important}
@@ -4922,7 +5022,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .checkpointRow{display:grid!important;grid-template-columns:180px minmax(0,1fr)!important;gap:14px!important;padding:12px 0!important;border-top:1px solid #f1dde1!important;font-size:14px!important}
 #p4 .checkpointRow:first-of-type{border-top:0!important}
 #p4 .checkpointRow b{font-size:18px!important;color:#de4343!important;font-weight:1000!important}
-#p4 .checkpointRow span{font-size:14px!important;line-height:1.55!important;color:#607995!important;font-weight:800!important}
+#p4 .checkpointRow span{font-size:14px!important;line-height:1.61!important;color:#607995!important;font-weight:800!important}
 #p4 .termsReferences{display:grid!important;gap:10px!important;background:linear-gradient(135deg,#fbfdff,#f7fbff)!important}
 #p4 .termsReferences button{display:flex!important;align-items:center!important;gap:10px!important;min-height:58px!important;border:1px solid #dae7f4!important;border-radius:16px!important;background:#fff!important;color:#173b66!important;text-align:left!important;padding:0 16px!important;font-size:15px!important;font-weight:900!important;cursor:pointer!important;box-shadow:0 8px 16px rgba(17,66,118,.04)!important}
 #p4 .termsReferences button::before{content:'📄';font-size:20px!important}
@@ -5034,7 +5134,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
     if(side && !side.querySelector('.sideArtBadge')){
       const badge=document.createElement('div');
       badge.className='sideArtBadge';
-      badge.textContent='v1.54 · 자동차보상';
+      badge.textContent='v1.65 · 자동차보상';
       side.appendChild(badge);
     }
   }
@@ -5117,7 +5217,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </script>
 
 <style id="v162-terms-final-polish">
-/* ===== v1.54 terms final polish ===== */
+/* ===== v1.65 terms final polish ===== */
 #p4 .termsMainPanel{gap:14px!important}
 #p4 .termsCompanyStrip{gap:9px!important}
 #p4 .termsCompanyChip{min-height:76px!important;padding:10px 12px!important}
@@ -5141,7 +5241,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .termsTopicCard{min-height:140px!important;padding:16px 14px!important}
 #p4 .termsCompanyGrid{gap:9px!important;padding:0 18px 18px!important}
 #p4 .termsBottomGrid{gap:12px!important}
-#p4 .termsDisclaimer{font-size:12px!important;line-height:1.55!important}
+#p4 .termsDisclaimer{font-size:12px!important;line-height:1.61!important}
 
 /* Keep policy content readable without compressing text */
 #p4 .termsWageTable{min-width:760px!important}
@@ -5241,7 +5341,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </script>
 
 <style id="v163-terms-compact">
-/* v1.54 compact the policy comparison chapter after real-render inspection */
+/* v1.65 compact the policy comparison chapter after real-render inspection */
 #p4 .termsCompanyChip{position:relative!important;grid-template-columns:44px minmax(0,1fr)!important;padding-right:28px!important;gap:9px!important;overflow:hidden!important}
 #p4 .termsCompanyChip>i{position:absolute!important;right:8px!important;top:50%!important;transform:translateY(-50%)!important;width:22px!important;height:22px!important;border-radius:50%!important;background:#eef5ff!important;color:#5d80aa!important;font-size:16px!important}
 #p4 .termsCompanyChip>div{min-width:0!important}
@@ -5261,7 +5361,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .termsPolicySummaryClean h4{margin:0 0 10px!important;font-size:22px!important;color:#173b66!important;font-weight:1000!important;display:flex!important;align-items:center!important;gap:9px!important}
 #p4 .termsPolicySummaryClean h4:before{content:'i';width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#287dff;color:#fff;font-size:18px;font-weight:1000}
 #p4 .termsPolicySummaryClean ul{margin:0!important;padding:0!important;display:grid!important;gap:6px!important}
-#p4 .termsPolicySummaryClean li{list-style:none!important;position:relative!important;padding-left:18px!important;font-size:12.5px!important;line-height:1.55!important;color:#526f8b!important;font-weight:800!important;word-break:keep-all!important}
+#p4 .termsPolicySummaryClean li{list-style:none!important;position:relative!important;padding-left:18px!important;font-size:12.5px!important;line-height:1.61!important;color:#526f8b!important;font-weight:800!important;word-break:keep-all!important}
 #p4 .termsPolicySummaryClean li:before{content:'●';position:absolute;left:0;top:0;color:#2478ee;font-size:10px;line-height:1.9}
 #p4 .termsPolicySummaryClean .summaryArt{height:118px!important;border-radius:18px!important;background:linear-gradient(135deg,#eef5ff,#dfeeff)!important;display:grid!important;place-items:center!important;font-size:64px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)!important}
 @media(min-width:1181px) and (max-width:1450px){
@@ -5299,7 +5399,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </script>
 
 <style id="v164-sidebar-size-topfix">
-/* ===== v1.54 좌측 메뉴 1.5배 확대 + 상단 잘림 방지 ===== */
+/* ===== v1.65 좌측 메뉴 1.5배 확대 + 상단 잘림 방지 ===== */
 @media(min-width:981px){
   body.workbenchMode #globalVisualNavWrap{
     top:var(--work-nav-top,78px)!important;
@@ -5525,7 +5625,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 #p4 .termsRefTopicCard .ti{display:flex!important;align-items:center!important;gap:10px!important;margin-bottom:8px!important}
 #p4 .termsRefTopicCard .ico{display:grid!important;place-items:center!important;width:38px!important;height:38px!important;border-radius:12px!important;font-size:21px!important;font-weight:900!important;color:#fff!important;box-shadow:0 8px 18px rgba(0,0,0,.08)!important}
 #p4 .termsRefTopicCard b{display:block!important;font-size:14px!important;line-height:1.25!important;color:#173b66!important;letter-spacing:-.02em!important}
-#p4 .termsRefTopicCard p{margin:6px 0 0!important;font-size:12px!important;line-height:1.55!important;color:#5c758d!important;font-weight:800!important}
+#p4 .termsRefTopicCard p{margin:6px 0 0!important;font-size:12px!important;line-height:1.61!important;color:#5c758d!important;font-weight:800!important}
 #p4 .topicSelf{background:linear-gradient(180deg,#fbf7ff,#fbf7ff)!important;border-color:#e4d7fb!important}.topicSelf .ico{background:linear-gradient(135deg,#a855f7,#7c3aed)!important}
 #p4 .topicAuto{background:linear-gradient(180deg,#f5fbff,#f5fbff)!important;border-color:#d7e9fb!important}.topicAuto .ico{background:linear-gradient(135deg,#30a0ff,#1266df)!important}
 #p4 .topicPain{background:linear-gradient(180deg,#f3fff8,#f3fff8)!important;border-color:#d2f1df!important}.topicPain .ico{background:linear-gradient(135deg,#30c98b,#059669)!important}
@@ -5610,7 +5710,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
     if(!side.querySelector('.sideArtWrap')){
       const art=document.createElement('div');
       art.className='sideArtWrap';
-      art.innerHTML='<div class="sideArtBox"></div><div class="sideArtBadge">v1.54 · 자동차보상</div>';
+      art.innerHTML='<div class="sideArtBox"></div><div class="sideArtBadge">v1.65 · 자동차보상</div>';
       side.appendChild(art);
     }
 
@@ -5720,7 +5820,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 </script>
 
 <style id="v166-compare-polish">
-/* v1.54 — compare input / flow rebalance */
+/* v1.65 — compare input / flow rebalance */
 #p3 #compareInputView .calcInputHeader{padding:15px 18px 10px!important}
 #p3 #compareInputView .calcInputTitle{font-size:20px!important}
 #p3 #compareInputView .calcInputTitle:before{width:42px!important;height:42px!important;font-size:22px!important}
@@ -5790,7 +5890,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 
 <style id="v167-final-alignment">
-/* ===== v1.54 final alignment ===== */
+/* ===== v1.65 final alignment ===== */
 /* 비교계산 흐름도: 4개 카드의 세로 기준 완전 통일 */
 #p3 #compareInputView .flowChart{
   grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr)!important;
@@ -5969,7 +6069,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 
 <style id="v168-terms-visual-buttons">
-/* v1.54 — 약관 상단 기능버튼: 세로 글자 방지 + 이미지형 가로 버튼 */
+/* v1.65 — 약관 상단 기능버튼: 세로 글자 방지 + 이미지형 가로 버튼 */
 #p4 .termsMainPanel{min-width:0!important}
 #p4 .termsFeatureGrid{
   display:grid!important;
@@ -6109,7 +6209,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
   const items=[
     {key:'policy',title:'보험사별 약관',desc:'현재 선택 보험사의 자손·자상 약관을 확인합니다.',target:'termsPolicySection'},
     {key:'criteria',title:'산정기준 비교',desc:'부상한도·공제·손해액 산정구조를 한눈에 확인합니다.',target:'termsKeySection'},
-    {key:'wage',title:'최신 임금기준',desc:'휴업손해 계산에 쓰는 일용근로자 임금 기준을 확인합니다.',target:'termsWageSection'},
+    {key:'wage',title:'최신 임금기준',desc:'도시일용임금과 자동차약관상 도시일용임금을 구분해 확인합니다.',target:'termsWageSection'},
     {key:'practice',title:'실무 해설',desc:'경상환자·향후치료비 등 주요 유의사항을 확인합니다.',target:'termsLawSection'}
   ];
   function rebuildVisualButtons(){
@@ -6138,7 +6238,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 
 <style id="v169-flow-home-horizontal">
-/* ===== v1.54: compare flow text + home horizontal nav ===== */
+/* ===== v1.65: compare flow text + home horizontal nav ===== */
 
 /* 1) 비교계산 흐름도: STEP별 제목 + 설명문을 명확하게 표시 */
 #p3 #compareInputView .flowChart{
@@ -6447,7 +6547,7 @@ function openServiceIntro(){ if(typeof openAppModal==='function'){ openAppModal(
 
 
 <style id="v173-clean-layout-fix">
-/* ===== v1.54 CLEAN: all-page horizontal menu + compare input cleanup ===== */
+/* ===== v1.65 CLEAN: all-page horizontal menu + compare input cleanup ===== */
 
 /* 전 화면 공통 가로 4분할 메뉴 */
 body #globalVisualNavWrap{
@@ -6660,7 +6760,7 @@ html body:not(.workbenchMode) #programHome{
 
 
 <style id="v174-remove-duplicate-terms">
-/* v1.54: remove duplicated terms dashboard only */
+/* v1.65: remove duplicated terms dashboard only */
 #p4 .termsDashboard,
 #p4 .termsRefHeroWrap{
   display:none!important;
@@ -6690,7 +6790,7 @@ html body:not(.workbenchMode) #programHome{
 
 
 <style id="v177-flow-coverage-final">
-/* ===== v1.54 STEP 텍스트 확정 + 현재 입력담보 직접 선택 ===== */
+/* ===== v1.65 STEP 텍스트 확정 + 현재 입력담보 직접 선택 ===== */
 #p3 #compareInputView .flowChart{
   display:grid!important;
   grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr)!important;
@@ -7203,7 +7303,7 @@ html body:not(.workbenchMode) #programHome{
 
 
 <style id="v181b-flow-step-visibility-fix">
-/* v1.54b - STEP 01~04 제목/설명 중앙 시인성 보정 */
+/* v1.65b - STEP 01~04 제목/설명 중앙 시인성 보정 */
 #p3 #compareInputView .flowChart{align-items:stretch!important;}
 #p3 #compareInputView .flowNode{
   grid-template-columns:136px minmax(0,1fr)!important;
@@ -7295,7 +7395,7 @@ html body:not(.workbenchMode) #programHome{
 
 
 <style id="v183-terms-company-top-left-align">
-/* v1.54 보험사별 약관비교: 좌측 기준선 통일 + 상단 보험사 버튼형 선택 */
+/* v1.65 보험사별 약관비교: 좌측 기준선 통일 + 상단 보험사 버튼형 선택 */
 #p4 #tv-policy{
   width:100%!important;
   margin:0!important;
@@ -7492,7 +7592,7 @@ html body:not(.workbenchMode) #programHome{
 </script>
 
 <style id="v185-terms-left-fullwidth">
-/* v1.54 약관 비교 화면: 좌측 기준선부터 전체폭 사용 */
+/* v1.65 약관 비교 화면: 좌측 기준선부터 전체폭 사용 */
 #p4 #termsV155 .tvGrid{
   display:grid!important;
   grid-template-columns:minmax(0,1fr)!important;
@@ -7805,7 +7905,7 @@ html,body,body *,button,input,select,textarea,table,th,td,label,option{
 </style>
 
 <style id="v147-21st-inspired-interactions">
-/* v1.54 interactive renewal — inspired by contemporary 21st.dev interaction patterns */
+/* v1.65 interactive renewal — inspired by contemporary 21st.dev interaction patterns */
 :root{
   --ui-ease:cubic-bezier(.22,1,.36,1);
   --ui-fast:180ms;
@@ -8177,7 +8277,7 @@ img,svg,canvas,video{max-width:100%;}
   #programHome .v129Section{padding:24px 10px!important;}
   #programHome .v129Head{display:block!important;margin-bottom:15px!important;}
   #programHome .v129Head h2,#programHome .v129InsightCopy h2{font-size:23px!important;line-height:1.2!important;}
-  #programHome .v129Head p{font-size:11px!important;line-height:1.55!important;text-align:left!important;margin-top:7px!important;}
+  #programHome .v129Head p{font-size:11px!important;line-height:1.61!important;text-align:left!important;margin-top:7px!important;}
   #programHome .v129ShowcaseGrid,#programHome .v129Insight,#programHome .v129Flow{grid-template-columns:1fr!important;gap:10px!important;}
 
   /* workbench */
@@ -8266,7 +8366,7 @@ img,svg,canvas,video{max-width:100%;}
 </style>
 
 <style id="v147_nav_96px_mobile_slim">
-/* v1.54 - 글로벌 4메뉴 슬림화: PC 96px / 모바일 연동 축소 */
+/* v1.65 - 글로벌 4메뉴 슬림화: PC 96px / 모바일 연동 축소 */
 html body.workbenchMode #globalVisualNavWrap .gvCard,
 html body.workbenchMode #globalVisualNavWrap.isCompact .gvCard,
 html body:not(.workbenchMode) #globalVisualNavWrap .gvCard,
@@ -8376,7 +8476,7 @@ html body #globalVisualNavWrap.isCompact .gvArrow{
 </style>
 
 <style id="v147_nav_text_balance_fix">
-/* v1.54 - 메뉴 텍스트 재배치: 제목 중앙 / 설명 하단 소형 한줄 */
+/* v1.65 - 메뉴 텍스트 재배치: 제목 중앙 / 설명 하단 소형 한줄 */
 html body #globalVisualNavWrap .gvText,
 html body #globalVisualNavWrap.isCompact .gvText{
   position:relative!important;
@@ -9454,10 +9554,10 @@ html body #globalVisualNavWrap.isCompact .gvText small{
  #programWorkbench .page.active input[type="range"]{min-height:46px!important;width:100%!important}
 }
 </style>
-<div id="v153UpdateBox" role="status" aria-live="polite"><span id="v153UpdateStatus">v1.54 · 최신버전 확인 중</span><button id="v153UpdateBtn" type="button">↻ 업데이트 확인</button></div>
+<div id="v153UpdateBox" role="status" aria-live="polite"><span id="v153UpdateStatus">v1.65 · 최신버전 확인 중</span><button id="v153UpdateBtn" type="button">↻ 업데이트 확인</button></div>
 <script id="v153-update-runtime">
 (function(){
-  const APP_VERSION='1.54';
+  const APP_VERSION='1.65';
   const status=document.getElementById('v153UpdateStatus');
   const btn=document.getElementById('v153UpdateBtn');
   const box=document.getElementById('v153UpdateBox');
