@@ -2285,7 +2285,7 @@ function closeAppModal(type){document.getElementById(type==='help'?'helpModal':'
 </tbody></table>
 <div class="wageFoot">* 현재 확인된 2026년 10월 기준. 자동차보험 약관상 일용근로자 임금은 공사부문 보통인부와 제조부문 단순노무종사원 임금의 평균값으로 계산하며, 실제 적용 시 사고일과 적용 약관을 확인합니다. 월 임금은 25일 기준으로 산정하고, 휴업손해의 1일 수입감소액은 월 현실소득액을 30일로 나누어 적용합니다.</div>
 </div></div>
-<div class="autoBox" style="order:4"><label>휴업손해 (약관기준 자동계산)</label><input id="lost" readonly="" type="text"/><div class="muted" style="margin-top:5px">일용근로자 임금 기준: 1일임금 × 25일 ÷ 30일 × 휴업 인정일수 × 85%</div></div>
+<div class="autoBox" style="order:4"><label>휴업손해 (약관기준 자동계산)</label><input id="lost" readonly="" type="text"/><div id="lostFormula" class="muted" style="margin-top:5px;font-weight:700;color:#166534">계산식: 1일임금 × 25일 ÷ 30일 × 휴업 인정일수 × 85%</div><div class="muted" style="margin-top:4px">약관기준: 1일 수입감소액 × 휴업일수 × 85% · 일용근로자 임금 적용 시 월 25일 기준으로 환산</div></div>
 <div class="entryBox" style="order:4"><label>통원일수</label><input id="outDays" min="0" placeholder="실제 통원일수" type="number"/></div>
 <div class="autoBox" style="order:6"><label>통원비 (자동계산)</label><input id="other" readonly="" type="text"/></div>
 <div class="entryBox" style="order:9"><label>기타 인정비용 (원)</label><input autocomplete="off" id="extraCost" inputmode="decimal" placeholder="예: 100,000" type="text"/><div class="muted" style="margin-top:5px">약관상 인정 여부 및 증빙 확인이 필요한 비용</div></div>
@@ -3066,7 +3066,7 @@ function calc(){
  const dailyIncomeLoss=monthlyDailyLaborIncome/30;
  const lostWon=dailyIncomeLoss*lostDays*0.85;
  const outpatientWon=OUTPATIENT_PER_DAY*outDays;
- if(comfort) comfort.value=won(comfortWon); if(lost) lost.value=won(lostWon); if(other) other.value=won(outpatientWon);
+ if(comfort) comfort.value=won(comfortWon); if(lost) lost.value=won(lostWon); const lostFormula=document.getElementById("lostFormula"); if(lostFormula){ const wageText=appliedDailyWage.toLocaleString("ko-KR",{maximumFractionDigits:1}); const dailyText=dailyIncomeLoss.toLocaleString("ko-KR",{maximumFractionDigits:1}); const resultText=Math.round(lostWon).toLocaleString("ko-KR"); lostFormula.textContent=`계산식: ${wageText}원 × 25일 ÷ 30일 (= ${dailyText}원) × ${lostDays}일 × 85% = ${resultText}원`; } if(other) other.value=won(outpatientWon);
 
  // 4가지 사고유형 안내 및 흐름도
  syncLogicControlsFromMain();
